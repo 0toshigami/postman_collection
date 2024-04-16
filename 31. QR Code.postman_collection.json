@@ -1,0 +1,547 @@
+{
+	"info": {
+		"_postman_id": "16f5b9da-3359-4c54-a907-15aadc7b7c84",
+		"name": "31. QR Code",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-16f5b9da-3359-4c54-a907-15aadc7b7c84?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "01. List Bank",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/qrcode/listbank",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"qrcode",
+						"listbank"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "01. List Bank",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/qrcode/listbank",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"qrcode",
+								"listbank"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Sep 2023 17:43:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=%2FRR%2F1LQhJskLxzzbcsjmqMURjvZ9KVNj3xYNbXE75EsDkBElmpbhpBpzCyLFn6F0GWBiq9DzdNagYtcVFG7pRX4q8gs%2FaT2vtsbdWKJtUbT8tluSeyFJkYP5x1Zl\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "802046d1ff4f08c6-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"no_banks\": \"52\",\n    \"data\": [\n        {\n            \"name\": \"Ngân hàng TMCP Công thương Việt Nam\",\n            \"code\": \"ICB\",\n            \"bin\": \"970415\",\n            \"short_name\": \"VietinBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Ngoại Thương Việt Nam\",\n            \"code\": \"VCB\",\n            \"bin\": \"970436\",\n            \"short_name\": \"Vietcombank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Quân đội\",\n            \"code\": \"MB\",\n            \"bin\": \"970422\",\n            \"short_name\": \"MBBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Á Châu\",\n            \"code\": \"ACB\",\n            \"bin\": \"970416\",\n            \"short_name\": \"ACB\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Việt Nam Thịnh Vượng\",\n            \"code\": \"VPB\",\n            \"bin\": \"970432\",\n            \"short_name\": \"VPBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Tiên Phong\",\n            \"code\": \"TPB\",\n            \"bin\": \"970423\",\n            \"short_name\": \"TPBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Hàng Hải\",\n            \"code\": \"MSB\",\n            \"bin\": \"970426\",\n            \"short_name\": \"MSB\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Nam Á\",\n            \"code\": \"NAB\",\n            \"bin\": \"970428\",\n            \"short_name\": \"NamABank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Bưu Điện Liên Việt\",\n            \"code\": \"LPB\",\n            \"bin\": \"970449\",\n            \"short_name\": \"LienVietPostBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Bản Việt\",\n            \"code\": \"VCCB\",\n            \"bin\": \"970454\",\n            \"short_name\": \"VietCapitalBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Đầu tư và Phát triển Việt Nam\",\n            \"code\": \"BIDV\",\n            \"bin\": \"970418\",\n            \"short_name\": \"BIDV\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Sài Gòn Thương Tín\",\n            \"code\": \"STB\",\n            \"bin\": \"970403\",\n            \"short_name\": \"Sacombank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Quốc tế Việt Nam\",\n            \"code\": \"VIB\",\n            \"bin\": \"970441\",\n            \"short_name\": \"VIB\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Phát triển Thành phố Hồ Chí Minh\",\n            \"code\": \"HDB\",\n            \"bin\": \"970437\",\n            \"short_name\": \"HDBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Đông Nam Á\",\n            \"code\": \"SEAB\",\n            \"bin\": \"970440\",\n            \"short_name\": \"SeABank\"\n        },\n        {\n            \"name\": \"Ngân hàng Thương mại TNHH MTV Dầu Khí Toàn Cầu\",\n            \"code\": \"GPB\",\n            \"bin\": \"970408\",\n            \"short_name\": \"GPBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Đại Chúng Việt Nam\",\n            \"code\": \"PVCB\",\n            \"bin\": \"970412\",\n            \"short_name\": \"PVcomBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Quốc Dân\",\n            \"code\": \"NCB\",\n            \"bin\": \"970419\",\n            \"short_name\": \"NCB\"\n        },\n        {\n            \"name\": \"Ngân hàng TNHH MTV Shinhan Việt Nam\",\n            \"code\": \"SHBVN\",\n            \"bin\": \"970424\",\n            \"short_name\": \"ShinhanBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Sài Gòn\",\n            \"code\": \"SCB\",\n            \"bin\": \"970429\",\n            \"short_name\": \"SCB\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Xăng dầu Petrolimex\",\n            \"code\": \"PGB\",\n            \"bin\": \"970430\",\n            \"short_name\": \"PGBank\"\n        },\n        {\n            \"name\": \"Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam\",\n            \"code\": \"VBA\",\n            \"bin\": \"970405\",\n            \"short_name\": \"Agribank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Kỹ thương Việt Nam\",\n            \"code\": \"TCB\",\n            \"bin\": \"970407\",\n            \"short_name\": \"Techcombank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Sài Gòn Công Thương\",\n            \"code\": \"SGICB\",\n            \"bin\": \"970400\",\n            \"short_name\": \"SaigonBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Đông Á\",\n            \"code\": \"DOB\",\n            \"bin\": \"970406\",\n            \"short_name\": \"DongABank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Bắc Á\",\n            \"code\": \"BAB\",\n            \"bin\": \"970409\",\n            \"short_name\": \"BacABank\"\n        },\n        {\n            \"name\": \"Ngân hàng TNHH MTV Standard Chartered Bank Việt Nam\",\n            \"code\": \"SCVN\",\n            \"bin\": \"970410\",\n            \"short_name\": \"StandardChartered\"\n        },\n        {\n            \"name\": \"Ngân hàng Thương mại TNHH MTV Đại Dương\",\n            \"code\": \"Oceanbank\",\n            \"bin\": \"970414\",\n            \"short_name\": \"Oceanbank\"\n        },\n        {\n            \"name\": \"Ngân hàng Liên doanh Việt - Nga\",\n            \"code\": \"VRB\",\n            \"bin\": \"970421\",\n            \"short_name\": \"VRB\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP An Bình\",\n            \"code\": \"ABB\",\n            \"bin\": \"970425\",\n            \"short_name\": \"ABBANK\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Việt Á\",\n            \"code\": \"VAB\",\n            \"bin\": \"970427\",\n            \"short_name\": \"VietABank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Xuất Nhập khẩu Việt Nam\",\n            \"code\": \"EIB\",\n            \"bin\": \"970431\",\n            \"short_name\": \"Eximbank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Việt Nam Thương Tín\",\n            \"code\": \"VIETBANK\",\n            \"bin\": \"970433\",\n            \"short_name\": \"VietBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TNHH Indovina\",\n            \"code\": \"IVB\",\n            \"bin\": \"970434\",\n            \"short_name\": \"IndovinaBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Bảo Việt\",\n            \"code\": \"BVB\",\n            \"bin\": \"970438\",\n            \"short_name\": \"BaoVietBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TNHH MTV Public Việt Nam\",\n            \"code\": \"PBVN\",\n            \"bin\": \"970439\",\n            \"short_name\": \"PublicBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Sài Gòn - Hà Nội\",\n            \"code\": \"SHB\",\n            \"bin\": \"970443\",\n            \"short_name\": \"SHB\"\n        },\n        {\n            \"name\": \"Ngân hàng Thương mại TNHH MTV Xây dựng Việt Nam\",\n            \"code\": \"CBB\",\n            \"bin\": \"970444\",\n            \"short_name\": \"CBBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Phương Đông\",\n            \"code\": \"OCB\",\n            \"bin\": \"970448\",\n            \"short_name\": \"OCB\"\n        },\n        {\n            \"name\": \"Ngân hàng TMCP Kiên Long\",\n            \"code\": \"KLB\",\n            \"bin\": \"970452\",\n            \"short_name\": \"KienLongBank\"\n        },\n        {\n            \"name\": \"Ngân hàng TNHH MTV CIMB Việt Nam\",\n            \"code\": \"CIMB\",\n            \"bin\": \"422589\",\n            \"short_name\": \"CIMB\"\n        },\n        {\n            \"name\": \"Ngân hàng TNHH MTV HSBC (Việt Nam)\",\n            \"code\": \"HSBC\",\n            \"bin\": \"458761\",\n            \"short_name\": \"HSBC\"\n        },\n        {\n            \"name\": \"DBS Bank Ltd - Chi nhánh Thành phố Hồ Chí Minh\",\n            \"code\": \"DBS\",\n            \"bin\": \"796500\",\n            \"short_name\": \"DBSBank\"\n        },\n        {\n            \"name\": \"Ngân hàng Nonghyup - Chi nhánh Hà Nội\",\n            \"code\": \"NHB HN\",\n            \"bin\": \"801011\",\n            \"short_name\": \"Nonghyup\"\n        },\n        {\n            \"id\": 13,\n            \"name\": \"Ngân hàng TNHH MTV Hong Leong Việt Nam\",\n            \"code\": \"HLBVN\",\n            \"bin\": \"970442\",\n            \"short_name\": \"HongLeong\"\n        },\n        {\n            \"name\": \"Ngân hàng Công nghiệp Hàn Quốc - Chi nhánh Hà Nội\",\n            \"code\": \"IBK - HN\",\n            \"bin\": \"970455\",\n            \"short_name\": \"IBK Bank\"\n        },\n        {\n            \"name\": \"Ngân hàng Công nghiệp Hàn Quốc - Chi nhánh TP. Hồ Chí Minh\",\n            \"code\": \"IBK - HCM\",\n            \"bin\": \"970456\",\n            \"short_name\": \"IBK Bank\"\n        },\n        {\n            \"name\": \"Ngân hàng TNHH MTV Woori Việt Nam\",\n            \"code\": \"WVN\",\n            \"bin\": \"970457\",\n            \"short_name\": \"Woori\"\n        },\n        {\n            \"name\": \"Ngân hàng United Overseas - Chi nhánh TP. Hồ Chí Minh\",\n            \"code\": \"UOB\",\n            \"bin\": \"970458\",\n            \"short_name\": \"UnitedOverseas\"\n        },\n        {\n            \"name\": \"Ngân hàng Kookmin - Chi nhánh Hà Nội\",\n            \"code\": \"KBHN\",\n            \"bin\": \"970462\",\n            \"short_name\": \"KookminHN\"\n        },\n        {\n            \"name\": \"Ngân hàng Kookmin - Chi nhánh Thành phố Hồ Chí Minh\",\n            \"code\": \"KBHCM\",\n            \"bin\": \"970463\",\n            \"short_name\": \"KookminHCM\"\n        },\n        {\n            \"name\": \"Ngân hàng Hợp tác xã Việt Nam\",\n            \"code\": \"COOPBANK\",\n            \"bin\": \"970446\",\n            \"short_name\": \"COOPBANK\"\n        }\n    ]\n}\n"
+				}
+			]
+		},
+		{
+			"name": "Momo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/qrcode/momo?phone=0855576421&amount=1012&memo=selltool",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"qrcode",
+						"momo"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "0855576421",
+							"description": "Phone receive money"
+						},
+						{
+							"key": "amount",
+							"value": "1012",
+							"description": "Amount"
+						},
+						{
+							"key": "memo",
+							"value": "selltool",
+							"description": "Message"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/qrcode/momo?phone=0855576421&amount=1012&memo=selltool",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"qrcode",
+								"momo"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "0855576421",
+									"description": "Phone receive money"
+								},
+								{
+									"key": "amount",
+									"value": "1012",
+									"description": "Amount"
+								},
+								{
+									"key": "memo",
+									"value": "selltool",
+									"description": "Message"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Sep 2023 17:10:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=rFmyLe3KOg5nKWy82CXNxsNO0ryPYARNgqn3T8XbiCWwGmnPLpDHqRMNgtO7PKikTD0zFU69l5eiocYhGVqgL9sGRCL0OM%2FJNCGn0MG%2FOUT0e8B9qQlR%2BxOYhdCr\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "802016499d260fe4-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"QRtext\": \"2|99|0855576421|||0|0|1012|selltool\",\n    \"QRlink\": \"https://chart.googleapis.com/chart?cht=qr&chs=400x400&chld=H|1&chl=2|99|0855576421|||0|0|1012|selltool\"\n}"
+				}
+			]
+		},
+		{
+			"name": "ZaloPay",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/qrcode/zalo?amount=1012&memo=selltool&userId=211110001506642",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"qrcode",
+						"zalo"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "1012",
+							"description": "Amount"
+						},
+						{
+							"key": "memo",
+							"value": "selltool",
+							"description": "Memo"
+						},
+						{
+							"key": "userId",
+							"value": "211110001506642",
+							"description": "UserID in 22.Zalopay/03.Login"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/qrcode/momo?phone=0855576421&amount=1012&memo=selltool",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"qrcode",
+								"momo"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "0855576421",
+									"description": "Phone receive money"
+								},
+								{
+									"key": "amount",
+									"value": "1012",
+									"description": "Amount"
+								},
+								{
+									"key": "memo",
+									"value": "selltool",
+									"description": "Message"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Sep 2023 17:10:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=rFmyLe3KOg5nKWy82CXNxsNO0ryPYARNgqn3T8XbiCWwGmnPLpDHqRMNgtO7PKikTD0zFU69l5eiocYhGVqgL9sGRCL0OM%2FJNCGn0MG%2FOUT0e8B9qQlR%2BxOYhdCr\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "802016499d260fe4-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"QRtext\": \"2|99|0855576421|||0|0|1012|selltool\",\n    \"QRlink\": \"https://chart.googleapis.com/chart?cht=qr&chs=400x400&chld=H|1&chl=2|99|0855576421|||0|0|1012|selltool\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Bank",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/qrcode/napas247?bankNumber=662663666999&bankCode=970415&amount=100000&memo=TTA",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"qrcode",
+						"napas247"
+					],
+					"query": [
+						{
+							"key": "bankNumber",
+							"value": "662663666999",
+							"description": "Number Account Bank Receive"
+						},
+						{
+							"key": "bankCode",
+							"value": "970415",
+							"description": "Use 01. List bank"
+						},
+						{
+							"key": "amount",
+							"value": "100000",
+							"description": "Amount"
+						},
+						{
+							"key": "memo",
+							"value": "TTA",
+							"description": "Message"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Bank",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/qrcode/napas247?bankNumber=0491000157943&bankCode=970436&amount=1012&memo=selltool",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"qrcode",
+								"napas247"
+							],
+							"query": [
+								{
+									"key": "bankNumber",
+									"value": "0491000157943",
+									"description": "Number Account Bank Receive"
+								},
+								{
+									"key": "bankCode",
+									"value": "970436",
+									"description": "Use 01. List bank"
+								},
+								{
+									"key": "amount",
+									"value": "1012",
+									"description": "Amount"
+								},
+								{
+									"key": "memo",
+									"value": "selltool",
+									"description": "Message"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Sep 2023 17:42:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=YXoo4mPo2%2FsJmIuCZ6UnQgSo%2FNDwHGgq08HbWTBG99y17UUq0MnZcETTFOTI7BY4R%2FqfP5%2BLaLZwzoiog52EqbpE53buXzZuAp4KoxY23p4ccCuFaVp9Gx0Rnvs1\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80204493982508c6-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"QRtext\": \"00020101021238570010A00000072701270006970436011304910001579430208QRIBFTTA5303704540410125802VN62120808selltool63045FEB\",\n    \"QRlink\": \"https://chart.googleapis.com/chart?cht=qr&chs=400x400&chld=H|1&chl=00020101021238570010A00000072701270006970436011304910001579430208QRIBFTTA5303704540410125802VN62120808selltool63045FEB\"\n}"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,1140 @@
+{
+	"info": {
+		"_postman_id": "899d3559-8fe5-4880-95ab-846801d221dd",
+		"name": "1.d. BIDV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-899d3559-8fe5-4880-95ab-846801d221dd?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/bidv/login?idBank=13",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"bidv",
+						"login"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "13"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login Old Data",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/bidv/login?idBank=13",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"bidv",
+								"login"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "13"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 07:21:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=MERNCL495ZW1DrnjXja9pVkudHcmFKw3leRfKd6jcPdEtY%2BEZlAOaHFZWpIBnnlQThy%2B0LXAvuVYD19ucL0bPYB4em7qeaQhPtCCSpOMKtD2tCjcS8KvFol4gAzw\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8045e9b92e453104-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"success\": true,\n    \"message\": \"OldData\",\n    \"session\": {\n        \"sessionId\": \"044f3e13f5d34f21a6bf11ff8632cb96\",\n        \"auth_token\": \"Bearer ******\",\n        \"mobileId\": \"0387654818\",\n        \"clientId\": \"3836845\",\n        \"cif\": \"19436560\"\n    },\n    \"data\": {\n        \"mid\": \"1\",\n        \"codeFull\": \"INFO-00\",\n        \"showDes\": false,\n        \"loginType\": \"1\",\n        \"name\": \"LE HONG SON\",\n        \"sessionId\": \"044f3e13f5d34f21a6bf11ff8632cb96\",\n        \"accessKey\": \"****\",\n        \"accessToken\": \"ey*****\",\n        \"sessionExpire\": \"5\",\n        \"cif\": \"19436560\",\n        \"isSpecial\": \"1\",\n        \"isUpper\": \"0\",\n        \"dob\": \"19/11/00\",\n        \"defaultAcc\": \"3711553103\",\n        \"email\": \"boysonyb@gmail.com\",\n        \"avatarUrl\": \"\",\n        \"lastLogin\": \"10/09/2023 14:21:15\",\n        \"reloadCache\": false,\n        \"banners\": \"./assets/media/img/background/home/1920/main-bg-6.jpg\",\n        \"mobileOtp\": \"0387654818\",\n        \"activatedSoftOtp\": \"1\",\n        \"sendEmailTrans\": \"\",\n        \"cusIdnumber\": \"061094323\",\n        \"address\": \"Viet Cuong, Tran Yen, Yen Bai\",\n        \"issueDate\": \"09062020\",\n        \"issuePlace\": \"CA TINH YEN BAI\",\n        \"nationality\": \"VN\",\n        \"cusResident\": \"1\",\n        \"otherDevice\": \"ON\",\n        \"isVip\": \"NORMAL\",\n        \"branchCode\": \"371000\",\n        \"isFamily\": \"0\",\n        \"success\": false,\n        \"code\": \"00\",\n        \"des\": \"Thành công\",\n        \"user\": \"0387654818\",\n        \"clientIP\": \"103.130.219.240\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Login OTP",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/bidv/login?idBank=13&otp=933440",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"bidv",
+						"login"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "13"
+						},
+						{
+							"key": "otp",
+							"value": "933440"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Balance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/bidv/balance?idBank=13",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"bidv",
+						"balance"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "13",
+							"description": "Bank ID trong hệ thống"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Balance",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/bidv/balance?idBank=13",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"bidv",
+								"balance"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "13",
+									"description": "Bank ID trong hệ thống"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 07:20:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=%2BIhYpRgNT7dZfT2K%2BQ8fGkLZZmM3WjcJexGvvA0UI5Bbg%2Fjg6Hna%2FWcXRJtgndW70ekdsojU1scuyE2evodxoXTHyo96dArKUyL2iBFJFpyfBLnD1DYFuQnaMg6z\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8045e9563ed83104-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"mid\": 10,\n    \"codeFull\": \"INFO-00\",\n    \"desDetail\": \"\",\n    \"showDes\": false,\n    \"accList\": [\n        {\n            \"cumDepFlag\": \"N\",\n            \"oldAcctNo\": \"37110001553103\",\n            \"prdCode\": \"1002\",\n            \"accNo\": \"3711553103\",\n            \"accName\": \"LE HONG SON\",\n            \"balanceAval\": \"419\",\n            \"accType\": \"D\",\n            \"branchCode\": \"371154\",\n            \"branchName\": \"CN YEN BAI PGD HONG HA\",\n            \"ccy\": \"VND\",\n            \"rule\": [\n                {\n                    \"ruleId\": \"2313\",\n                    \"serviceCode\": \"REGISTER\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2314\",\n                    \"serviceCode\": \"1410\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2340\",\n                    \"serviceCode\": \"0908\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2341\",\n                    \"serviceCode\": \"0906\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2342\",\n                    \"serviceCode\": \"0907\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2343\",\n                    \"serviceCode\": \"8884\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2344\",\n                    \"serviceCode\": \"0904\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2345\",\n                    \"serviceCode\": \"0902\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2346\",\n                    \"serviceCode\": \"0912\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2220\",\n                    \"serviceCode\": \"0230\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2223\",\n                    \"serviceCode\": \"0232\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2226\",\n                    \"serviceCode\": \"0231\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2229\",\n                    \"serviceCode\": \"0800\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2230\",\n                    \"serviceCode\": \"0800\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2232\",\n                    \"serviceCode\": \"1801\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2233\",\n                    \"serviceCode\": \"1201\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2234\",\n                    \"serviceCode\": \"0810\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2236\",\n                    \"serviceCode\": \"REGISTER_BE\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2238\",\n                    \"serviceCode\": \"1151\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2239\",\n                    \"serviceCode\": \"1100\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2243\",\n                    \"serviceCode\": \"0300\",\n                    \"ruleQuiry\": \"0\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2244\",\n                    \"serviceCode\": \"0440\",\n                    \"ruleQuiry\": \"0\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2245\",\n                    \"serviceCode\": \"1150\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2246\",\n                    \"serviceCode\": \"0441\",\n                    \"ruleQuiry\": \"0\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2247\",\n                    \"serviceCode\": \"2201\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2248\",\n                    \"serviceCode\": \"2202\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2249\",\n                    \"serviceCode\": \"2203\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2250\",\n                    \"serviceCode\": \"2204\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2251\",\n                    \"serviceCode\": \"6500\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2252\",\n                    \"serviceCode\": \"0540\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2253\",\n                    \"serviceCode\": \"6500\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2254\",\n                    \"serviceCode\": \"0540\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2256\",\n                    \"serviceCode\": \"0541\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2259\",\n                    \"serviceCode\": \"0549\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2260\",\n                    \"serviceCode\": \"0549\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2262\",\n                    \"serviceCode\": \"0545\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2263\",\n                    \"serviceCode\": \"0542\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2264\",\n                    \"serviceCode\": \"0544\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2265\",\n                    \"serviceCode\": \"0543\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2266\",\n                    \"serviceCode\": \"0546\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2267\",\n                    \"serviceCode\": \"0546\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2268\",\n                    \"serviceCode\": \"0547\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2269\",\n                    \"serviceCode\": \"0552\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2270\",\n                    \"serviceCode\": \"0553\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2271\",\n                    \"serviceCode\": \"0548\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2272\",\n                    \"serviceCode\": \"0548\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2273\",\n                    \"serviceCode\": \"0550\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2274\",\n                    \"serviceCode\": \"0550\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2275\",\n                    \"serviceCode\": \"2601\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2276\",\n                    \"serviceCode\": \"N001\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2277\",\n                    \"serviceCode\": \"6502\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2279\",\n                    \"serviceCode\": \"6501\",\n                    \"ruleQuiry\": \"0\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2281\",\n                    \"serviceCode\": \"6503\",\n                    \"ruleQuiry\": \"0\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2283\",\n                    \"serviceCode\": \"1501\",\n                    \"ruleQuiry\": \"0\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2284\",\n                    \"serviceCode\": \"N200\",\n                    \"ruleQuiry\": \"0\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2285\",\n                    \"serviceCode\": \"1004\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2290\",\n                    \"serviceCode\": \"2101\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2291\",\n                    \"serviceCode\": \"2301\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2294\",\n                    \"serviceCode\": \"1002\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2258\",\n                    \"serviceCode\": \"0541\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"3000\",\n                    \"serviceCode\": \"0911\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"3001\",\n                    \"serviceCode\": \"0914\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                }\n            ],\n            \"showDefault\": true,\n            \"balance\": \"419\",\n            \"minblm\": \"0\"\n        },\n        {\n            \"cumDepFlag\": \"N\",\n            \"oldAcctNo\": \"68066008956666\",\n            \"prdCode\": \"1000\",\n            \"accNo\": \"6808956666\",\n            \"accName\": \"LE HONG SON\",\n            \"balanceAval\": \"25502\",\n            \"accType\": \"D\",\n            \"branchCode\": \"680000\",\n            \"branchName\": \"CN LONG AN\",\n            \"ccy\": \"VND\",\n            \"rule\": [\n                {\n                    \"ruleId\": \"2313\",\n                    \"serviceCode\": \"REGISTER\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2314\",\n                    \"serviceCode\": \"1410\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2340\",\n                    \"serviceCode\": \"0908\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2341\",\n                    \"serviceCode\": \"0906\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2342\",\n                    \"serviceCode\": \"0907\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2343\",\n                    \"serviceCode\": \"8884\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2344\",\n                    \"serviceCode\": \"0904\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2345\",\n                    \"serviceCode\": \"0902\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2346\",\n                    \"serviceCode\": \"0912\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2220\",\n                    \"serviceCode\": \"0230\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2223\",\n                    \"serviceCode\": \"0232\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2226\",\n                    \"serviceCode\": \"0231\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2229\",\n                    \"serviceCode\": \"0800\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2230\",\n                    \"serviceCode\": \"0800\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2232\",\n                    \"serviceCode\": \"1801\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2233\",\n                    \"serviceCode\": \"1201\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2234\",\n                    \"serviceCode\": \"0810\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2236\",\n                    \"serviceCode\": \"REGISTER_BE\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2238\",\n                    \"serviceCode\": \"1151\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2239\",\n                    \"serviceCode\": \"1100\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2243\",\n                    \"serviceCode\": \"0300\",\n                    \"ruleQuiry\": \"0\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2244\",\n                    \"serviceCode\": \"0440\",\n                    \"ruleQuiry\": \"0\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2245\",\n                    \"serviceCode\": \"1150\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2246\",\n                    \"serviceCode\": \"0441\",\n                    \"ruleQuiry\": \"0\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2247\",\n                    \"serviceCode\": \"2201\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2248\",\n                    \"serviceCode\": \"2202\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2249\",\n                    \"serviceCode\": \"2203\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2250\",\n                    \"serviceCode\": \"2204\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2251\",\n                    \"serviceCode\": \"6500\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2252\",\n                    \"serviceCode\": \"0540\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2253\",\n                    \"serviceCode\": \"6500\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2254\",\n                    \"serviceCode\": \"0540\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2256\",\n                    \"serviceCode\": \"0541\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2259\",\n                    \"serviceCode\": \"0549\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2260\",\n                    \"serviceCode\": \"0549\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2262\",\n                    \"serviceCode\": \"0545\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2263\",\n                    \"serviceCode\": \"0542\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2264\",\n                    \"serviceCode\": \"0544\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2265\",\n                    \"serviceCode\": \"0543\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2266\",\n                    \"serviceCode\": \"0546\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2267\",\n                    \"serviceCode\": \"0546\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2268\",\n                    \"serviceCode\": \"0547\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2269\",\n                    \"serviceCode\": \"0552\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2270\",\n                    \"serviceCode\": \"0553\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2271\",\n                    \"serviceCode\": \"0548\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2272\",\n                    \"serviceCode\": \"0548\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2273\",\n                    \"serviceCode\": \"0550\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2274\",\n                    \"serviceCode\": \"0550\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2275\",\n                    \"serviceCode\": \"2601\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2276\",\n                    \"serviceCode\": \"N001\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2277\",\n                    \"serviceCode\": \"6502\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2279\",\n                    \"serviceCode\": \"6501\",\n                    \"ruleQuiry\": \"0\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2281\",\n                    \"serviceCode\": \"6503\",\n                    \"ruleQuiry\": \"0\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"2283\",\n                    \"serviceCode\": \"1501\",\n                    \"ruleQuiry\": \"0\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2284\",\n                    \"serviceCode\": \"N200\",\n                    \"ruleQuiry\": \"0\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2285\",\n                    \"serviceCode\": \"1004\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2290\",\n                    \"serviceCode\": \"2101\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2291\",\n                    \"serviceCode\": \"2301\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2294\",\n                    \"serviceCode\": \"1002\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"0\"\n                },\n                {\n                    \"ruleId\": \"2258\",\n                    \"serviceCode\": \"0541\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"0\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"3000\",\n                    \"serviceCode\": \"0911\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                },\n                {\n                    \"ruleId\": \"3001\",\n                    \"serviceCode\": \"0914\",\n                    \"ruleQuiry\": \"1\",\n                    \"ruleDebit\": \"1\",\n                    \"ruleCredit\": \"1\"\n                }\n            ],\n            \"showDefault\": false,\n            \"balance\": \"25502\",\n            \"minblm\": \"50000\"\n        }\n    ],\n    \"lstTotal\": [\n        {\n            \"ccy\": \"VND\",\n            \"amount\": \"25921\",\n            \"type\": \"D\",\n            \"total\": 25921\n        }\n    ],\n    \"success\": false,\n    \"requestId\": \"142059316844824\",\n    \"code\": \"00\",\n    \"des\": \"Thành công\",\n    \"clientPubKey\": \"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCLwPEczBI3kc+h4LJkqFDAMrg6ZD7EPTtIGWTVZ6qBJ6LaKBWPmzg+Xm+SqbPljRFkcdx5nI4q4X2XqU/WxOmF53ekQOQdVu9DUCrrK+H6ksCbrPWyBXaMD5pqoei41qFDMPsxUQxL0j1X12yVobH8R35Ie+XljJdpkm5aMhQ34wIDAQAB\",\n    \"user\": \"0387654818\",\n    \"clientIP\": \"103.130.219.240\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Histories",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/api/bidv/histories?idBank=13&nextRunbal=40000&postingDate=050324&postingOrder=IFX|22|MDAyNDM4MDQ1MjY2OTM3NjQyODkwNA==",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"bidv",
+						"histories"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "13",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "nextRunbal",
+							"value": "40000"
+						},
+						{
+							"key": "postingDate",
+							"value": "050324"
+						},
+						{
+							"key": "postingOrder",
+							"value": "IFX|22|MDAyNDM4MDQ1MjY2OTM3NjQyODkwNA=="
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Histories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{host}}/api/bidv/histories?idBank=13",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"bidv",
+								"histories"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "13",
+									"description": "Bank ID trong hệ thống"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Sep 2023 07:21:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=PX45w2e0xLxKTG0qP6rHFkoUIz6rQWyHTAsqwPx9nAx0KJ%2FrlAYY6F8KbtFcUp2WwesyoH1begCBfNpZSyDFjVV2nrwI8%2F%2Bk1WHJ4ac%2BW2q8nVjO1CghaaZzzpOn\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8045ea461a633104-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"mid\": 12,\n    \"code\": \"00\",\n    \"showDes\": false,\n    \"moreRecord\": \"Y\",\n    \"txnList\": [\n        {\n            \"txnDate\": \"23/08/2023\",\n            \"txnTime\": \"21:28:13\",\n            \"txnRemark\": \"MB-TKThe :662663666999, tai Vietinbank. ND LE HONG SON Chuyen tien -CTLNHIDO0\",\n            \"txnType\": \"-\",\n            \"amount\": \"1\",\n            \"refNo\": \"63703424\",\n            \"runbal\": \"419\",\n            \"postingOrder\": \"3\",\n            \"postingDate\": \"230823\",\n            \"ccy\": \"VND\",\n            \"balance\": \"420\",\n            \"fileIndicator\": \"H\"\n        },\n        {\n            \"txnDate\": \"23/08/2023\",\n            \"txnTime\": \"21:26:27\",\n            \"txnRemark\": \"MB-TKThe :662663666999, tai Vietinbank. ND LE HONG SON Chuyen tien -CTLNHIDO0\",\n            \"txnType\": \"-\",\n            \"amount\": \"12\",\n            \"refNo\": \"63700507\",\n            \"runbal\": \"420\",\n            \"postingOrder\": \"2\",\n            \"postingDate\": \"230823\",\n            \"ccy\": \"VND\",\n            \"balance\": \"432\",\n            \"fileIndicator\": \"H\"\n        },\n        {\n            \"txnDate\": \"23/08/2023\",\n            \"txnTime\": \"20:36:49\",\n            \"txnRemark\": \"MB-TKThe :662663666999, tai Vietinbank. ND LE HONG SON Chuyen tien -CTLNHIDO0\",\n            \"txnType\": \"-\",\n            \"amount\": \"1\",\n            \"refNo\": \"63607256\",\n            \"runbal\": \"432\",\n            \"postingOrder\": \"1\",\n            \"postingDate\": \"230823\",\n            \"ccy\": \"VND\",\n            \"balance\": \"433\",\n            \"fileIndicator\": \"H\"\n        },\n        {\n            \"txnDate\": \"21/08/2023\",\n            \"txnTime\": \"12:14:39\",\n            \"txnRemark\": \"MB-TKThe :0491000157943, tai Vietcombank. ND TestCk -CTLNHIDO0\",\n            \"txnType\": \"-\",\n            \"amount\": \"1000\",\n            \"refNo\": \"58070930\",\n            \"runbal\": \"433\",\n            \"postingOrder\": \"3\",\n            \"postingDate\": \"210823\",\n            \"ccy\": \"VND\",\n            \"balance\": \"1433\",\n            \"fileIndicator\": \"H\"\n        },\n        {\n            \"txnDate\": \"21/08/2023\",\n            \"txnTime\": \"12:13:44\",\n            \"txnRemark\": \"MB-TKThe :0491000157943, tai Vietcombank. ND TestCk -CTLNHIDO0\",\n            \"txnType\": \"-\",\n            \"amount\": \"1000\",\n            \"refNo\": \"58068738\",\n            \"runbal\": \"1433\",\n            \"postingOrder\": \"2\",\n            \"postingDate\": \"210823\",\n            \"ccy\": \"VND\",\n            \"balance\": \"2433\",\n            \"fileIndicator\": \"H\"\n        },\n        {\n            \"txnDate\": \"21/08/2023\",\n            \"txnTime\": \"12:06:57\",\n            \"txnRemark\": \"MB-TKThe :0491000157943, tai Vietcombank. ND TestCk -CTLNHIDO0\",\n            \"txnType\": \"-\",\n            \"amount\": \"1000\",\n            \"refNo\": \"58052502\",\n            \"runbal\": \"2433\",\n            \"postingOrder\": \"1\",\n            \"postingDate\": \"210823\",\n            \"ccy\": \"VND\",\n            \"balance\": \"3433\",\n            \"fileIndicator\": \"H\"\n        },\n        {\n            \"txnDate\": \"16/08/2023\",\n            \"txnTime\": \"14:22:42\",\n            \"txnRemark\": \"MB-TKThe :662663666999, tai Vietinbank. ND LE HONG SON Chuyen tien -CTLNHIDO0\",\n            \"txnType\": \"-\",\n            \"amount\": \"1000\",\n            \"refNo\": \"47738569\",\n            \"runbal\": \"3433\",\n            \"postingOrder\": \"2\",\n            \"postingDate\": \"160823\",\n            \"ccy\": \"VND\",\n            \"balance\": \"4433\",\n            \"fileIndicator\": \"H\"\n        },\n        {\n            \"txnDate\": \"16/08/2023\",\n            \"txnTime\": \"14:22:04\",\n            \"txnRemark\": \"MB-TKThe :662663666999, tai Vietinbank. ND LE HONG SON Chuyen tien -CTLNHIDO0\",\n            \"txnType\": \"-\",\n            \"amount\": \"1\",\n            \"refNo\": \"47737376\",\n            \"runbal\": \"4433\",\n            \"postingOrder\": \"1\",\n            \"postingDate\": \"160823\",\n            \"ccy\": \"VND\",\n            \"balance\": \"4434\",\n            \"fileIndicator\": \"H\"\n        },\n        {\n            \"txnDate\": \"08/08/2023\",\n            \"txnTime\": \"14:53:23\",\n            \"txnRemark\": \"Tfr Ac: 37110000592617 NGUYEN HONG MINH Chuyen tien\",\n            \"txnType\": \"+\",\n            \"amount\": \"1000\",\n            \"refNo\": \"509031713\",\n            \"runbal\": \"4434\",\n            \"postingOrder\": \"2\",\n            \"postingDate\": \"80823\",\n            \"ccy\": \"VND\",\n            \"balance\": \"3434\",\n            \"fileIndicator\": \"H\"\n        },\n        {\n            \"txnDate\": \"08/08/2023\",\n            \"txnTime\": \"14:38:09\",\n            \"txnRemark\": \"TKThe :662663666999, tai Vietinbank. LE HONG SON chuyen tien -CTLNHIDI0\",\n            \"txnType\": \"+\",\n            \"amount\": \"1111\",\n            \"refNo\": \"81165991\",\n            \"runbal\": \"3434\",\n            \"postingOrder\": \"1\",\n            \"postingDate\": \"80823\",\n            \"ccy\": \"VND\",\n            \"balance\": \"2323\",\n            \"fileIndicator\": \"H\"\n        }\n    ],\n    \"success\": true,\n    \"requestId\": \"142137638831426\",\n    \"des\": \"Thành công\",\n    \"clientPubKey\": \"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCLwPEczBI3kc+h4LJkqFDAMrg6ZD7EPTtIGWTVZ6qBJ6LaKBWPmzg+Xm+SqbPljRFkcdx5nI4q4X2XqU/WxOmF53ekQOQdVu9DUCrrK+H6ksCbrPWyBXaMD5pqoei41qFDMPsxUQxL0j1X12yVobH8R35Ie+XljJdpkm5aMhQ34wIDAQAB\",\n    \"user\": \"0387654818\",\n    \"clientIP\": \"103.130.219.240\"\n}"
+				}
+			]
+		},
+		{
+			"name": "More Histories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/bidv/histories-more?idBank=13&runbal=90765&date=261223&order=IFX|22|MDAyNDUxMTE3ODY2OTM3NTg2NTYwMw==",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"bidv",
+						"histories-more"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "13",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "runbal",
+							"value": "90765",
+							"description": "Thông tin của giao dịch cuối cùng"
+						},
+						{
+							"key": "date",
+							"value": "261223",
+							"description": "Thông tin của giao dịch cuối cùng"
+						},
+						{
+							"key": "order",
+							"value": "IFX|22|MDAyNDUxMTE3ODY2OTM3NTg2NTYwMw==",
+							"description": "Thông tin của giao dịch cuối cùng"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "More Histories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/bidv/histories?idBank=13&runbal=15011&date=280423&order=2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"bidv",
+								"histories"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "13",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "runbal",
+									"value": "15011",
+									"description": "Thông tin của giao dịch cuối cùng"
+								},
+								{
+									"key": "date",
+									"value": "280423",
+									"description": "Thông tin của giao dịch cuối cùng"
+								},
+								{
+									"key": "order",
+									"value": "2",
+									"description": "Thông tin của giao dịch cuối cùng"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 03:13:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=ow5qbpgpcaRQW%2BVyx8V4IDePf2D2xAVm74xcY%2FW2Z6FUeLZfeY%2FXEnf%2BVhHP2ZXHIRaobbM5gsJcIwj4LDIT6a96cWkZhS%2BDpg%2FRV4mJADXg2XFX1aiNdkVm1AyK\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "804cbc8009090ff5-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"mid\": 12,\n    \"code\": \"00\",\n    \"showDes\": false,\n    \"moreRecord\": \"Y\",\n    \"txnList\": [\n        {\n            \"txnDate\": \"10/09/2023\",\n            \"txnTime\": \"21:52:17\",\n            \"txnRemark\": \"MB-TKThe :0491000157943, tai Vietcombank. ND  TestCk                                                                                                                                          -CTLNHIDO000005636151616-1/1-PMT-002\",\n            \"txnType\": \"-\",\n            \"amount\": \"1\",\n            \"refNo\": \"08324hrO-7l876XvUv\",\n            \"runbal\": \"397\",\n            \"postingOrder\": \"IFX|22|MDA0MDU2ODA5MjY2NzI4MzY4MjQwMA==\",\n            \"postingDate\": \"100923\",\n            \"ccy\": \"VND\",\n            \"balance\": \"398\",\n            \"fileIndicator\": \"\"\n        },\n        {\n            \"txnDate\": \"10/09/2023\",\n            \"txnTime\": \"21:35:01\",\n            \"txnRemark\": \"MB-TKThe :0491000157943, tai Vietcombank. ND  TestCk                                                                                                                                          -CTLNHIDO000005636014655-1/1-PMT-002\",\n            \"txnType\": \"-\",\n            \"amount\": \"1\",\n            \"refNo\": \"083xPk6-7l85yQpRv\",\n            \"runbal\": \"398\",\n            \"postingOrder\": \"IFX|22|MDA0MDU2ODA5MjY2NzI4MzY4MjQwMA==\",\n            \"postingDate\": \"100923\",\n            \"ccy\": \"VND\",\n            \"balance\": \"399\",\n            \"fileIndicator\": \"\"\n        },\n        {\n            \"txnDate\": \"10/09/2023\",\n            \"txnTime\": \"21:32:46\",\n            \"txnRemark\": \"MB-TKThe :0491000157943, tai Vietcombank. ND  TestCk                                                                                                                                          -CTLNHIDO000005635996111-1/1-PMT-002\",\n            \"txnType\": \"-\",\n            \"amount\": \"1\",\n            \"refNo\": \"083oLKe-7l85pKUGV\",\n            \"runbal\": \"399\",\n            \"postingOrder\": \"IFX|22|MDA0MDU2ODA5MjY2NzI4MzY4MjQwMA==\",\n            \"postingDate\": \"100923\",\n            \"ccy\": \"VND\",\n            \"balance\": \"400\",\n            \"fileIndicator\": \"\"\n        },\n        {\n            \"txnDate\": \"10/09/2023\",\n            \"txnTime\": \"21:00:00\",\n            \"txnRemark\": \"MB-TKThe :0491000157943, tai Vietcombank. ND  TestCk                                                                                                                                          -CTLNHIDO000005635696780-1/1-PMT-002\",\n            \"txnType\": \"-\",\n            \"amount\": \"1\",\n            \"refNo\": \"0831HDG8-7l83gExyE\",\n            \"runbal\": \"400\",\n            \"postingOrder\": \"IFX|22|MDA0MDU2ODA5MjY2NzI4MzY4MjQwMA==\",\n            \"postingDate\": \"100923\",\n            \"ccy\": \"VND\",\n            \"balance\": \"401\",\n            \"fileIndicator\": \"\"\n        },\n        {\n            \"txnDate\": \"10/09/2023\",\n            \"txnTime\": \"20:43:59\",\n            \"txnRemark\": \"MB-TKThe :0491000157943, tai Vietcombank. ND  TestCk                                                                                                                                          -CTLNHIDO000005635537961-1/1-PMT-002\",\n            \"txnType\": \"-\",\n            \"amount\": \"1\",\n            \"refNo\": \"08317rcA-7l82dEJed\",\n            \"runbal\": \"401\",\n            \"postingOrder\": \"IFX|22|MDA0MDU2ODA5MjY2NzI4MzY4MjQwMA==\",\n            \"postingDate\": \"100923\",\n            \"ccy\": \"VND\",\n            \"balance\": \"402\",\n            \"fileIndicator\": \"\"\n        },\n        {\n            \"txnDate\": \"10/09/2023\",\n            \"txnTime\": \"20:33:28\",\n            \"txnRemark\": \"MB-TKThe :0491000157943, tai Vietcombank. ND  TestCk                                                                                                                                          -CTLNHIDO000005635429594-1/1-PMT-002\",\n            \"txnType\": \"-\",\n            \"amount\": \"1\",\n            \"refNo\": \"0831FHti-7l81wYxJg\",\n            \"runbal\": \"402\",\n            \"postingOrder\": \"IFX|22|MDA0MDU2ODA5MjY2NzI4MzY4MjQwMA==\",\n            \"postingDate\": \"100923\",\n            \"ccy\": \"VND\",\n            \"balance\": \"403\",\n            \"fileIndicator\": \"\"\n        },\n        {\n            \"txnDate\": \"10/09/2023\",\n            \"txnTime\": \"20:20:23\",\n            \"txnRemark\": \"MB-TKThe :0491000157943, tai Vietcombank. ND  TestCk                                                                                                                                          -CTLNHIDO000005635292401-1/1-PMT-002\",\n            \"txnType\": \"-\",\n            \"amount\": \"1\",\n            \"refNo\": \"0833ljko-7l815Qsi8\",\n            \"runbal\": \"403\",\n            \"postingOrder\": \"IFX|22|MDA0MDU2ODA5MjY2NzI4MzY4MjQwMA==\",\n            \"postingDate\": \"100923\",\n            \"ccy\": \"VND\",\n            \"balance\": \"404\",\n            \"fileIndicator\": \"\"\n        },\n        {\n            \"txnDate\": \"10/09/2023\",\n            \"txnTime\": \"20:17:04\",\n            \"txnRemark\": \"MB-TKThe :0491000157943, tai Vietcombank. ND  TestCk                                                                                                                                          -CTLNHIDO000005635256836-1/1-PMT-002\",\n            \"txnType\": \"-\",\n            \"amount\": \"1\",\n            \"refNo\": \"0831iQt6-7l80rv96B\",\n            \"runbal\": \"404\",\n            \"postingOrder\": \"IFX|22|MDA0MDU2ODA5MjY2NzI4MzY4MjQwMA==\",\n            \"postingDate\": \"100923\",\n            \"ccy\": \"VND\",\n            \"balance\": \"405\",\n            \"fileIndicator\": \"\"\n        },\n        {\n            \"txnDate\": \"10/09/2023\",\n            \"txnTime\": \"20:15:43\",\n            \"txnRemark\": \"MB-TKThe :0491000157943, tai Vietcombank. ND  TestCk                                                                                                                                          -CTLNHIDO000005635242472-1/1-PMT-002\",\n            \"txnType\": \"-\",\n            \"amount\": \"1\",\n            \"refNo\": \"083pAPu-7l80mSuVG\",\n            \"runbal\": \"405\",\n            \"postingOrder\": \"IFX|22|MDA0MDU2ODA5MjY2NzI4MzY4MjQwMA==\",\n            \"postingDate\": \"100923\",\n            \"ccy\": \"VND\",\n            \"balance\": \"406\",\n            \"fileIndicator\": \"\"\n        },\n        {\n            \"txnDate\": \"10/09/2023\",\n            \"txnTime\": \"19:59:14\",\n            \"txnRemark\": \"MB-TKThe :0491000157943, tai Vietcombank. ND  TestCk                                                                                                                                          -CTLNHIDO000005635065702-1/1-PMT-002\",\n            \"txnType\": \"-\",\n            \"amount\": \"1\",\n            \"refNo\": \"0831FpzA-7l7zhUlwA\",\n            \"runbal\": \"406\",\n            \"postingOrder\": \"IFX|22|MDA0MDU2ODA5MjY2NzI4MzY4MjQwMA==\",\n            \"postingDate\": \"100923\",\n            \"ccy\": \"VND\",\n            \"balance\": \"407\",\n            \"fileIndicator\": \"\"\n        }\n    ],\n    \"success\": true,\n    \"requestId\": \"101343102315967\",\n    \"des\": \"Thành công\",\n    \"clientPubKey\": \"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCLwPEczBI3kc+h4LJkqFDAMrg6ZD7EPTtIGWTVZ6qBJ6LaKBWPmzg+Xm+SqbPljRFkcdx5nI4q4X2XqU/WxOmF53ekQOQdVu9DUCrrK+H6ksCbrPWyBXaMD5pqoei41qFDMPsxUQxL0j1X12yVobH8R35Ie+XljJdpkm5aMhQ34wIDAQAB\",\n    \"user\": \"0387654818\",\n    \"clientIP\": \"103.130.219.240\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/bidv/transfer?idBank=13&toBank=0491000157943&bankCode=970436&amount=2000&memo=TestCk",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"bidv",
+						"transfer"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "13",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "toBank",
+							"value": "0491000157943",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970436",
+							"description": "Bankcode Napas 247"
+						},
+						{
+							"key": "amount",
+							"value": "2000",
+							"description": "Số tiền"
+						},
+						{
+							"key": "memo",
+							"value": "TestCk",
+							"description": "Lời nhắn"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Transfer",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/bidv/transfer?idBank=13&toBank=0491000157943&bankCode=970436&amount=1&memo=TestCk",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"bidv",
+								"transfer"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "13",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "toBank",
+									"value": "0491000157943",
+									"description": "Số tài khoản nhận tiền"
+								},
+								{
+									"key": "bankCode",
+									"value": "970436",
+									"description": "Bankcode Napas 247"
+								},
+								{
+									"key": "amount",
+									"value": "1",
+									"description": "Số tiền"
+								},
+								{
+									"key": "memo",
+									"value": "TestCk",
+									"description": "Lời nhắn"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 03:15:09 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=K7Nhqb36jjYGfwbuw1XeexO%2Baar5YleaqItB4tiFnKml1kqaYW0PsGTrnzVkZnsVXH%2B%2Bn5jLEJDl097zHsBTFmAiMNpGVvIlrpkpk1WJLj3p%2FGfYPuGDuVkx%2BINJ\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "804cbe96ee890ff5-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"mid\": 102,\n    \"code\": \"00\",\n    \"codeFull\": \"INFO-00\",\n    \"authToken\": \"c94a56f0ebdc4dd080bf1cdef41d090a\",\n    \"showDes\": false,\n    \"tranDate\": \"11/09/2023 10:15:09\",\n    \"tranToken\": \"A7C52C68A31A4C17A8B4\",\n    \"dataSotp\": \"00020101021502020103069704180404BIDV0720A7C52C68A31A4C17A8B408141109202310150910037041264d47a2f73af8d57581ddb3e3c5c3252146911a10b99e2577c75040dc0c8ac4cda13049C4F\",\n    \"tranxId\": \"20026472556\",\n    \"authenType\": [\n        \"0\"\n    ],\n    \"serviceCode\": \"0542\",\n    \"timeExpireSms\": \"120\",\n    \"fee\": \"0\",\n    \"vat\": \"0\",\n    \"isBen\": \"0\",\n    \"beneName\": \"\",\n    \"otpForTxn\": \"\",\n    \"softForClient\": {\n        \"transId\": 20026472556,\n        \"fromAccount\": \"3711553103\",\n        \"amount\": \"1\",\n        \"toAccount\": \"0491000157943\"\n    },\n    \"source\": \"IB\",\n    \"os\": \"WINDOWS\",\n    \"clientIP\": \"103.130.219.240\",\n    \"lang\": \"vi\",\n    \"fromAcc\": \"3711553103\",\n    \"toAcc\": \"0491000157943\",\n    \"toAccName\": \"LE HONG SON\",\n    \"ccy\": \"VND\",\n    \"amount\": \"1\",\n    \"chargeFeeTo\": \"1\",\n    \"remark\": \"TestCk\",\n    \"realAmount\": \"1\",\n    \"tranType\": \"1\",\n    \"bankCode247\": \"970436\",\n    \"bankName\": \"NH TMCP Ngoai Thuong Viet nam\",\n    \"trace\": \"980916\",\n    \"toAccCard\": \"0491000157943\",\n    \"toAccCardName\": \"LE HONG SON\",\n    \"email\": \"\",\n    \"contactId\": \"\",\n    \"branchName\": \"NHTMCP NGOAI THUONG VN\",\n    \"branchCode\": \"371154\",\n    \"success\": true,\n    \"requestId\": \"101509082568436\",\n    \"des\": \"Thành công\",\n    \"clientPubKey\": \"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCLwPEczBI3kc+h4LJkqFDAMrg6ZD7EPTtIGWTVZ6qBJ6LaKBWPmzg+Xm+SqbPljRFkcdx5nI4q4X2XqU/WxOmF53ekQOQdVu9DUCrrK+H6ksCbrPWyBXaMD5pqoei41qFDMPsxUQxL0j1X12yVobH8R35Ie+XljJdpkm5aMhQ34wIDAQAB\",\n    \"user\": \"0387654818\"\n}"
+				}
+			]
+		},
+		{
+			"name": "One Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/bidv/one-transfer?idBank=13&toBank=102876729473&bankCode=970415&amount=10000&memo=Selltool&requestId=123231",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"bidv",
+						"one-transfer"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "13",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "toBank",
+							"value": "102876729473",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970415",
+							"description": "Bankcode Napas 247"
+						},
+						{
+							"key": "amount",
+							"value": "10000",
+							"description": "Số tiền"
+						},
+						{
+							"key": "memo",
+							"value": "Selltool",
+							"description": "Lời nhắn"
+						},
+						{
+							"key": "requestId",
+							"value": "123231"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "One Transfer",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/bidv/one-transfer?idBank=13&toBank=0491000157943&bankCode=970436&amount=1&memo=TestCk",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"bidv",
+								"one-transfer"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "13",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "toBank",
+									"value": "0491000157943",
+									"description": "Số tài khoản nhận tiền"
+								},
+								{
+									"key": "bankCode",
+									"value": "970436",
+									"description": "Bankcode Napas 247"
+								},
+								{
+									"key": "amount",
+									"value": "1",
+									"description": "Số tiền"
+								},
+								{
+									"key": "memo",
+									"value": "TestCk",
+									"description": "Lời nhắn"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:18:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=4XzE458KWV1wk7v2RkiD7ch5R2XfkbTGHd%2BzWEEW1NnSU051QquMP5p8MkNqXDpnvZOfs4IrwoHAAkBL00wGDYnGjQCKosXrmA8%2FVp9Che8Ys2yS5OFJlAP82kwi\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d3e1c6c32dbaa-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"mid\": 102,\n    \"code\": \"00\",\n    \"codeFull\": \"INFO-00\",\n    \"authToken\": \"098e0276ce3f452da1ca172d29545b30\",\n    \"showDes\": false,\n    \"tranDate\": \"13/09/2023 10:18:25\",\n    \"tranToken\": \"EBC7D800F1C64C6AB2DA\",\n    \"dataSotp\": \"00020101021502020103069704180404BIDV0720EBC7D800F1C64C6AB2DA08141309202310182510037041264f25e7c1a5505ef4443446a64ee3fa490a886f7ba560be4cb0758b2d19619aec413043B40\",\n    \"tranxId\": \"20034414341\",\n    \"authenType\": [\n        \"0\"\n    ],\n    \"serviceCode\": \"0542\",\n    \"timeExpireSms\": \"120\",\n    \"fee\": \"0\",\n    \"vat\": \"0\",\n    \"isBen\": \"0\",\n    \"beneName\": \"\",\n    \"otpForTxn\": \"\",\n    \"softForClient\": {\n        \"transId\": 20034414341,\n        \"fromAccount\": \"3711553103\",\n        \"amount\": \"1\",\n        \"toAccount\": \"0491000157943\"\n    },\n    \"source\": \"IB\",\n    \"os\": \"WINDOWS\",\n    \"clientIP\": \"103.130.219.240\",\n    \"lang\": \"vi\",\n    \"fromAcc\": \"3711553103\",\n    \"toAcc\": \"0491000157943\",\n    \"toAccName\": \"LE HONG SON\",\n    \"ccy\": \"VND\",\n    \"amount\": \"1\",\n    \"chargeFeeTo\": \"1\",\n    \"remark\": \"TestCk\",\n    \"realAmount\": \"1\",\n    \"tranType\": \"1\",\n    \"bankCode247\": \"970436\",\n    \"bankName\": \"NH TMCP Ngoai Thuong Viet nam\",\n    \"trace\": \"838751\",\n    \"toAccCard\": \"0491000157943\",\n    \"toAccCardName\": \"LE HONG SON\",\n    \"email\": \"\",\n    \"contactId\": \"\",\n    \"branchName\": \"NHTMCP NGOAI THUONG VN\",\n    \"branchCode\": \"371154\",\n    \"success\": true,\n    \"requestId\": \"101824658333877\",\n    \"des\": \"Thành công\",\n    \"clientPubKey\": \"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCLwPEczBI3kc+h4LJkqFDAMrg6ZD7EPTtIGWTVZ6qBJ6LaKBWPmzg+Xm+SqbPljRFkcdx5nI4q4X2XqU/WxOmF53ekQOQdVu9DUCrrK+H6ksCbrPWyBXaMD5pqoei41qFDMPsxUQxL0j1X12yVobH8R35Ie+XljJdpkm5aMhQ34wIDAQAB\",\n    \"user\": \"0387654818\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Transfer OTP",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/bidv/updatetransfer?idBank=1&tranxId=9720336721&cancel=false",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"bidv",
+						"updatetransfer"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "1",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "tranxId",
+							"value": "9720336721"
+						},
+						{
+							"key": "cancel",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Info Transfer Local",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/bidv/infotransfer?tranxId=20761781954&idBank=13",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"bidv",
+						"infotransfer"
+					],
+					"query": [
+						{
+							"key": "tranxId",
+							"value": "20761781954",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "idBank",
+							"value": "13"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Info Transfer Local",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/bidv/infotransfer?tranxId=20026472556&idBank=13",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"bidv",
+								"infotransfer"
+							],
+							"query": [
+								{
+									"key": "tranxId",
+									"value": "20026472556",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "idBank",
+									"value": "13"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 03:16:01 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=8jj4ym1x9H6zXVHHEPUC0TH5MezYPWeMx4EQmhAfOw76MeSQVe4kM5jpKO5%2F9TJL8VH%2F9bJagHmK4zQlJPEWkNKvbABoISU230tOKBT%2FpIOaGNv%2BiHhrYvlId0Yj\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "804cbfe12d350ff5-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 74,\n    \"idbank\": \"13\",\n    \"username\": \"0387654818\",\n    \"tranxId\": \"20026472556\",\n    \"toAccCard\": \"0491000157943\",\n    \"toAccCardName\": \"LE HONG SON\",\n    \"amount\": \"1\",\n    \"tranToken\": \"A7C52C68A31A4C17A8B4\",\n    \"showDes\": \"0\",\n    \"dataSOTP\": \"00020101021502020103069704180404BIDV0720A7C52C68A31A4C17A8B408141109202310150910037041264d47a2f73af8d57581ddb3e3c5c3252146911a10b99e2577c75040dc0c8ac4cda13049C4F\",\n    \"status\": \"00\",\n    \"owner\": \"1\",\n    \"note\": \"Giao dịch thành công\",\n    \"app\": \"com.bidv.smartbanking\",\n    \"fullBank\": \"bidv\",\n    \"created_at\": null,\n    \"updated_at\": null\n}"
+				}
+			]
+		}
+	]
+}

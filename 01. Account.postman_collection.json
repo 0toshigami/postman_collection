@@ -1,0 +1,643 @@
+{
+	"info": {
+		"_postman_id": "c113a912-01fa-45ed-a475-e3741b7ddaae",
+		"name": "01. Account",
+		"description": "Register account",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-c113a912-01fa-45ed-a475-e3741b7ddaae?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "scanbank"
+						},
+						{
+							"key": "email",
+							"value": "selltoolscanbank@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "scanbank"
+						},
+						{
+							"key": "selltoll",
+							"value": "selltoll",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/account/register",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "selltoolvn"
+								},
+								{
+									"key": "email",
+									"value": "selltool@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "selltoolvn"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/account/register",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 04:09:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=ybIvXhOtMKD8FYfYe1SWc7SW0%2FjfaEFDgEPR3W1bbFSPmVsKpTfjn2s9L5wdNKbjDsiQEp6w55F%2FBnSf5qHN46wmtnKrSkXB26gXj9vyThoK%2B76t%2BVPPZQ1%2FYohk\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "801360aeca400fd8-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLnVrbS52bi9hcGkvYWNjb3VudC9yZWdpc3RlciIsImlhdCI6MTY5MzgwMDUxMiwibmJmIjoxNjkzODAwNTEyLCJqdGkiOiJDZHo4WlI3VlFWdjU0dVhIIiwic3ViIjoiMjYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.yejE34OiDOc8kh6iudsQ1-YinzK7DPP2Wnl-vTwnRzw\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "123",
+							"description": "Tài khoản"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"description": "Mật khẩu"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/account/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"login"
+					]
+				},
+				"description": "Login, and server response token, token used to authenticate system"
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "selltool",
+									"description": "Tài khoản"
+								},
+								{
+									"key": "password",
+									"value": "selltool",
+									"description": "Mật khẩu"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/account/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 04:10:39 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=%2BAtm6iI7uFk%2Bwnnsmjg6eASOMEWo2Ed6LpyLyvI1eS9fhWcBZrL5HkL9eTOxtIxjkzFL6WL5pGGwCYo9ATvVeeA3yPZvEoeTV9SDTUnDDpH6uMdNR1me0JF4AMlw\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "801362494b7f0fd8-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLnVrbS52bi9hcGkvYWNjb3VudC9sb2dpbiIsImlhdCI6MTY5MzgwMDU3OCwibmJmIjoxNjkzODAwNTc4LCJqdGkiOiJKN1RVeThlbG16eGNzVkNPIiwic3ViIjoiMjUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.i-b39fM__-zcDZvCBh_aPXa6fHbXVdpevQcLtHLuDPA\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/account/logout?token={{token}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				},
+				"description": "Logout"
+			},
+			"response": [
+				{
+					"name": "Logout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/account/logout?token={{token}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"logout"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 04:14:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=u7xsfZK2ouxtgwC8lPKsRsKCbF8ylDFtkclxDoFphhVvOYQQS20Wv4G8%2BokPxhIPFbUlgnuo8k1NMOerZ9fe8NltRGzVXQfZcmvS1VC1cJjFIs97N%2Flg6KJtdGOv\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "801368324ef90fd8-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"You have successfully logged out.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Info Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/account/info",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"info"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Info Account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/account/info?token={{token}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"info"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 04:15:56 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=WrXaNa3qLfetkifaaLXIQtsOQ%2Fbz2iEUn5UR6wa%2Faj68kYfJ10BHBDcwKYs7J%2BHTwSCbOZtC8NFhvMSpLWFD3lHaztX%2BEYPRETYm%2Fpu6RRALURt3ha4hAH1a9fBW\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80136a0928050fd8-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"id\": 1,\n    \"name\": \"Vô Danh\",\n    \"email\": \"132333@gmail.com2\",\n    \"balance\": \"10,000\",\n    \"create_at\": \"10/05/2023\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Check Token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/checktoken",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"checktoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nạp thẻ cào",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "telco",
+							"value": "VIETTEL",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "028928514986570",
+							"type": "text"
+						},
+						{
+							"key": "serial",
+							"value": "20000252811999",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "10000",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/account/rechargecard",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"rechargecard"
+					]
+				},
+				"description": "Đăng nhập vào hệ thống, sẽ trả về 1 token có thời hạn là 1 ngày"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

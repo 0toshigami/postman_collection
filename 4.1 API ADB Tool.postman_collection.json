@@ -1,0 +1,423 @@
+{
+	"info": {
+		"_postman_id": "cb064ab9-e86f-42bb-b98a-bf91b4d79687",
+		"name": "4.1 API ADB Tool",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-cb064ab9-e86f-42bb-b98a-bf91b4d79687?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "01. VCB: Session Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/selltool/cookie-account?username=0387654818",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"selltool",
+						"cookie-account"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "0387654818"
+						}
+					]
+				},
+				"description": "If \"type\" = 1 then SMS will be sent"
+			},
+			"response": [
+				{
+					"name": "Login And Require OTP",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietcombank/login?idBank=7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"login"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "7"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"description": "1: SMS",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 04:52:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=M1tLONWrrqYjykJvMhEwJHk%2BQXxd57N4M5AQFRShuYstauh0YIwgdovo2SvH4wjVkPy%2BWJ3ovh7HqHTqWakGxDt99yi8bmS7u3rHxRo0R7oe7wmuj%2FurUG7cgkSB\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80139f5fdbda7c83-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"needOTP\",\n    \"result\": {\n        \"browserToken\": \"a432c84064a148f48716bb6b2c6d0bb1\",\n        \"tranId\": \"4151246145\",\n        \"challenge\": \"00493621\"\n    },\n    \"param\": {\n        \"DT\": \"Windows\",\n        \"OV\": \"10\",\n        \"PM\": \"Chrome 104.0.0.0\",\n        \"E\": \"37144485-4F33-E45B-6FF1-BDD367783133\",\n        \"browserId\": \"9f92b5d3f8bab7e9c5b97e534e01d3c7\",\n        \"lang\": \"vi\",\n        \"mid\": 3010,\n        \"cif\": \"\",\n        \"clientId\": \"\",\n        \"mobileId\": \"\",\n        \"sessionId\": \"\",\n        \"browserToken\": \"a432c84064a148f48716bb6b2c6d0bb1\",\n        \"tranId\": \"4151246141\",\n        \"type\": 5,\n        \"user\": \"0387654818\"\n    },\n    \"data\": {\n        \"mid\": \"3010\",\n        \"code\": \"00\",\n        \"des\": \"success\",\n        \"data\": \"eyJrIjoiQTQyOEQyRjhGNjczMTJEQzNENjA1NTgxNTcwOTE5NkREREUzOUQ4Rjc4QjZGRjVGODA5QUEzMEI4NDkzNzkyMTU3NzNCNTk3NjQ2Njg1QTA2OTQ1MEM1QzZEQzJFMTQ2MTIwMUU4NkE0RkRBQkY2NTFFMDYwRUYwODYzMDk2QTdFMDVERTI1QjAxMzE2RkUxOUJFMzJCMzIwRDRFOUJEMUEyMDdGNjI3RTU0QTUxQkVEN0E2MkRERkYxRjA1MzZBMTE3MkFFREEyMDlEMDhCODYxQ0MyRTBENDlGNTA0RUYiLCJlIjoiOUUxNDRGQ0Y4NDlFRDc4MUJGM0E4MDQzMjE3QzQ0MkQzRkZDMzVCNTA3QkYwMUFGNTA2Q0I0Q0Y1MUMxQkI4RDkzRjA4NDBCRDZDMzcyNzJDMjYwQUQyMUJCMDUyOEI2NjUyNUREQUJDRDkxMDJBQUQyNDgwMjAyMjc0REJDQ0Q5QkNFNTYzNEQzRkEzMTE2QkM4NkIyMUJEMjI4MjIxMjNCOUMxMjIwMjJCMDY2NTk0RDYwMTkiLCJ0IjoxNjkzODAzMTUyLCJsaWNlbnNlVmVyc2lvbiI6MTM2NzYxMjIsInMiOiJNRVFDSUJLWHJxSUIyZWVVVGdMVGRiSGFrczBIM2FaSFVGbkZvd2M0T0UxMjNQMjZBaUFrUFdYenBwUWtlTzVBdW5iRDg0NFYxSm9UR3dldXA0cEx6ek9CdTZEcjh3PT0ifQ==\",\n        \"tranId\": \"4151246141\",\n        \"challenge\": \"00493613\",\n        \"E\": \"37144485-4F33-E45B-6FF1-BDD370783133\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "02. VCB: Change Session Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/selltool/vcb-change-cookie-account?username=0387654818&mobileId=mobileId&clientId=clientId&cif=cif&sessionId=sessionId",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"selltool",
+						"vcb-change-cookie-account"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "0387654818"
+						},
+						{
+							"key": "mobileId",
+							"value": "mobileId"
+						},
+						{
+							"key": "clientId",
+							"value": "clientId"
+						},
+						{
+							"key": "cif",
+							"value": "cif"
+						},
+						{
+							"key": "sessionId",
+							"value": "sessionId"
+						}
+					]
+				},
+				"description": "If \"type\" = 1 then SMS will be sent"
+			},
+			"response": [
+				{
+					"name": "Login And Require OTP",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietcombank/login?idBank=7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"login"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "7"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"description": "1: SMS",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 04:52:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=M1tLONWrrqYjykJvMhEwJHk%2BQXxd57N4M5AQFRShuYstauh0YIwgdovo2SvH4wjVkPy%2BWJ3ovh7HqHTqWakGxDt99yi8bmS7u3rHxRo0R7oe7wmuj%2FurUG7cgkSB\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80139f5fdbda7c83-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"needOTP\",\n    \"result\": {\n        \"browserToken\": \"a432c84064a148f48716bb6b2c6d0bb1\",\n        \"tranId\": \"4151246145\",\n        \"challenge\": \"00493621\"\n    },\n    \"param\": {\n        \"DT\": \"Windows\",\n        \"OV\": \"10\",\n        \"PM\": \"Chrome 104.0.0.0\",\n        \"E\": \"37144485-4F33-E45B-6FF1-BDD367783133\",\n        \"browserId\": \"9f92b5d3f8bab7e9c5b97e534e01d3c7\",\n        \"lang\": \"vi\",\n        \"mid\": 3010,\n        \"cif\": \"\",\n        \"clientId\": \"\",\n        \"mobileId\": \"\",\n        \"sessionId\": \"\",\n        \"browserToken\": \"a432c84064a148f48716bb6b2c6d0bb1\",\n        \"tranId\": \"4151246141\",\n        \"type\": 5,\n        \"user\": \"0387654818\"\n    },\n    \"data\": {\n        \"mid\": \"3010\",\n        \"code\": \"00\",\n        \"des\": \"success\",\n        \"data\": \"eyJrIjoiQTQyOEQyRjhGNjczMTJEQzNENjA1NTgxNTcwOTE5NkREREUzOUQ4Rjc4QjZGRjVGODA5QUEzMEI4NDkzNzkyMTU3NzNCNTk3NjQ2Njg1QTA2OTQ1MEM1QzZEQzJFMTQ2MTIwMUU4NkE0RkRBQkY2NTFFMDYwRUYwODYzMDk2QTdFMDVERTI1QjAxMzE2RkUxOUJFMzJCMzIwRDRFOUJEMUEyMDdGNjI3RTU0QTUxQkVEN0E2MkRERkYxRjA1MzZBMTE3MkFFREEyMDlEMDhCODYxQ0MyRTBENDlGNTA0RUYiLCJlIjoiOUUxNDRGQ0Y4NDlFRDc4MUJGM0E4MDQzMjE3QzQ0MkQzRkZDMzVCNTA3QkYwMUFGNTA2Q0I0Q0Y1MUMxQkI4RDkzRjA4NDBCRDZDMzcyNzJDMjYwQUQyMUJCMDUyOEI2NjUyNUREQUJDRDkxMDJBQUQyNDgwMjAyMjc0REJDQ0Q5QkNFNTYzNEQzRkEzMTE2QkM4NkIyMUJEMjI4MjIxMjNCOUMxMjIwMjJCMDY2NTk0RDYwMTkiLCJ0IjoxNjkzODAzMTUyLCJsaWNlbnNlVmVyc2lvbiI6MTM2NzYxMjIsInMiOiJNRVFDSUJLWHJxSUIyZWVVVGdMVGRiSGFrczBIM2FaSFVGbkZvd2M0T0UxMjNQMjZBaUFrUFdYenBwUWtlTzVBdW5iRDg0NFYxSm9UR3dldXA0cEx6ek9CdTZEcjh3PT0ifQ==\",\n        \"tranId\": \"4151246141\",\n        \"challenge\": \"00493613\",\n        \"E\": \"37144485-4F33-E45B-6FF1-BDD370783133\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "02. Test SSE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/selltool/sse",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"selltool",
+						"sse"
+					]
+				},
+				"description": "If \"type\" = 1 then SMS will be sent"
+			},
+			"response": [
+				{
+					"name": "Login And Require OTP",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietcombank/login?idBank=7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"login"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "7"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"description": "1: SMS",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 04:52:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=M1tLONWrrqYjykJvMhEwJHk%2BQXxd57N4M5AQFRShuYstauh0YIwgdovo2SvH4wjVkPy%2BWJ3ovh7HqHTqWakGxDt99yi8bmS7u3rHxRo0R7oe7wmuj%2FurUG7cgkSB\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80139f5fdbda7c83-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"needOTP\",\n    \"result\": {\n        \"browserToken\": \"a432c84064a148f48716bb6b2c6d0bb1\",\n        \"tranId\": \"4151246145\",\n        \"challenge\": \"00493621\"\n    },\n    \"param\": {\n        \"DT\": \"Windows\",\n        \"OV\": \"10\",\n        \"PM\": \"Chrome 104.0.0.0\",\n        \"E\": \"37144485-4F33-E45B-6FF1-BDD367783133\",\n        \"browserId\": \"9f92b5d3f8bab7e9c5b97e534e01d3c7\",\n        \"lang\": \"vi\",\n        \"mid\": 3010,\n        \"cif\": \"\",\n        \"clientId\": \"\",\n        \"mobileId\": \"\",\n        \"sessionId\": \"\",\n        \"browserToken\": \"a432c84064a148f48716bb6b2c6d0bb1\",\n        \"tranId\": \"4151246141\",\n        \"type\": 5,\n        \"user\": \"0387654818\"\n    },\n    \"data\": {\n        \"mid\": \"3010\",\n        \"code\": \"00\",\n        \"des\": \"success\",\n        \"data\": \"eyJrIjoiQTQyOEQyRjhGNjczMTJEQzNENjA1NTgxNTcwOTE5NkREREUzOUQ4Rjc4QjZGRjVGODA5QUEzMEI4NDkzNzkyMTU3NzNCNTk3NjQ2Njg1QTA2OTQ1MEM1QzZEQzJFMTQ2MTIwMUU4NkE0RkRBQkY2NTFFMDYwRUYwODYzMDk2QTdFMDVERTI1QjAxMzE2RkUxOUJFMzJCMzIwRDRFOUJEMUEyMDdGNjI3RTU0QTUxQkVEN0E2MkRERkYxRjA1MzZBMTE3MkFFREEyMDlEMDhCODYxQ0MyRTBENDlGNTA0RUYiLCJlIjoiOUUxNDRGQ0Y4NDlFRDc4MUJGM0E4MDQzMjE3QzQ0MkQzRkZDMzVCNTA3QkYwMUFGNTA2Q0I0Q0Y1MUMxQkI4RDkzRjA4NDBCRDZDMzcyNzJDMjYwQUQyMUJCMDUyOEI2NjUyNUREQUJDRDkxMDJBQUQyNDgwMjAyMjc0REJDQ0Q5QkNFNTYzNEQzRkEzMTE2QkM4NkIyMUJEMjI4MjIxMjNCOUMxMjIwMjJCMDY2NTk0RDYwMTkiLCJ0IjoxNjkzODAzMTUyLCJsaWNlbnNlVmVyc2lvbiI6MTM2NzYxMjIsInMiOiJNRVFDSUJLWHJxSUIyZWVVVGdMVGRiSGFrczBIM2FaSFVGbkZvd2M0T0UxMjNQMjZBaUFrUFdYenBwUWtlTzVBdW5iRDg0NFYxSm9UR3dldXA0cEx6ek9CdTZEcjh3PT0ifQ==\",\n        \"tranId\": \"4151246141\",\n        \"challenge\": \"00493613\",\n        \"E\": \"37144485-4F33-E45B-6FF1-BDD370783133\"\n    }\n}"
+				}
+			]
+		}
+	]
+}

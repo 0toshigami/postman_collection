@@ -1,0 +1,841 @@
+{
+	"info": {
+		"_postman_id": "63027cf9-4065-41f0-919a-de8009d67f81",
+		"name": "02. Manager Bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-63027cf9-4065-41f0-919a-de8009d67f81?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "01. Add Bank",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "03876548181",
+							"description": "Username bank account"
+						},
+						{
+							"key": "password",
+							"value": "Son123@2",
+							"description": "Password bank account"
+						},
+						{
+							"key": "bankName",
+							"value": "vcb",
+							"description": "vtb, vcb, mbb, tpb, bidv, acb, scb, vpb, msb"
+						},
+						{
+							"key": "numberAccount",
+							"value": "0491000157943",
+							"description": "Number bank account"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/manage/bank/bank-account",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"manage",
+						"bank",
+						"bank-account"
+					]
+				},
+				"description": "Add an account and receive ID to request all other APIs"
+			},
+			"response": [
+				{
+					"name": "Add Bank Account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "0365424349"
+								},
+								{
+									"key": "password",
+									"value": "Pthao143206#"
+								},
+								{
+									"key": "bankName",
+									"value": "mbb",
+									"description": "vtb, vcb, mbb, tpb, bidv, acb, scb, vpb"
+								},
+								{
+									"key": "numberAccount",
+									"value": "00011400003206"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/manage/bank/bank-account",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"manage",
+								"bank",
+								"bank-account"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 04:16:23 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=sDmf0645LoMW5GVeXXo4V5B9OG55kxvR%2FLo4zR3glwTAxnhQVWMXSI489JiMrtyIDWw1grvNZQm%2B2LYo8N5MKB05bDGraWGCllIAWZBvMpdBlBDdfmHSi1Fj6uCp\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80136ab0193d0fd8-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 39,\n    \"username\": \"0365424349\",\n    \"password\": \"Pthao143206#\",\n    \"numberAccount\": \"00011400003206\",\n    \"bankName\": \"mbb\",\n    \"moneyDailyReceive\": \"0\",\n    \"moneyMonthReceive\": \"0\",\n    \"isWorking\": 1,\n    \"isQueue\": null,\n    \"callbackUrl\": null,\n    \"isProxy\": null,\n    \"proxy\": null,\n    \"balance\": \"0\",\n    \"type\": \"0\",\n    \"group\": 0,\n    \"owner\": 1,\n    \"created_at\": \"2023-07-14T16:35:45.000000Z\",\n    \"updated_at\": \"2023-07-14T16:35:45.000000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "02. List Bank",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/api/manage/bank/bank-account?bankName=mbb&order=desc",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"manage",
+						"bank",
+						"bank-account"
+					],
+					"query": [
+						{
+							"key": "bankName",
+							"value": "mbb",
+							"description": "Filter bank"
+						},
+						{
+							"key": "order",
+							"value": "desc"
+						}
+					]
+				},
+				"description": "Get list bank account added\n\nCan add params **\"bankName\"** to filter by bank name"
+			},
+			"response": [
+				{
+					"name": "List Bank Account",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{host}}/api/manage/bank/bank-account",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"manage",
+								"bank",
+								"bank-account"
+							],
+							"query": [
+								{
+									"key": "bankName",
+									"value": "vcb",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 04:16:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "55"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=ammgw3nUYzTyk%2BEZko%2FKc4uz1QwTEryYyI%2B9GXv7YRrM30a8bFIiKYWva5cAV3atmPezj1bbbPVpEzSZOCOhDMpBHsh%2Bzz2pjckPC4ImPCIPEMdduidwn7Pqosxq\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80136aec395d0fd8-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"data\": [\n        {\n            \"id\": 7,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"0491000157943\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": 1,\n            \"isQueue\": 1,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"19/05/2023\"\n        },\n        {\n            \"id\": 8,\n            \"username\": \"MB061094323\",\n            \"numberAccount\": \"0387654818\",\n            \"bankName\": \"mbb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"19/05/2023\"\n        },\n        {\n            \"id\": 9,\n            \"username\": \"038765483\",\n            \"numberAccount\": \"0491000157943\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"20/05/2023\"\n        },\n        {\n            \"id\": 10,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"662663666999\",\n            \"bankName\": \"vtb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"20/05/2023\"\n        },\n        {\n            \"id\": 11,\n            \"username\": \"0968503430\",\n            \"numberAccount\": \"08860493690\",\n            \"bankName\": \"mbb\",\n            \"isWorking\": 1,\n            \"isQueue\": 0,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"21/05/2023\"\n        },\n        {\n            \"id\": 12,\n            \"username\": \"0379916261\",\n            \"numberAccount\": \"9965191234\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"22/05/2023\"\n        },\n        {\n            \"id\": 13,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"37110001553103\",\n            \"bankName\": \"bidv\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": 0,\n            \"proxy\": \"http://194.233.85.190:3128\",\n            \"created_at\": \"22/05/2023\"\n        },\n        {\n            \"id\": 15,\n            \"username\": \"lesondev1911\",\n            \"numberAccount\": \"00001942125\",\n            \"bankName\": \"tpb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"28/05/2023\"\n        },\n        {\n            \"id\": 16,\n            \"username\": \"lesondev1911\",\n            \"numberAccount\": \"00001942125\",\n            \"bankName\": \"tpb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"28/05/2023\"\n        },\n        {\n            \"id\": 17,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"7164631\",\n            \"bankName\": \"acb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"29/05/2023\"\n        },\n        {\n            \"id\": 28,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"3606666888\",\n            \"bankName\": \"tcb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"12/06/2023\"\n        },\n        {\n            \"id\": 29,\n            \"username\": \"PTHILAN2212\",\n            \"numberAccount\": \"123123123\",\n            \"bankName\": \"scb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"19/06/2023\"\n        },\n        {\n            \"id\": 30,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"123123123123\",\n            \"bankName\": \"vpb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"29/06/2023\"\n        },\n        {\n            \"id\": 31,\n            \"username\": \"0855576421\",\n            \"numberAccount\": \"0855517421\",\n            \"bankName\": \"vpb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"29/06/2023\"\n        },\n        {\n            \"id\": 32,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"020102924917\",\n            \"bankName\": \"scb\",\n            \"isWorking\": 1,\n            \"isQueue\": 1,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"04/07/2023\"\n        },\n        {\n            \"id\": 33,\n            \"username\": \"LESONDEV\",\n            \"numberAccount\": \"000004129271\",\n            \"bankName\": \"sab\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"05/07/2023\"\n        },\n        {\n            \"id\": 34,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"03201012522358\",\n            \"bankName\": \"msb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"07/07/2023\"\n        },\n        {\n            \"id\": 35,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"8701281003647\",\n            \"bankName\": \"agr\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"09/07/2023\"\n        },\n        {\n            \"id\": 36,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"020102924917\",\n            \"bankName\": \"scb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"10/07/2023\"\n        },\n        {\n            \"id\": 37,\n            \"username\": \"0387654123\",\n            \"numberAccount\": \"020102924917\",\n            \"bankName\": \"scb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"10/07/2023\"\n        },\n        {\n            \"id\": 38,\n            \"username\": \"0387654123\",\n            \"numberAccount\": \"0201029249177899\",\n            \"bankName\": \"aaa\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"10/07/2023\"\n        },\n        {\n            \"id\": 39,\n            \"username\": \"0365424349\",\n            \"numberAccount\": \"00011400003206\",\n            \"bankName\": \"mbb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"14/07/2023\"\n        },\n        {\n            \"id\": 41,\n            \"username\": \"selltool\",\n            \"numberAccount\": \"123123\",\n            \"bankName\": \"mbb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"30/07/2023\"\n        },\n        {\n            \"id\": 42,\n            \"username\": \"selltool\",\n            \"numberAccount\": \"123123\",\n            \"bankName\": \"vtb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"30/07/2023\"\n        },\n        {\n            \"id\": 44,\n            \"username\": \"selltool\",\n            \"numberAccount\": \"1212121221\",\n            \"bankName\": \"acb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"30/07/2023\"\n        },\n        {\n            \"id\": 45,\n            \"username\": \"selltool\",\n            \"numberAccount\": \"123123\",\n            \"bankName\": \"bidv\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"30/07/2023\"\n        },\n        {\n            \"id\": 49,\n            \"username\": \"123\",\n            \"numberAccount\": \"123123\",\n            \"bankName\": \"vtb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"01/08/2023\"\n        },\n        {\n            \"id\": 50,\n            \"username\": \"123\",\n            \"numberAccount\": \"123123\",\n            \"bankName\": \"bidv\",\n            \"isWorking\": 1,\n            \"isQueue\": 1,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"01/08/2023\"\n        },\n        {\n            \"id\": 51,\n            \"username\": \"123\",\n            \"numberAccount\": \"2314235433\",\n            \"bankName\": \"acb\",\n            \"isWorking\": 0,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"02/08/2023\"\n        },\n        {\n            \"id\": 55,\n            \"username\": \"0565500504\",\n            \"numberAccount\": \"1040236143\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": null,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"23/08/2023\"\n        },\n        {\n            \"id\": 56,\n            \"username\": \"0559674238\",\n            \"numberAccount\": \"123123\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": null,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"23/08/2023\"\n        },\n        {\n            \"id\": 57,\n            \"username\": \"0877167338\",\n            \"numberAccount\": \"123123123\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": null,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"23/08/2023\"\n        },\n        {\n            \"id\": 58,\n            \"username\": \"123\",\n            \"numberAccount\": \"123123\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": null,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"26/08/2023\"\n        },\n        {\n            \"id\": 59,\n            \"username\": \"0877821539\",\n            \"numberAccount\": \"1040345683\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": null,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"28/08/2023\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "03. Info Bank Account",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/api/manage/bank/info?idBank=137",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"manage",
+						"bank",
+						"info"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "137"
+						}
+					]
+				},
+				"description": "Get all data stored in the database of an account"
+			},
+			"response": [
+				{
+					"name": "03. Info Bank Account",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{host}}/api/manage/bank/info?idBank=59",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"manage",
+								"bank",
+								"info"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "59"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 04:17:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=SU7Kws2zvmsG0bk%2FNTKXyPshsXs2NoZUpCQNjOZMRQyqOkkJJF2Bi9qjFfNJQoo%2F7mwuQYxJpYsgW%2B8azFoEOHYYQAD7JklWu%2BmH%2FstCFRsL6FZJ2ooXUuU4V6qf\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80136c479ddb0fd8-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 59,\n    \"username\": \"0877821539\",\n    \"password\": \"jPAKN1122@\",\n    \"numberAccount\": \"1040345683\",\n    \"bankName\": \"vcb\",\n    \"moneyDailyReceive\": \"0\",\n    \"moneyMonthReceive\": \"0\",\n    \"isWorking\": null,\n    \"isQueue\": null,\n    \"callbackUrl\": null,\n    \"isProxy\": null,\n    \"proxy\": null,\n    \"balance\": \"0\",\n    \"type\": \"0\",\n    \"group\": \"0\",\n    \"owner\": \"1\",\n    \"created_at\": \"28/08/2023\",\n    \"updated_at\": \"28/08/2023\"\n}"
+				}
+			]
+		},
+		{
+			"name": "04. List All Bank",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/api/manage/bank/listbank-active",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"manage",
+						"bank",
+						"listbank-active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "05. Bật tắt tài khoản",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "32",
+							"type": "text"
+						},
+						{
+							"key": "target",
+							"value": "isWorking",
+							"description": "isWorking, isQueue, isProxy",
+							"type": "text"
+						},
+						{
+							"key": "value",
+							"value": "0",
+							"description": "Chỉ có 0 và 1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/manage/bank/toggle-bank-account",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"manage",
+						"bank",
+						"toggle-bank-account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "06. Edit Bank",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/api/manage/bank/bank-account?callbackUrl=123&numberAccount=6626636669991",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"manage",
+						"bank",
+						"bank-account"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "8",
+							"description": "Filter bank",
+							"disabled": true
+						},
+						{
+							"key": "callbackUrl",
+							"value": "123"
+						},
+						{
+							"key": "numberAccount",
+							"value": "6626636669991"
+						}
+					]
+				},
+				"description": "Get list bank account added\n\nCan add params **\"bankName\"** to filter by bank name"
+			},
+			"response": [
+				{
+					"name": "List Bank Account",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{host}}/api/manage/bank/bank-account",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"manage",
+								"bank",
+								"bank-account"
+							],
+							"query": [
+								{
+									"key": "bankName",
+									"value": "vcb",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 04:16:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "55"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=ammgw3nUYzTyk%2BEZko%2FKc4uz1QwTEryYyI%2B9GXv7YRrM30a8bFIiKYWva5cAV3atmPezj1bbbPVpEzSZOCOhDMpBHsh%2Bzz2pjckPC4ImPCIPEMdduidwn7Pqosxq\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80136aec395d0fd8-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"data\": [\n        {\n            \"id\": 7,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"0491000157943\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": 1,\n            \"isQueue\": 1,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"19/05/2023\"\n        },\n        {\n            \"id\": 8,\n            \"username\": \"MB061094323\",\n            \"numberAccount\": \"0387654818\",\n            \"bankName\": \"mbb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"19/05/2023\"\n        },\n        {\n            \"id\": 9,\n            \"username\": \"038765483\",\n            \"numberAccount\": \"0491000157943\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"20/05/2023\"\n        },\n        {\n            \"id\": 10,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"662663666999\",\n            \"bankName\": \"vtb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"20/05/2023\"\n        },\n        {\n            \"id\": 11,\n            \"username\": \"0968503430\",\n            \"numberAccount\": \"08860493690\",\n            \"bankName\": \"mbb\",\n            \"isWorking\": 1,\n            \"isQueue\": 0,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"21/05/2023\"\n        },\n        {\n            \"id\": 12,\n            \"username\": \"0379916261\",\n            \"numberAccount\": \"9965191234\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"22/05/2023\"\n        },\n        {\n            \"id\": 13,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"37110001553103\",\n            \"bankName\": \"bidv\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": 0,\n            \"proxy\": \"http://194.233.85.190:3128\",\n            \"created_at\": \"22/05/2023\"\n        },\n        {\n            \"id\": 15,\n            \"username\": \"lesondev1911\",\n            \"numberAccount\": \"00001942125\",\n            \"bankName\": \"tpb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"28/05/2023\"\n        },\n        {\n            \"id\": 16,\n            \"username\": \"lesondev1911\",\n            \"numberAccount\": \"00001942125\",\n            \"bankName\": \"tpb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"28/05/2023\"\n        },\n        {\n            \"id\": 17,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"7164631\",\n            \"bankName\": \"acb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"29/05/2023\"\n        },\n        {\n            \"id\": 28,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"3606666888\",\n            \"bankName\": \"tcb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"12/06/2023\"\n        },\n        {\n            \"id\": 29,\n            \"username\": \"PTHILAN2212\",\n            \"numberAccount\": \"123123123\",\n            \"bankName\": \"scb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"19/06/2023\"\n        },\n        {\n            \"id\": 30,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"123123123123\",\n            \"bankName\": \"vpb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"29/06/2023\"\n        },\n        {\n            \"id\": 31,\n            \"username\": \"0855576421\",\n            \"numberAccount\": \"0855517421\",\n            \"bankName\": \"vpb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"29/06/2023\"\n        },\n        {\n            \"id\": 32,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"020102924917\",\n            \"bankName\": \"scb\",\n            \"isWorking\": 1,\n            \"isQueue\": 1,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"04/07/2023\"\n        },\n        {\n            \"id\": 33,\n            \"username\": \"LESONDEV\",\n            \"numberAccount\": \"000004129271\",\n            \"bankName\": \"sab\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"05/07/2023\"\n        },\n        {\n            \"id\": 34,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"03201012522358\",\n            \"bankName\": \"msb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"07/07/2023\"\n        },\n        {\n            \"id\": 35,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"8701281003647\",\n            \"bankName\": \"agr\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"09/07/2023\"\n        },\n        {\n            \"id\": 36,\n            \"username\": \"0387654818\",\n            \"numberAccount\": \"020102924917\",\n            \"bankName\": \"scb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"10/07/2023\"\n        },\n        {\n            \"id\": 37,\n            \"username\": \"0387654123\",\n            \"numberAccount\": \"020102924917\",\n            \"bankName\": \"scb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"10/07/2023\"\n        },\n        {\n            \"id\": 38,\n            \"username\": \"0387654123\",\n            \"numberAccount\": \"0201029249177899\",\n            \"bankName\": \"aaa\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"10/07/2023\"\n        },\n        {\n            \"id\": 39,\n            \"username\": \"0365424349\",\n            \"numberAccount\": \"00011400003206\",\n            \"bankName\": \"mbb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"14/07/2023\"\n        },\n        {\n            \"id\": 41,\n            \"username\": \"selltool\",\n            \"numberAccount\": \"123123\",\n            \"bankName\": \"mbb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"30/07/2023\"\n        },\n        {\n            \"id\": 42,\n            \"username\": \"selltool\",\n            \"numberAccount\": \"123123\",\n            \"bankName\": \"vtb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"30/07/2023\"\n        },\n        {\n            \"id\": 44,\n            \"username\": \"selltool\",\n            \"numberAccount\": \"1212121221\",\n            \"bankName\": \"acb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"30/07/2023\"\n        },\n        {\n            \"id\": 45,\n            \"username\": \"selltool\",\n            \"numberAccount\": \"123123\",\n            \"bankName\": \"bidv\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"30/07/2023\"\n        },\n        {\n            \"id\": 49,\n            \"username\": \"123\",\n            \"numberAccount\": \"123123\",\n            \"bankName\": \"vtb\",\n            \"isWorking\": 1,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"01/08/2023\"\n        },\n        {\n            \"id\": 50,\n            \"username\": \"123\",\n            \"numberAccount\": \"123123\",\n            \"bankName\": \"bidv\",\n            \"isWorking\": 1,\n            \"isQueue\": 1,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"01/08/2023\"\n        },\n        {\n            \"id\": 51,\n            \"username\": \"123\",\n            \"numberAccount\": \"2314235433\",\n            \"bankName\": \"acb\",\n            \"isWorking\": 0,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"02/08/2023\"\n        },\n        {\n            \"id\": 55,\n            \"username\": \"0565500504\",\n            \"numberAccount\": \"1040236143\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": null,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"23/08/2023\"\n        },\n        {\n            \"id\": 56,\n            \"username\": \"0559674238\",\n            \"numberAccount\": \"123123\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": null,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"23/08/2023\"\n        },\n        {\n            \"id\": 57,\n            \"username\": \"0877167338\",\n            \"numberAccount\": \"123123123\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": null,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"23/08/2023\"\n        },\n        {\n            \"id\": 58,\n            \"username\": \"123\",\n            \"numberAccount\": \"123123\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": null,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"26/08/2023\"\n        },\n        {\n            \"id\": 59,\n            \"username\": \"0877821539\",\n            \"numberAccount\": \"1040345683\",\n            \"bankName\": \"vcb\",\n            \"isWorking\": null,\n            \"isQueue\": null,\n            \"balance\": \"0\",\n            \"callbackUrl\": null,\n            \"isProxy\": null,\n            \"proxy\": null,\n            \"created_at\": \"28/08/2023\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Bank Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/manage/bank/bank-account?idBank=9",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"manage",
+						"bank",
+						"bank-account"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Bank Account",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/manage/bank/bank-account?idBank=9",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"manage",
+								"bank",
+								"bank-account"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 04:21:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=EAaHwP2jhRT6bYKtn1a2ITjlQa1Jjbr7ceUJZAhBCVVU2MVoRUBcC4A7ONWfFONKtob2Y5mzsHxDGbzaveCey3AHOc4naPzypjkJSnhJfdHvSX%2FyV%2FCStDGHC8DF\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "801371f66f5c0fd8-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"true\",\n    \"message\": \"Delete Success\"\n}"
+				}
+			]
+		}
+	]
+}

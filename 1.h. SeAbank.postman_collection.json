@@ -1,0 +1,566 @@
+{
+	"info": {
+		"_postman_id": "3327ee8e-bec6-47ad-b7c6-df151a30eb39",
+		"name": "1.h. SeAbank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-3327ee8e-bec6-47ad-b7c6-df151a30eb39?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/seabank/login?idBank=33",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"seabank",
+						"login"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "33"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/seabank/login?idBank=33",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"seabank",
+								"login"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "33"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 06:23:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=USwr3wUMIOM0lPBHPvITmutGDRumSxAYFK549Z7AsvaNX9gE4wqvmh3Ned4CSwaHGRSedZWX595khT3zmueftO32Jmj15uWBkWZcDK1AMJMxPziHRKB3oj7XZ%2FD2\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805e4deaf9ac2efc-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"00\",\n    \"message\": \"Success\",\n    \"messageVi\": null,\n    \"messageEn\": null,\n    \"data\": {\n        \"changePassword\": \"OPEN\",\n        \"username\": \"1694245300\",\n        \"customerId\": \"169453553\",\n        \"mainAccount\": \"0000343529271\",\n        \"id_token\": \"eyJ*************\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Info Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/seabank/info?idBank=33",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"seabank",
+						"info"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "33"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Info Account",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/seabank/getinfo?idBank=33",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"seabank",
+								"getinfo"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "33"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 06:24:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=pfvcCwq07wrx7sMyOhVMmj2Xq5abTpajoy6DsE1J6ZKhJUcJd0Kzjc3b790XXe6JPUzcOq8%2FiCkotwcht7S%2B3TtXKbWlGT02j9AnUgB38t6ho9EjJG75cs6XurfG\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805e4e68ba222efc-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"code\" : \"00\",\n  \"message\" : \"Success\",\n  \"messageVi\" : null,\n  \"messageEn\" : null,\n  \"data\" : [ {\n    \"accountType\" : \"CURRENT\",\n    \"shortName\" : \"LE HONG SON\",\n    \"shortTitle\" : \"LE HONG SON\",\n    \"currency\" : \"VND\",\n    \"accountID\" : \"000004129271\",\n    \"account13\" : \"000004129271\",\n    \"category\" : \"1001\",\n    \"company\" : \"VN0010009\",\n    \"availBal\" : \"623\",\n    \"clearedBal\" : \"623\",\n    \"addShortName\" : \"\",\n    \"addShortTitle\" : \"\",\n    \"addAccountType\" : \"\",\n    \"interest\" : \"0.00\",\n    \"totalInterest\" : \"\",\n    \"maturityDate\" : \"\",\n    \"openingDate\" : \"20230703\",\n    \"productCode\" : \"800\",\n    \"productName\" : \"TK TG THANH TOAN\",\n    \"keyMap\" : null,\n    \"ruleOption\" : null,\n    \"accountNmVi\" : \"Tài khoản thanh toán\",\n    \"accountNmEn\" : \"Current Account\",\n    \"companyNameGB\" : \"TRUNG HOA T.O\",\n    \"companyNameVI\" : \"PGD TRUNG HOA\",\n    \"customerID\" : \"16945953\",\n    \"customerType\" : \"INDIVIDUAL\",\n    \"faceValue\" : \"\",\n    \"contributionType\" : \"\",\n    \"groupCode\" : \"TKTT\",\n    \"lockedAmt\" : null,\n    \"minBal\" : null,\n    \"altAccountNum\" : null,\n    \"remainLimit\" : null,\n    \"interestFreq\" : null,\n    \"availAmt\" : null,\n    \"locTerm\" : null,\n    \"overDueDate\" : null,\n    \"valueDate\" : null,\n    \"totalRepayAmt\" : null,\n    \"subsidiaryAccount\" : null,\n    \"interestLiquAcct\" : null,\n    \"approvedLimit\" : null,\n    \"block\" : null,\n    \"maturityInstr\" : null\n  } ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Histories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/seabank/histories?idBank=33&day=30",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"seabank",
+						"histories"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "33"
+						},
+						{
+							"key": "day",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Histories",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/seabank/histories?idBank=33&day=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"seabank",
+								"histories"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "33"
+								},
+								{
+									"key": "day",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 06:26:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=ZBtv48p6NzrR51crW%2BSuwhSQjM4QI0s5j21aR%2BqxvG%2FTOBp8gVwCDpKuGyB7kQkQmrRPs3MtD%2F3H586t1WXGmHRA7DXPXUMPvCkBAUxOOHioYehPLDAl%2FKMdA7I5\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805e51315a642efc-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\"code\":\"00\",\"message\":\"Success\",\"messageVi\":null,\"messageEn\":null,\"data\":null}"
+				}
+			]
+		},
+		{
+			"name": "Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "33"
+						},
+						{
+							"key": "toBank",
+							"value": "0491000157943",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970436",
+							"description": "Bankcode Napas 247"
+						},
+						{
+							"key": "amount",
+							"value": "10000",
+							"description": "Số tiền"
+						},
+						{
+							"key": "memo",
+							"value": "Tra tien nha",
+							"description": "Lời nhắn"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/seabank/transfer",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"seabank",
+						"transfer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Histories",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/seabank/histories?idBank=33&day=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"seabank",
+								"histories"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "33"
+								},
+								{
+									"key": "day",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 06:26:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=ZBtv48p6NzrR51crW%2BSuwhSQjM4QI0s5j21aR%2BqxvG%2FTOBp8gVwCDpKuGyB7kQkQmrRPs3MtD%2F3H586t1WXGmHRA7DXPXUMPvCkBAUxOOHioYehPLDAl%2FKMdA7I5\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805e51315a642efc-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\"code\":\"00\",\"message\":\"Success\",\"messageVi\":null,\"messageEn\":null,\"data\":null}"
+				}
+			]
+		}
+	]
+}

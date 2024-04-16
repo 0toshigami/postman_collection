@@ -1,0 +1,2106 @@
+{
+	"info": {
+		"_postman_id": "cab2a1ea-f4c4-4e55-8a1f-1ae0447b0beb",
+		"name": "1.a. Vietcombank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-cab2a1ea-f4c4-4e55-8a1f-1ae0447b0beb?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "01. Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/vietcombank/login?idBank=7",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietcombank",
+						"login"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "7"
+						},
+						{
+							"key": "type",
+							"value": "1",
+							"description": "1: SMS",
+							"disabled": true
+						},
+						{
+							"key": "browserId",
+							"value": "eba632350f1dfffd884a51d2753b64de",
+							"description": "Dont turn on it",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "0387654818",
+							"disabled": true
+						},
+						{
+							"key": "numberAccount",
+							"value": "0491000157943",
+							"disabled": true
+						}
+					]
+				},
+				"description": "If \"type\" = 1 then SMS will be sent"
+			},
+			"response": [
+				{
+					"name": "Login And Require OTP",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietcombank/login?idBank=7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"login"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "7"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"description": "1: SMS",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 04:52:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=M1tLONWrrqYjykJvMhEwJHk%2BQXxd57N4M5AQFRShuYstauh0YIwgdovo2SvH4wjVkPy%2BWJ3ovh7HqHTqWakGxDt99yi8bmS7u3rHxRo0R7oe7wmuj%2FurUG7cgkSB\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80139f5fdbda7c83-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"needOTP\",\n    \"result\": {\n        \"browserToken\": \"a432c84064a148f48716bb6b2c6d0bb1\",\n        \"tranId\": \"4151246145\",\n        \"challenge\": \"00493621\"\n    },\n    \"param\": {\n        \"DT\": \"Windows\",\n        \"OV\": \"10\",\n        \"PM\": \"Chrome 104.0.0.0\",\n        \"E\": \"37144485-4F33-E45B-6FF1-BDD367783133\",\n        \"browserId\": \"9f92b5d3f8bab7e9c5b97e534e01d3c7\",\n        \"lang\": \"vi\",\n        \"mid\": 3010,\n        \"cif\": \"\",\n        \"clientId\": \"\",\n        \"mobileId\": \"\",\n        \"sessionId\": \"\",\n        \"browserToken\": \"a432c84064a148f48716bb6b2c6d0bb1\",\n        \"tranId\": \"4151246141\",\n        \"type\": 5,\n        \"user\": \"0387654818\"\n    },\n    \"data\": {\n        \"mid\": \"3010\",\n        \"code\": \"00\",\n        \"des\": \"success\",\n        \"data\": \"eyJrIjoiQTQyOEQyRjhGNjczMTJEQzNENjA1NTgxNTcwOTE5NkREREUzOUQ4Rjc4QjZGRjVGODA5QUEzMEI4NDkzNzkyMTU3NzNCNTk3NjQ2Njg1QTA2OTQ1MEM1QzZEQzJFMTQ2MTIwMUU4NkE0RkRBQkY2NTFFMDYwRUYwODYzMDk2QTdFMDVERTI1QjAxMzE2RkUxOUJFMzJCMzIwRDRFOUJEMUEyMDdGNjI3RTU0QTUxQkVEN0E2MkRERkYxRjA1MzZBMTE3MkFFREEyMDlEMDhCODYxQ0MyRTBENDlGNTA0RUYiLCJlIjoiOUUxNDRGQ0Y4NDlFRDc4MUJGM0E4MDQzMjE3QzQ0MkQzRkZDMzVCNTA3QkYwMUFGNTA2Q0I0Q0Y1MUMxQkI4RDkzRjA4NDBCRDZDMzcyNzJDMjYwQUQyMUJCMDUyOEI2NjUyNUREQUJDRDkxMDJBQUQyNDgwMjAyMjc0REJDQ0Q5QkNFNTYzNEQzRkEzMTE2QkM4NkIyMUJEMjI4MjIxMjNCOUMxMjIwMjJCMDY2NTk0RDYwMTkiLCJ0IjoxNjkzODAzMTUyLCJsaWNlbnNlVmVyc2lvbiI6MTM2NzYxMjIsInMiOiJNRVFDSUJLWHJxSUIyZWVVVGdMVGRiSGFrczBIM2FaSFVGbkZvd2M0T0UxMjNQMjZBaUFrUFdYenBwUWtlTzVBdW5iRDg0NFYxSm9UR3dldXA0cEx6ek9CdTZEcjh3PT0ifQ==\",\n        \"tranId\": \"4151246141\",\n        \"challenge\": \"00493613\",\n        \"E\": \"37144485-4F33-E45B-6FF1-BDD370783133\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Login OTP",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/vietcombank/otplogin?idBank=69&otp=711958",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietcombank",
+						"otplogin"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "69",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "otp",
+							"value": "711958"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login OTP",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietcombank/otplogin?idBank=7&otp=981157",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"otplogin"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "7",
+									"description": "Bank ID in list account bank"
+								},
+								{
+									"key": "otp",
+									"value": "981157",
+									"description": "OTP"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 08:37:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=t6IVM4TXaor4TwMCE%2FAoV3O02mOXneMs7mRZMvLgVG4q4rrgcOxgu1socMqrlTX375bKWwV9IKJGegvXTPl%2BXqOmUHe%2Bfk%2BzWcxrdxjXCKwCrb9kVhZTFUCo2dAD\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8014e8b7aeae7edd-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"success\",\n    \"session\": {\n        \"sessionId\": \"d769ddef222147b8880b9xxx34c356d2\",\n        \"mobileId\": \"15701317\",\n        \"clientId\": \"22443894\",\n        \"cif\": \"15363147\"\n    },\n    \"data\": {\n        \"mid\": \"3011\",\n        \"code\": \"00\",\n        \"des\": \"success\",\n        \"sessionId\": \"d769ddef222147b8880b9xxx34c356d2\",\n        \"userInfo\": {\n            \"username\": \"0123456789\",\n            \"cusId\": \"15701317\",\n            \"mobileNo\": \"0123456789\",\n            \"cif\": \"15363147\",\n            \"cusName\": \"SELL TOOL\",\n            \"cusEmail\": \"SELLTOOL@GMAIL.COM\",\n            \"cusEmailSeq\": \"30\",\n            \"createUser\": \"CNMAI\",\n            \"updateUser\": \"VCB-DIGI\",\n            \"confirmUser\": \"VCB-DIGI\",\n            \"resetPassDate\": \"20230820000000\",\n            \"defaultAccount\": \"04910000000000\",\n            \"defaultAccountNew\": \"0004051319\",\n            \"defaultAccountType\": \"D\",\n            \"defaultAccountCcy\": \"VND\",\n            \"defaultAccountProduct\": \"10016\",\n            \"defaultAccountBranchCode\": \"04905\",\n            \"status\": \"3\",\n            \"cusAddr\": \"Ha dong,Ha dong,HA DONG,HA NOI\",\n            \"cusIdNumber\": \"012312312\",\n            \"idType\": \"IC\",\n            \"issueDate\": \"0001-01-01T00:00:00\",\n            \"birthday\": \"1990-11-11T00:00:00\",\n            \"sex\": \"M\",\n            \"cusType\": \"I\",\n            \"numConfirmOtp\": \"100\",\n            \"numOtpActSoft\": \"0\",\n            \"otpMethod\": \"1\",\n            \"mobileId\": \"15705457\",\n            \"clientId\": \"22444567\",\n            \"registChannel\": \"TP\",\n            \"createdDate\": \"2020-01-10 10:10:10.0\",\n            \"receiverOTP\": \"0123456789\",\n            \"lastLogin\": \"2023-08-30 00:11:00.884\",\n            \"crossLogin\": \"0\",\n            \"isActiveSMS\": \"1\",\n            \"listFav\": \"UT5,T1,UT2,UT3,C3,S1,1640995200000\",\n            \"isLockedWeb\": \"0\",\n            \"isLockedMB\": \"0\",\n            \"isLockedPAY\": \"0\",\n            \"channelId\": \"22446398\",\n            \"emailSettings\": \"1\",\n            \"pkgCode\": \"PK01\",\n            \"promotionCode\": \"GD02\",\n            \"branchCode\": \"12000\",\n            \"maxBalanceSubService\": \"3000000000\",\n            \"listChannel\": [\n                {\n                    \"channel\": \"MB\",\n                    \"channelId\": \"56394578\",\n                    \"lastLogin\": \"2023-09-02 01:01:02.95\",\n                    \"isLocked\": \"0\",\n                    \"otpMethod\": \"1\",\n                    \"numConfirmOTP\": \"2\",\n                    \"numOtpActSoft\": \"0\",\n                    \"appVer\": \"5.5.9\",\n                    \"ov\": \"30\",\n                    \"methodOTP\": \"1\",\n                    \"os\": \"ANDROID\",\n                    \"imei\": \"###97005c51578593a4###ffffffff-fcfb-18ab-ffff-ffffef05ac4a\",\n                    \"deviceType\": \"Star 9\"\n                },\n                {\n                    \"channel\": \"PAY\",\n                    \"channelId\": \"3858547\",\n                    \"lastLogin\": \"2022-08-01 01:44:32.0\",\n                    \"isLocked\": \"0\",\n                    \"otpMethod\": \"1\",\n                    \"numConfirmOTP\": \"0\",\n                    \"numOtpActSoft\": \"0\",\n                    \"appVer\": \"5.0.2\",\n                    \"ov\": \"8.0.0\",\n                    \"methodOTP\": \"1\",\n                    \"os\": \"ANDROID\",\n                    \"imei\": \"b28fff855641dfd4###ffffffff-c222-5491-ffff-ffff92f4a961\",\n                    \"deviceType\": \"Mi A1\",\n                    \"receiveRequestTransfer\": \"1\"\n                },\n                {\n                    \"channel\": \"Web\",\n                    \"channelId\": \"22443454\",\n                    \"lastLogin\": \"2023-08-28 22:47:00.884\",\n                    \"isLocked\": \"0\",\n                    \"otpMethod\": \"1\",\n                    \"numConfirmOTP\": \"0\",\n                    \"numOtpActSoft\": \"0\",\n                    \"methodOTP\": \"1\"\n                }\n            ],\n            \"lockSession\": false,\n            \"omniSession\": true,\n            \"sessionId\": \"d769dde414218524650b939234c356d2\",\n            \"lastUsed\": \"1693816451529\",\n            \"converted\": true,\n            \"useVCBSoft\": \"0\",\n            \"hasOldSoft\": \"0\",\n            \"validateLuckyAcc\": false,\n            \"validateOpenLoanFD\": false,\n            \"validateOpenAliasAcc\": false,\n            \"failTime\": 0,\n            \"isCheckCard\": \"0\",\n            \"checkVipTime\": \"20231404\",\n            \"cusLevel\": \"NORMAL\",\n            \"validIssue\": false,\n            \"validSMSOTP\": false\n        },\n        \"tranTime\": \"01:01 Thứ Hai 01/09/2023\",\n        \"isUserLoyalty\": \"00\",\n        \"accessKey\": \"eyJ0aW1lc3RhbXA567486864568796Rva2VuIjoiZWNkYzU5ZTk2ZTRkNGU2Y2FjYjczNjkxOGI3YTY5NDIiLCJzaWduIjoiREJmZk4xL2ZEdjZkaVFlU0FWbUtJQ1ZLSU5sM3pMUXc1TVZpdVBMNXdMaz0ifQ==\",\n        \"popups\": [],\n        \"allowSave\": false,\n        \"E\": \"37144485-4F33-E4875-6FF1-BD896783133\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Bank Code",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "7",
+							"description": "Bank ID trong hệ thống"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/vietcombank/bankcode",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietcombank",
+						"bankcode"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Bank Code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idBank",
+									"value": "7",
+									"description": "Bank ID trong hệ thống"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/vietcombank/bankcode",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"bankcode"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 09:18:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=8GOOhkC%2FEewoi6zNUuQ2%2FP0aCR1WrzVxfwlMFW6emFfDyExO4Dz8QW1kjGu7nvZhOxvfiYLcRSJMQLAsnWWIxEo6nS6kBPtcuZSniuzDaHC7WEnSPtwXbvfMOhj2\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "801525ec48ae08f2-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"mid\": \"23\",\n    \"code\": \"00\",\n    \"des\": \"success\",\n    \"banks\": [\n        {\n            \"bankCode\": \"970405\",\n            \"bankName\": \"Ngân hàng  Nông nghiệp và phát triển nông thôn Việt Nam (AGRIBANK)\",\n            \"bankNameEN\": \"Vietnam Bank for Agriculture and Rural Development (AGRIBANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970405.png\",\n            \"brandName\": \"AGRIBANK\"\n        },\n        {\n            \"bankCode\": \"970418\",\n            \"bankName\": \"Ngân hàng  Đầu tư và phát triển Việt Nam (BIDV)\",\n            \"bankNameEN\": \"Bank for Investment and Development of Vietnam (BIDV)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970418.png\",\n            \"brandName\": \"BIDV\"\n        },\n        {\n            \"bankCode\": \"970415\",\n            \"bankName\": \"Ngân hàng  Công Thương Việt Nam (VIETINBANK)\",\n            \"bankNameEN\": \"Bank for Industry and Trade (VIETINBANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970415.png\",\n            \"brandName\": \"VIETINBANK\"\n        },\n        {\n            \"bankCode\": \"970432\",\n            \"bankName\": \"Ngân hàng  Việt Nam Thịnh Vượng (VPBANK)\",\n            \"bankNameEN\": \"Vietnam Prosperity Bank (VPBANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970432.png\",\n            \"brandName\": \"VPBANK\"\n        },\n        {\n            \"bankCode\": \"533948\",\n            \"bankName\": \"CITIBANK VIETNAM\",\n            \"bankNameEN\": \"CITIBANK VIETNAM\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/533948.png\",\n            \"brandName\": \"CITIBANK VIETNAM\"\n        },\n        {\n            \"bankCode\": \"977777\",\n            \"bankName\": \"Công ty Tài chính TNHH MTV Mirae Asset Việt Nam (MAFC)\",\n            \"bankNameEN\": \"Mirae Asset Finance Company VN (MAFC)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"brandName\": \"MAFC\"\n        },\n        {\n            \"bankCode\": \"970425\",\n            \"bankName\": \"Ngân hàng  An Bình (ABBANK)\",\n            \"bankNameEN\": \"An Binh Bank (ABBANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970425.png\",\n            \"brandName\": \"ABBANK\"\n        },\n        {\n            \"bankCode\": \"970449\",\n            \"bankName\": \"Ngân hàng  Bưu điện Liên Việt (LPBank)\",\n            \"bankNameEN\": \"Lien Viet Post Bank (LPBank)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970449.png\",\n            \"brandName\": \"LPBank\"\n        },\n        {\n            \"bankCode\": \"970454\",\n            \"bankName\": \"Ngân hàng  Bản Việt (VIET CAPITAL BANK)\",\n            \"bankNameEN\": \"Ban Viet Bank (VIET CAPITAL BANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970454.png\",\n            \"brandName\": \"VIET CAPITAL BANK\"\n        },\n        {\n            \"bankCode\": \"970409\",\n            \"bankName\": \"Ngân hàng  Bắc Á (BAC A BANK)\",\n            \"bankNameEN\": \"Bac A Bank (BAC A BANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970409.png\",\n            \"brandName\": \"BAC A BANK\"\n        },\n        {\n            \"bankCode\": \"546034\",\n            \"bankName\": \"Ngân hàng  CAKE BY VPBANK (CAKE)\",\n            \"bankNameEN\": \"CAKE BY VPBANK (CAKE)\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/546034.png\",\n            \"brandName\": \"CAKE\"\n        },\n        {\n            \"bankCode\": \"422589\",\n            \"bankName\": \"Ngân hàng  CIMB Việt Nam (CIMB)\",\n            \"bankNameEN\": \"CIMB Bank Vietnam (CIMB)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/422589.png\",\n            \"brandName\": \"CIMB\"\n        },\n        {\n            \"bankCode\": \"970408\",\n            \"bankName\": \"Ngân hàng  Dầu khí toàn cầu (GPBANK)\",\n            \"bankNameEN\": \"Global Petro Bank (GPBANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970408.png\",\n            \"brandName\": \"GPBANK\"\n        },\n        {\n            \"bankCode\": \"970442\",\n            \"bankName\": \"Ngân hàng  Hong Leong Việt Nam (HLBANK)\",\n            \"bankNameEN\": \"Hong Leong Bank Vietnam Limited (HLBANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970442.png\",\n            \"brandName\": \"HLBANK\"\n        },\n        {\n            \"bankCode\": \"970426\",\n            \"bankName\": \"Ngân hàng  Hàng Hải (MSB)\",\n            \"bankNameEN\": \"Maritime Bank (MSB)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970426.png\",\n            \"brandName\": \"MSB\"\n        },\n        {\n            \"bankCode\": \"970452\",\n            \"bankName\": \"Ngân hàng  Kiên Long (KIEN LONG BANK)\",\n            \"bankNameEN\": \"Kien Long Bank (KIEN LONG BANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970452.png\",\n            \"brandName\": \"KIEN LONG BANK\"\n        },\n        {\n            \"bankCode\": \"970421\",\n            \"bankName\": \"Ngân hàng  Liên doanh Việt Nga (VRB)\",\n            \"bankNameEN\": \"Vietnam - Russia Joint Venture Bank (VRB)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970421.png\",\n            \"brandName\": \"VRB\"\n        },\n        {\n            \"bankCode\": \"970428\",\n            \"bankName\": \"Ngân hàng  Nam Á (NAM A BANK)\",\n            \"bankNameEN\": \"Nam A Bank (NAM A BANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970428.png\",\n            \"brandName\": \"NAM A BANK\"\n        },\n        {\n            \"bankCode\": \"796500\",\n            \"bankName\": \"Ngân hàng  Ngân hàng DBS - Chi nhánh Hồ Chí Minh (DBS)\",\n            \"bankNameEN\": \"DBS Bank Ltd - Ho Chi Minh Branch (DBS)\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/796500.png\",\n            \"brandName\": \"DBS\"\n        },\n        {\n            \"bankCode\": \"970462\",\n            \"bankName\": \"Ngân hàng  Ngân hàng Kookmin - Chi nhánh Hà Nội (KBHN)\",\n            \"bankNameEN\": \"Kookmin Bank - Hanoi Branch (KBHN)\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970462.png\",\n            \"brandName\": \"KBHN\"\n        },\n        {\n            \"bankCode\": \"970463\",\n            \"bankName\": \"Ngân hàng  Ngân hàng Kookmin - Chi nhánh Thành phố Hồ Chí Minh (KBHCM)\",\n            \"bankNameEN\": \"Kookmin Bank - Ho Chi Minh City Branch (KBHCM)\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970463.png\",\n            \"brandName\": \"KBHCM\"\n        },\n        {\n            \"bankCode\": \"970439\",\n            \"bankName\": \"Ngân hàng  Ngân hàng TNHH  MTV Public Việt Nam (PBVN)\",\n            \"bankNameEN\": \"Public Bank Vietnam Limited (PBVN)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970439.png\",\n            \"brandName\": \"PBVN\"\n        },\n        {\n            \"bankCode\": \"801011\",\n            \"bankName\": \"Ngân hàng  Nonghuyp - Chi nhánh Hà Nội (NONGHUYP)\",\n            \"bankNameEN\": \"Nonghyup Bank - Hanoi Branch (NONGHUYP)\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/801011.png\",\n            \"brandName\": \"NONGHUYP\"\n        },\n        {\n            \"bankCode\": \"970448\",\n            \"bankName\": \"Ngân hàng  Phương Đông (OCB)\",\n            \"bankNameEN\": \"Orient Bank (OCB)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970448.png\",\n            \"brandName\": \"OCB\"\n        },\n        {\n            \"bankCode\": \"970419\",\n            \"bankName\": \"Ngân hàng  Quốc Dân (NCB)\",\n            \"bankNameEN\": \"National Citizen Bank (NCB)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970419.png\",\n            \"brandName\": \"NCB\"\n        },\n        {\n            \"bankCode\": \"970441\",\n            \"bankName\": \"Ngân hàng  Quốc tế (VIB)\",\n            \"bankNameEN\": \"Vietnam International Bank (VIB)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970441.png\",\n            \"brandName\": \"VIB\"\n        },\n        {\n            \"bankCode\": \"970424\",\n            \"bankName\": \"Ngân hàng  Shinhan Bank Việt Nam (SHINHAN)\",\n            \"bankNameEN\": \"SHINHAN Bank Vietnam (SHINHAN)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970424.png\",\n            \"brandName\": \"SHINHAN\"\n        },\n        {\n            \"bankCode\": \"970400\",\n            \"bankName\": \"Ngân hàng  Sài Gòn Công Thương (SAIGONBANK)\",\n            \"bankNameEN\": \"Saigon Bank For Industry and Trade (SAIGONBANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970400.png\",\n            \"brandName\": \"SAIGONBANK\"\n        },\n        {\n            \"bankCode\": \"970443\",\n            \"bankName\": \"Ngân hàng  Sài Gòn Hà Nội (SHB)\",\n            \"bankNameEN\": \"Saigon Hanoi Bank (SHB)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970443.png\",\n            \"brandName\": \"SHB\"\n        },\n        {\n            \"bankCode\": \"970403\",\n            \"bankName\": \"Ngân hàng  Sài Gòn thương tín (SACOMBANK)\",\n            \"bankNameEN\": \"Sai Gon Thuong Tin Bank (SACOMBANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970403.png\",\n            \"brandName\": \"SACOMBANK\"\n        },\n        {\n            \"bankCode\": \"458761\",\n            \"bankName\": \"Ngân hàng  TNHH MTV HSBC Việt Nam  (HSBC)\",\n            \"bankNameEN\": \"HSBC Bank Vietnam Ltd. (HSBC)\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/458761.png\",\n            \"brandName\": \"HSBC\"\n        },\n        {\n            \"bankCode\": \"970410\",\n            \"bankName\": \"Ngân hàng  TNHH MTV Standard Chartered Việt Nam (SCVN)\",\n            \"bankNameEN\": \"Standard Chartered Vietnam (SCVN)\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970410.png\",\n            \"brandName\": \"SCVN\"\n        },\n        {\n            \"bankCode\": \"970434\",\n            \"bankName\": \"Ngân hàng  Trách nhiệm hữu hạn Indovina (IVB)\",\n            \"bankNameEN\": \"Indovina Bank Ltd. (IVB)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970434.png\",\n            \"brandName\": \"IVB\"\n        },\n        {\n            \"bankCode\": \"546035\",\n            \"bankName\": \"Ngân hàng  UBANK BY VPBANK (UBANK)\",\n            \"bankNameEN\": \"UBANK BY VPBANK (UBANK)\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/546035.png\",\n            \"brandName\": \"UBANK\"\n        },\n        {\n            \"bankCode\": \"970458\",\n            \"bankName\": \"Ngân hàng  UOB Việt Nam (UOB VN)\",\n            \"bankNameEN\": \"UOB Vietnam bank (UOB VN)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970458.png\",\n            \"brandName\": \"UOB VN\"\n        },\n        {\n            \"bankCode\": \"970433\",\n            \"bankName\": \"Ngân hàng  Việt Nam Thương Tín (VIETBANK)\",\n            \"bankNameEN\": \"Vietnam Thuong Tin Bank (VIETBANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970433.png\",\n            \"brandName\": \"VIETBANK\"\n        },\n        {\n            \"bankCode\": \"970427\",\n            \"bankName\": \"Ngân hàng  Việt Á (VIET A BANK)\",\n            \"bankNameEN\": \"Viet A Bank (VIET A BANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970427.png\",\n            \"brandName\": \"VIET A BANK\"\n        },\n        {\n            \"bankCode\": \"970431\",\n            \"bankName\": \"Ngân hàng  Xuất Nhập khẩu (EXIMBANK)\",\n            \"bankNameEN\": \"Vietnam Export Import Bank (EXIMBANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970431.png\",\n            \"brandName\": \"EXIMBANK\"\n        },\n        {\n            \"bankCode\": \"970430\",\n            \"bankName\": \"Ngân hàng  Xăng Dầu Petrolimex (PGBANK)\",\n            \"bankNameEN\": \"Petrolimex Group Bank (PGBANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970430.png\",\n            \"brandName\": \"PGBANK\"\n        },\n        {\n            \"bankCode\": \"970406\",\n            \"bankName\": \"Ngân hàng  Đông Á (DONG A BANK)\",\n            \"bankNameEN\": \"Dong A Bank (DONG A BANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970406.png\",\n            \"brandName\": \"DONG A BANK\"\n        },\n        {\n            \"bankCode\": \"970412\",\n            \"bankName\": \"Ngân hàng  Đại chúng (PVCOMBANK)\",\n            \"bankNameEN\": \"Vietnam Public Bank (PVCOMBANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970412.png\",\n            \"brandName\": \"PVCOMBANK\"\n        },\n        {\n            \"bankCode\": \"970438\",\n            \"bankName\": \"Ngân hàng Bảo Việt (BVB)\",\n            \"bankNameEN\": \"Bao Viet Bank (BVB)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970438.png\",\n            \"brandName\": \"BVB\"\n        },\n        {\n            \"bankCode\": \"999888\",\n            \"bankName\": \"Ngân hàng Chính sách Xã hội VBSP (VBSP)\",\n            \"bankNameEN\": \"Vietnam Bank for Social Policies (VBSP)\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/999888.png\",\n            \"brandName\": \"VBSP\"\n        },\n        {\n            \"bankCode\": \"970455\",\n            \"bankName\": \"Ngân hàng Công nghiệp Hàn Quốc  (IBK BANK)\",\n            \"bankNameEN\": \"Industrial Bank of Korea (IBK BANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970455.png\",\n            \"brandName\": \"IBK BANK\"\n        },\n        {\n            \"bankCode\": \"970446\",\n            \"bankName\": \"Ngân hàng Hợp tác xã Việt Nam (CO-OPBANK)\",\n            \"bankNameEN\": \"Co-operative bank of Vietnam (CO-OPBANK)\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970446.png\",\n            \"brandName\": \"CO-OPBANK\"\n        },\n        {\n            \"bankCode\": \"970467\",\n            \"bankName\": \"Ngân hàng KEB HANA – Chi nhánh Hà Nội (KEB HANA)\",\n            \"bankNameEN\": \"KEB HANA BANK – HANOI BRANCH (KEB HANA)\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970467.png\",\n            \"brandName\": \"KEB HANA\"\n        },\n        {\n            \"bankCode\": \"970466\",\n            \"bankName\": \"Ngân hàng KEB HANA – Chi nhánh Thành phố Hồ Chí Minh (KEB HANA)\",\n            \"bankNameEN\": \"KEB HANA BANK –HO CHI MINH CITY BRANCH (KEB HANA)\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970466.png\",\n            \"brandName\": \"KEB HANA\"\n        },\n        {\n            \"bankCode\": \"970407\",\n            \"bankName\": \"Ngân hàng Kỹ thương Việt Nam (TECHCOMBANK)\",\n            \"bankNameEN\": \"Vietnam Technological and Commercial Bank (TECHCOMBANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970407.png\",\n            \"brandName\": \"TECHCOMBANK\"\n        },\n        {\n            \"bankCode\": \"970437\",\n            \"bankName\": \"Ngân hàng Phát triển TP.HCM (HD BANK)\",\n            \"bankNameEN\": \"Ho Chi Minh City Development Bank (HD BANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970437.png\",\n            \"brandName\": \"HD BANK\"\n        },\n        {\n            \"bankCode\": \"970422\",\n            \"bankName\": \"Ngân hàng Quân Đội (MB)\",\n            \"bankNameEN\": \"Military Bank (MB)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970422.png\",\n            \"brandName\": \"MB\"\n        },\n        {\n            \"bankCode\": \"970429\",\n            \"bankName\": \"Ngân hàng Sài Gòn (SCB)\",\n            \"bankNameEN\": \"Saigon Bank (SCB)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970429.png\",\n            \"brandName\": \"SCB\"\n        },\n        {\n            \"bankCode\": \"970423\",\n            \"bankName\": \"Ngân hàng Tiên phong (TPBANK)\",\n            \"bankNameEN\": \"Tien Phong Bank (TPBANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970423.png\",\n            \"brandName\": \"TPBANK\"\n        },\n        {\n            \"bankCode\": \"970457\",\n            \"bankName\": \"Ngân hàng Woori Bank Việt Nam (WOORI)\",\n            \"bankNameEN\": \"Woori Bank Vietnam (WOORI)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970457.png\",\n            \"brandName\": \"WOORI\"\n        },\n        {\n            \"bankCode\": \"970444\",\n            \"bankName\": \"Ngân hàng Xây dựng  (CBBANK)\",\n            \"bankNameEN\": \"Construction Bank (CBBANK)\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970444.png\",\n            \"brandName\": \"CBBANK\"\n        },\n        {\n            \"bankCode\": \"963369\",\n            \"bankName\": \"Ngân hàng số Liobank – Ngân hàng TMCP Phương Đông (Liobank)\",\n            \"bankNameEN\": \"Liobank – Orient Commercial Joint Stock Bank (Liobank)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/963369.png\",\n            \"brandName\": \"Liobank\"\n        },\n        {\n            \"bankCode\": \"963388\",\n            \"bankName\": \"Ngân hàng số Timo – Ngân hàng TMCP Bản Việt\",\n            \"bankNameEN\": \"Timo by Ban Viet Bank\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/963388.png\",\n            \"brandName\": \"Timo by Ban Viet Bank\"\n        },\n        {\n            \"bankCode\": \"963399\",\n            \"bankName\": \"Ngân hàng số UMEE by Kienlongbank (UMEE)\",\n            \"bankNameEN\": \"UMEE by Kienlongbank (UMEE)\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/963399.png\",\n            \"brandName\": \"UMEE\"\n        },\n        {\n            \"bankCode\": \"970416\",\n            \"bankName\": \"Ngân hàng Á Châu (ACB)\",\n            \"bankNameEN\": \"Asia Commercial Bank (ACB)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970416.png\",\n            \"brandName\": \"ACB\"\n        },\n        {\n            \"bankCode\": \"970440\",\n            \"bankName\": \"Ngân hàng Đông Nam Á (SEABANK)\",\n            \"bankNameEN\": \"Southeast Asia Bank (SEABANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970440.png\",\n            \"brandName\": \"SEABANK\"\n        },\n        {\n            \"bankCode\": \"970414\",\n            \"bankName\": \"Ngân hàng Đại dương (OCEANBANK)\",\n            \"bankNameEN\": \"Ocean Commercial One Member Limited Liability Bank (OCEANBANK)\",\n            \"level\": \"1\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/970414.png\",\n            \"brandName\": \"OCEANBANK\"\n        },\n        {\n            \"bankCode\": \"668888\",\n            \"bankName\": \"Ngân hàng đại chúng TNHH KASIKORNBANK – Chi nhánh thành phố Hồ Chí Minh (KBANK)\",\n            \"bankNameEN\": \"KASIKORNBANK public company limited - Ho Chi Minh City Branch (KBANK)\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/668888.png\",\n            \"brandName\": \"KBANK\"\n        },\n        {\n            \"bankCode\": \"971011\",\n            \"bankName\": \"VNPT Money\",\n            \"bankNameEN\": \"VNPT Money\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/971011.png\",\n            \"brandName\": \"VNPT MONEY\"\n        },\n        {\n            \"bankCode\": \"971005\",\n            \"bankName\": \"Viettel Money\",\n            \"bankNameEN\": \"Viettel Money\",\n            \"fastTrans\": \"1\",\n            \"logo\": \"https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/logo/971005.png\",\n            \"brandName\": \"VIETTEL MONEY\"\n        }\n    ],\n    \"E\": \"37144485-4F33-E45B-6FF1-BDD370783133\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "7",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "toBank",
+							"value": "662663666999",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970415",
+							"description": "Bankcode Napas 247"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/vietcombank/getname",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietcombank",
+						"getname"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Name",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idBank",
+									"value": "7",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "toBank",
+									"value": "662663666999",
+									"description": "Số tài khoản nhận tiền"
+								},
+								{
+									"key": "bankCode",
+									"value": "970415",
+									"description": "Bankcode Napas 247"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/vietcombank/getname",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"getname"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 09:19:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=vx86X9LzStkHLeN7lidYv59pYzgMNM7tAuySxARR1lO%2FSmbaWWYOMdGDVRxnoxDkMNKpbV6O%2BEsXI5zYP7OosTiM6gv16IQ0Gp3%2F4S7ytKdfsDw2GFxDBB%2FDYii2\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8015262a293408f2-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"mid\": \"917\",\n    \"code\": \"00\",\n    \"des\": \"success\",\n    \"cardHolderName\": \"LE HONG SON\",\n    \"bankCode\": \"970415\",\n    \"E\": \"37144485-4F33-E45B-6FF1-BDD370783133\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Info Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/vietcombank/info?idBank=7",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietcombank",
+						"info"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "7",
+							"description": "Bank ID trong hệ thống"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Info Account",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietcombank/info?idBank=7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"info"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "7",
+									"description": "Bank ID trong hệ thống"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 03:02:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=QaadarELzz5eI8AHU1%2Bd3IrXP7psSSbgIcI%2Ff8EUYxQlJaY7gMvWJb7%2FZvOVPklgnMivLUaaAHTAnMuFQr%2FfGkakLIgFfYsRPBAUMNKf0Cn%2FEyWYiDtVcvcH2eCD\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "804cabb28a6c2aa0-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"mid\": \"13\",\n    \"code\": \"00\",\n    \"des\": \"success\",\n    \"E\": \"37144485-4F33-35FB-6FF1-BDD370783133\",\n    \"accountDetail\": {\n        \"accountNo\": \"0491157943\",\n        \"newAccountNo\": \"4051459\",\n        \"cif\": \"15362347.0\",\n        \"address\": \"HA DONG,HA NOI\",\n        \"customerName\": \"LE HONG SON\",\n        \"accruedInterest\": \"6\",\n        \"accountType\": \"D\",\n        \"accountCurr\": \"VND\",\n        \"availBalance\": \"85,535\",\n        \"availBalanceWH\": \"85,535\",\n        \"branchCode\": \"04905\",\n        \"branchName\": \"PGD ABC\",\n        \"groupCode\": \"0\",\n        \"holdBalance\": \"0\",\n        \"interest\": \"0.1\",\n        \"currentBalance\": \"85,535\",\n        \"openDate\": \"11/01/2019\",\n        \"productTypeCode\": \"10016\",\n        \"reserve8\": \"\",\n        \"accountStatus\": \"1\",\n        \"overdraftBalance\": \"0\",\n        \"lastTransactionDate\": \"10/09/2023\",\n        \"overdraftInterest\": \"0.0\",\n        \"pdtNumber\": 0,\n        \"rowNum\": 0,\n        \"joinAccount\": false,\n        \"tlastsStatus\": [\n            \"N\",\n            \"N\",\n            \" \",\n            \" \",\n            \" \",\n            \" \",\n            \" \",\n            \" \",\n            \" \",\n            \" \",\n            \"N\",\n            \" \",\n            \"N\",\n            \"N\",\n            \"N\",\n            \"N\",\n            \"N\",\n            \" \",\n            \" \",\n            \" \",\n            \"5362b319-12fd-25d6-bd38-457c6d954778\"\n        ],\n        \"currency\": \"VND\",\n        \"accountNumber\": \"0491157943\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Histories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/vietcombank/histories?idBank=7&day=3",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietcombank",
+						"histories"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "7",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "day",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Histories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietcombank/histories?idBank=7&day=20",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"histories"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "7",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "day",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 03:03:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=KCFZm5UGEqJLo8vGYrhkwwUJ6rCf7L6vS9IGhW2X3F92ZG4uP6upWLp1FZ3rlceGaIs8M1pq9YheXflk2Uybiw7AbTIWKtmKkjg%2Fd%2Fg9y0tXtxu72%2Fbrw6SwxVri\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "804cad2fc8002aa0-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"mid\": \"14\",\n    \"code\": \"00\",\n    \"des\": \"success\",\n    \"transactions\": [\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5282 - 73007\",\n            \"CD\": \"-\",\n            \"Amount\": \"1,111,111\",\n            \"Description\": \"MBVCB.4193103849.099184.LE HONG SON chuyen tien.CT tu 0491000157943 LE HONG SON toi 662663666999 LE HONG SON tai VIETINBANK\",\n            \"PCTime\": \"224649\",\n            \"DorCCode\": \"D\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"224649\",\n            \"Remark\": \"MBVCB.4193103849.099184.LE HONG SON chuyen tien.CT tu 0491000157943 LE HONG SON toi 662663666999 LE HONG SON tai VIETINBANK\",\n            \"SeqNo\": \"73007\",\n            \"TnxCode\": \"74\",\n            \"Teller\": \"5282\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5161 - 22290\",\n            \"CD\": \"+\",\n            \"Amount\": \"987,000\",\n            \"Description\": \"PARTNER.DIRECT_DEBITS_VCB.ZLP.ZP6I0BM9G690.20230910.Selltool0935\",\n            \"PCTime\": \"224523\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"224523\",\n            \"Remark\": \"PARTNER.DIRECT_DEBITS_VCB.ZLP.ZP6I0BM9G690.20230910.Selltool0935\",\n            \"SeqNo\": \"22290\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5161\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5219 - 46168\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"653431.100923.215131.TestCk\",\n            \"PCTime\": \"215216\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"215216\",\n            \"Remark\": \"653431.100923.215131.TestCk\",\n            \"SeqNo\": \"46168\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5219\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5219 - 3161\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"597485.100923.213418.TestCk\",\n            \"PCTime\": \"213500\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"213500\",\n            \"Remark\": \"597485.100923.213418.TestCk\",\n            \"SeqNo\": \"3161\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5219\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5017 - 97356\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"589534.100923.213205.TestCk\",\n            \"PCTime\": \"213245\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"213245\",\n            \"Remark\": \"589534.100923.213205.TestCk\",\n            \"SeqNo\": \"97356\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5017\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5217 - 4267\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"909576.100923.205917.TestCk\",\n            \"PCTime\": \"205959\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"205959\",\n            \"Remark\": \"909576.100923.205917.TestCk\",\n            \"SeqNo\": \"4267\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5217\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5215 - 54884\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"840706.100923.204313.TestCk\",\n            \"PCTime\": \"204358\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"204358\",\n            \"Remark\": \"840706.100923.204313.TestCk\",\n            \"SeqNo\": \"54884\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5215\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5220 - 21748\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"793955.100923.203246.TestCk\",\n            \"PCTime\": \"203328\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"203328\",\n            \"Remark\": \"793955.100923.203246.TestCk\",\n            \"SeqNo\": \"21748\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5220\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5213 - 79367\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"736033.100923.201940.TestCk\",\n            \"PCTime\": \"202023\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"202023\",\n            \"Remark\": \"736033.100923.201940.TestCk\",\n            \"SeqNo\": \"79367\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5213\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5215 - 68479\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"721269.100923.201626.TestCk\",\n            \"PCTime\": \"201703\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"201703\",\n            \"Remark\": \"721269.100923.201626.TestCk\",\n            \"SeqNo\": \"68479\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5215\"\n        }\n    ],\n    \"nextIndex\": \"1\",\n    \"E\": \"37144485-4F33-E45B-6FF1-BDD370783133\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Histories Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/vietcombank/histories-index?idBank=7&index=0&oneIndex=1&fromDate=29/01/2024&toDate=28/02/2024",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietcombank",
+						"histories-index"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "7",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "index",
+							"value": "0"
+						},
+						{
+							"key": "oneIndex",
+							"value": "1"
+						},
+						{
+							"key": "day",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "fromDate",
+							"value": "29/01/2024"
+						},
+						{
+							"key": "toDate",
+							"value": "28/02/2024"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Histories Index",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietcombank/histories-index?idBank=7&index=2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"histories-index"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "7",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "index",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 03:03:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=PuolDEvFX2xzrsqyJObx3kjMu2DcAyFj4gm0Lbp8s%2FpoJ1z9VseJBu8unW6X7Q8GHKS2rg6uYQkXqlhKL7iQ%2BvZ68VrjUN2gSJa%2BDIo0zlnOT%2FRUBg2EoGpFo7%2Bm\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "804cad707e372aa0-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"mid\": \"14\",\n    \"code\": \"00\",\n    \"des\": \"success\",\n    \"transactions\": [\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5282 - 73007\",\n            \"CD\": \"-\",\n            \"Amount\": \"1,111,111\",\n            \"Description\": \"MBVCB.4193103849.099184.LE HONG SON chuyen tien.CT tu 0491000157943 LE HONG SON toi 662663666999 LE HONG SON tai VIETINBANK\",\n            \"PCTime\": \"224649\",\n            \"DorCCode\": \"D\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"224649\",\n            \"Remark\": \"MBVCB.4193103849.099184.LE HONG SON chuyen tien.CT tu 0491000157943 LE HONG SON toi 662663666999 LE HONG SON tai VIETINBANK\",\n            \"SeqNo\": \"73007\",\n            \"TnxCode\": \"74\",\n            \"Teller\": \"5282\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5161 - 22290\",\n            \"CD\": \"+\",\n            \"Amount\": \"987,000\",\n            \"Description\": \"PARTNER.DIRECT_DEBITS_VCB.ZLP.ZP6I0BM9G690.20230910.Selltool0935\",\n            \"PCTime\": \"224523\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"224523\",\n            \"Remark\": \"PARTNER.DIRECT_DEBITS_VCB.ZLP.ZP6I0BM9G690.20230910.Selltool0935\",\n            \"SeqNo\": \"22290\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5161\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5219 - 46168\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"653431.100923.215131.TestCk\",\n            \"PCTime\": \"215216\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"215216\",\n            \"Remark\": \"653431.100923.215131.TestCk\",\n            \"SeqNo\": \"46168\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5219\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5219 - 3161\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"597485.100923.213418.TestCk\",\n            \"PCTime\": \"213500\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"213500\",\n            \"Remark\": \"597485.100923.213418.TestCk\",\n            \"SeqNo\": \"3161\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5219\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5017 - 97356\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"589534.100923.213205.TestCk\",\n            \"PCTime\": \"213245\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"213245\",\n            \"Remark\": \"589534.100923.213205.TestCk\",\n            \"SeqNo\": \"97356\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5017\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5217 - 4267\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"909576.100923.205917.TestCk\",\n            \"PCTime\": \"205959\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"205959\",\n            \"Remark\": \"909576.100923.205917.TestCk\",\n            \"SeqNo\": \"4267\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5217\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5215 - 54884\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"840706.100923.204313.TestCk\",\n            \"PCTime\": \"204358\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"204358\",\n            \"Remark\": \"840706.100923.204313.TestCk\",\n            \"SeqNo\": \"54884\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5215\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5220 - 21748\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"793955.100923.203246.TestCk\",\n            \"PCTime\": \"203328\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"203328\",\n            \"Remark\": \"793955.100923.203246.TestCk\",\n            \"SeqNo\": \"21748\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5220\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5213 - 79367\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"736033.100923.201940.TestCk\",\n            \"PCTime\": \"202023\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"202023\",\n            \"Remark\": \"736033.100923.201940.TestCk\",\n            \"SeqNo\": \"79367\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5213\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5215 - 68479\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"721269.100923.201626.TestCk\",\n            \"PCTime\": \"201703\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"201703\",\n            \"Remark\": \"721269.100923.201626.TestCk\",\n            \"SeqNo\": \"68479\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5215\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5215 - 64102\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"714334.100923.201502.TestCk\",\n            \"PCTime\": \"201542\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"201542\",\n            \"Remark\": \"714334.100923.201502.TestCk\",\n            \"SeqNo\": \"64102\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5215\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5214 - 9923\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"636689.100923.195827.TestCk\",\n            \"PCTime\": \"195913\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"195913\",\n            \"Remark\": \"636689.100923.195827.TestCk\",\n            \"SeqNo\": \"9923\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5214\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5212 - 47018\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"997547.100923.193931.TestCk\",\n            \"PCTime\": \"194018\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"194018\",\n            \"Remark\": \"997547.100923.193931.TestCk\",\n            \"SeqNo\": \"47018\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5212\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5220 - 47883\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"857343.100923.190917.TestCk\",\n            \"PCTime\": \"190957\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"190957\",\n            \"Remark\": \"857343.100923.190917.TestCk\",\n            \"SeqNo\": \"47883\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5220\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5215 - 43530\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"847867.100923.190714.TestCk\",\n            \"PCTime\": \"190826\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"190826\",\n            \"Remark\": \"847867.100923.190714.TestCk\",\n            \"SeqNo\": \"43530\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5215\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5213 - 69378\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"748001.100923.184616.TestCk\",\n            \"PCTime\": \"184656\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"184656\",\n            \"Remark\": \"748001.100923.184616.TestCk\",\n            \"SeqNo\": \"69378\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5213\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5218 - 58664\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"732627.100923.184314.TestCk\",\n            \"PCTime\": \"184401\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"184401\",\n            \"Remark\": \"732627.100923.184314.TestCk\",\n            \"SeqNo\": \"58664\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5218\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5209 - 42292\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"710963.100923.183852.TestCk\",\n            \"PCTime\": \"183934\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"183934\",\n            \"Remark\": \"710963.100923.183852.TestCk\",\n            \"SeqNo\": \"42292\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5209\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5214 - 22321\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"682797.100923.183330.TestCk\",\n            \"PCTime\": \"183413\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"183413\",\n            \"Remark\": \"682797.100923.183330.TestCk\",\n            \"SeqNo\": \"22321\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5214\"\n        },\n        {\n            \"tranDate\": \"10/09/2023\",\n            \"TransactionDate\": \"10/09/2023\",\n            \"Reference\": \"5220 - 199\",\n            \"CD\": \"+\",\n            \"Amount\": \"1\",\n            \"Description\": \"651726.100923.182714.TestCk\",\n            \"PCTime\": \"182800\",\n            \"DorCCode\": \"C\",\n            \"EffDate\": \"2023-09-10\",\n            \"PostingDate\": \"2023-09-10\",\n            \"PostingTime\": \"182800\",\n            \"Remark\": \"651726.100923.182714.TestCk\",\n            \"SeqNo\": \"199\",\n            \"TnxCode\": \"34\",\n            \"Teller\": \"5220\"\n        }\n    ],\n    \"nextIndex\": \"1\",\n    \"E\": \"37144485-4F33-E45B-6FF1-BDD370783133\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Histories Excel",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/vietcombank/his-excel?idBank=7&day=5",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietcombank",
+						"his-excel"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "7",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "day",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "7",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "toBank",
+							"value": "3606666888",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970407",
+							"description": "Bankcode Napas 247"
+						},
+						{
+							"key": "amount",
+							"value": "2000",
+							"description": "Số tiền"
+						},
+						{
+							"key": "memo",
+							"value": "Le Hong Son tEST",
+							"description": "Lời nhắn"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/vietcombank/transfer",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietcombank",
+						"transfer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Transfer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idBank",
+									"value": "7",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "toBank",
+									"value": "662663666999",
+									"description": "Số tài khoản nhận tiền"
+								},
+								{
+									"key": "bankCode",
+									"value": "970415",
+									"description": "Bankcode Napas 247"
+								},
+								{
+									"key": "amount",
+									"value": "1000",
+									"description": "Số tiền"
+								},
+								{
+									"key": "memo",
+									"value": "Le Hong Son Chuyen Khoan",
+									"description": "Lời nhắn"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/vietcombank/transfer",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"transfer"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 03:03:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=RD9oYRRC%2B4gkhSfi5v1jC1vg5jdduJkWGFZ7CcPuPTLKCM62qkSAWh8Z5FwMKPL7YTnhHPHIkVQYQuObihMpAfGVtpgPpn5tGKgQ%2BK%2FcNp5sYVYPGvpDbdE%2F%2BVmv\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "804cadd1bb462aa0-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"mid\": \"17\",\n    \"code\": \"00\",\n    \"des\": \"success\",\n    \"data\": \"eyJrIjoiQjY1OTY4NUM2NTQ0QjgzMDdCMTI3RjdBQjk0QUZDOEFBMDI0RkU0NDBGQ0RBRDMxMTA4NENBRTk5NjMwNjIzRDc0QkMwMDRERkI5MTU1QUFCRjI2OEE1QUY2RTZFNDQ2MjVGREJDQzUyMjFDQTYzNzk0RDc1QTJFQUFBNjVEMDNEOUExM0REQ0JCQTgxMjAyNjUzNEI0MzRERjZCNDdBRkMwMEYwNDhFMDlENjczNzE2REFGMTg2MThCMzQ4MzI5QjZBNzNGMEZDRjZCMDlGRTJGOEI1Q0M3MDA3NTUyQzgiLCJlIjoiMEM0MUI0QTdGNjE3Mjg4RTAzNERGMTk4QUQwQjdFQ0Q1NTMyRjY4QjQ1M0Y3Nzk2NjM4RjUwNDNBQkI3ODU5QUEzM0UzNUY1MkFBOURCQTU3QkZCRjg0NjQ3QzhCMUQ0QUM0MDlDRjg0RTcxNjZCQTAxQUE5N0YyMjA2QzFDNTUzQUE5MkQwRDU2NEVEMDBDQ0NDQTcxNjc1QjBCQkI1MEJBQjZGQThBRkJCNDBCNjEzMkE0NjA2RSIsInQiOjE2OTQ0MDE0MjMsImxpY2Vuc2VWZXJzaW9uIjoyMDI3MjA4NCwicyI6Ik1FUUNJRVI2WVJoYjNYelRmQkd0a2ZoYkdFYVN3SGE0c3NXdHl4aVJka0tuVVVWVUFpQWVsYnVIVDRPRzFlWHZtcXZ6SWZiSy9jMVVwUXBTNUU2K0doVFJiSitIeHc9PSJ9\",\n    \"tranxId\": \"4194724150\",\n    \"challenge\": \"00513613\",\n    \"E\": \"37144485-4F33-E45B-6FF1-BDD370783133\"\n}"
+				}
+			]
+		},
+		{
+			"name": "One Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "7",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "toBank",
+							"value": "3606666888",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970407",
+							"description": "Bankcode Napas 247"
+						},
+						{
+							"key": "amount",
+							"value": "2000",
+							"description": "Số tiền"
+						},
+						{
+							"key": "memo",
+							"value": "Le Hong Son Chuyen Khoan",
+							"description": "Lời nhắn"
+						},
+						{
+							"key": "requestId",
+							"value": "2132423343",
+							"type": "text"
+						},
+						{
+							"key": "callbackUrl",
+							"value": "123123213",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/vietcombank/one-transfer",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietcombank",
+						"one-transfer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Wait Done",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idBank",
+									"value": "7",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "toBank",
+									"value": "662663666999",
+									"description": "Số tài khoản nhận tiền"
+								},
+								{
+									"key": "bankCode",
+									"value": "970415",
+									"description": "Bankcode Napas 247"
+								},
+								{
+									"key": "amount",
+									"value": "1000",
+									"description": "Số tiền"
+								},
+								{
+									"key": "memo",
+									"value": "Le Hong Son Chuyen Khoan",
+									"description": "Lời nhắn"
+								},
+								{
+									"key": "requestId",
+									"value": "123123123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/vietcombank/one-transfer",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"one-transfer"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 03:03:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=e3zWDjawUl5EJJopVfx4uKrzYo5zQD1sQkkftnWO9FMkDUR3o4imauv9Hf8fZn0IV2guOgfGVs%2FS6QBWaviBce3d4LQrrXixvCL7fFKYer5TdVINH51XC49fcOxU\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "804cae07cfe52aa0-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": false,\n    \"message\": \"Có giao dịch đang xử lý, chưa hết thời gian\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Fast Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "7",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "toBank",
+							"value": "662663666999",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970415",
+							"description": "Bankcode Napas 247"
+						},
+						{
+							"key": "amount",
+							"value": "2000",
+							"description": "Số tiền"
+						},
+						{
+							"key": "memo",
+							"value": "Le Hong Son Chuyen Khoan",
+							"description": "Lời nhắn"
+						},
+						{
+							"key": "requestId",
+							"value": "123123123123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/vietcombank/fast-transfer",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietcombank",
+						"fast-transfer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Wait Done",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idBank",
+									"value": "7",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "toBank",
+									"value": "662663666999",
+									"description": "Số tài khoản nhận tiền"
+								},
+								{
+									"key": "bankCode",
+									"value": "970415",
+									"description": "Bankcode Napas 247"
+								},
+								{
+									"key": "amount",
+									"value": "1000",
+									"description": "Số tiền"
+								},
+								{
+									"key": "memo",
+									"value": "Le Hong Son Chuyen Khoan",
+									"description": "Lời nhắn"
+								},
+								{
+									"key": "requestId",
+									"value": "123123123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/vietcombank/one-transfer",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"one-transfer"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 03:03:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=e3zWDjawUl5EJJopVfx4uKrzYo5zQD1sQkkftnWO9FMkDUR3o4imauv9Hf8fZn0IV2guOgfGVs%2FS6QBWaviBce3d4LQrrXixvCL7fFKYer5TdVINH51XC49fcOxU\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "804cae07cfe52aa0-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": false,\n    \"message\": \"Có giao dịch đang xử lý, chưa hết thời gian\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Fast Transfer v2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "7",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "toBank",
+							"value": "3606666888",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970407",
+							"description": "Bankcode Napas 247"
+						},
+						{
+							"key": "amount",
+							"value": "2000",
+							"description": "Số tiền"
+						},
+						{
+							"key": "memo",
+							"value": "Anh Yeu Em",
+							"description": "Lời nhắn"
+						},
+						{
+							"key": "requestId",
+							"value": "123123123123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/vietcombank/fast-transfer-v2",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietcombank",
+						"fast-transfer-v2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Wait Done",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idBank",
+									"value": "7",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "toBank",
+									"value": "662663666999",
+									"description": "Số tài khoản nhận tiền"
+								},
+								{
+									"key": "bankCode",
+									"value": "970415",
+									"description": "Bankcode Napas 247"
+								},
+								{
+									"key": "amount",
+									"value": "1000",
+									"description": "Số tiền"
+								},
+								{
+									"key": "memo",
+									"value": "Le Hong Son Chuyen Khoan",
+									"description": "Lời nhắn"
+								},
+								{
+									"key": "requestId",
+									"value": "123123123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/vietcombank/one-transfer",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"one-transfer"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 03:03:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=e3zWDjawUl5EJJopVfx4uKrzYo5zQD1sQkkftnWO9FMkDUR3o4imauv9Hf8fZn0IV2guOgfGVs%2FS6QBWaviBce3d4LQrrXixvCL7fFKYer5TdVINH51XC49fcOxU\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "804cae07cfe52aa0-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": false,\n    \"message\": \"Có giao dịch đang xử lý, chưa hết thời gian\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Gửi Otp Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/vietcombank/updatetransfer?idBank=69&tranid=4514022033&otp=883116",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietcombank",
+						"updatetransfer"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "69",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "tranid",
+							"value": "4514022033"
+						},
+						{
+							"key": "otp",
+							"value": "883116"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gửi Otp Transfer Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/otp/vietcombank?token={{token}}&idBank=39&tranid=3433120997&otp=633337",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"otp",
+						"vietcombank"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"description": "Token "
+						},
+						{
+							"key": "idBank",
+							"value": "39",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "tranid",
+							"value": "3433120997"
+						},
+						{
+							"key": "otp",
+							"value": "633337"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Info Transfer Local",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/vietcombank/infotransfer?paymentId=4625653314&idBank=7",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietcombank",
+						"infotransfer"
+					],
+					"query": [
+						{
+							"key": "paymentId",
+							"value": "4625653314",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "idBank",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Info Transfer Local",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietcombank/infotransfer?paymentId=4625650820&idBank=7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"infotransfer"
+							],
+							"query": [
+								{
+									"key": "paymentId",
+									"value": "4625650820",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "idBank",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2023 06:17:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=mb8s56HDlL4fzmYUuU7X7q%2F8Jc6im%2FbnnjeLztMU7AHUqzrR4RFoy8LuU%2FvJdXo85Dl9IIVZZrGxGbp2fALFpklmdapd7qEPzjzekW4rM%2FY%2FJz%2FYrC5xNoCEWZSJ\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "825d22154fd720f5-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 38828,\n    \"idbank\": \"7\",\n    \"username\": \"0387654818\",\n    \"tranId\": \"4625648047\",\n    \"challenge\": \"00859621\",\n    \"OTP\": \"OUT\",\n    \"debitAccountNo\": \"0491000157943\",\n    \"creditAccountNo\": \"662663666999\",\n    \"creditAccountName\": \"LE HONG SON\",\n    \"creditBankCode\": \"970415\",\n    \"memo\": \"Le Hong Son Chuyen Khoan\",\n    \"amount\": \"1,000\",\n    \"fullBank\": \"vcb\",\n    \"status\": \"00\",\n    \"note\": \"IBVCB.4625648047.043424.Le Hong Son Chuyen Khoan.CT tu 0491000157943 LE HONG SON toi 662663666999 LE HONG SON tai VIETINBANK\",\n    \"requestId\": \"\",\n    \"callbackCount\": null,\n    \"callbackStatus\": null,\n    \"owner\": \"1\",\n    \"created_at\": \"2023-11-14 13:16:51\",\n    \"updated_at\": \"2023-11-14 13:16:53\"\n}"
+				},
+				{
+					"name": "Waiting",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietcombank/infotransfer?paymentId=4625653314&idBank=7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietcombank",
+								"infotransfer"
+							],
+							"query": [
+								{
+									"key": "paymentId",
+									"value": "4625653314",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "idBank",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2023 06:18:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "53"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=0vZLAtqGF9Bjb9eNEwNGVXiAxT%2Bss%2FeELwApRuSAv3YYGPf%2FtgONjTjiWlqqDBLrrTNOFenmF%2F8aMwmzPPQde%2BWvYFwPpI1202gKqX2lqCTPqcwVMZbfY0fMk5EM\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "825d23ce494f20f5-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 38830,\n    \"idbank\": \"7\",\n    \"username\": \"0387654818\",\n    \"tranId\": \"4625653314\",\n    \"challenge\": \"00282215\",\n    \"OTP\": \"OUT\",\n    \"debitAccountNo\": \"0491000157943\",\n    \"creditAccountNo\": \"662663666999\",\n    \"creditAccountName\": \"LE HONG SON\",\n    \"creditBankCode\": \"970415\",\n    \"memo\": \"Le Hong Son Chuyen Khoan\",\n    \"amount\": \"1,000\",\n    \"fullBank\": \"vcb\",\n    \"status\": \"2\",\n    \"note\": \"\",\n    \"requestId\": \"123123123123\",\n    \"callbackCount\": null,\n    \"callbackStatus\": null,\n    \"owner\": \"1\",\n    \"created_at\": \"2023-11-14 13:18:31\",\n    \"updated_at\": \"2023-11-14 13:18:43\"\n}"
+				}
+			]
+		}
+	]
+}

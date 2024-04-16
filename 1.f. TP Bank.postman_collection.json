@@ -1,0 +1,1386 @@
+{
+	"info": {
+		"_postman_id": "8b657393-9e03-4fb9-8f57-598aace5a152",
+		"name": "1.f. TP Bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-8b657393-9e03-4fb9-8f57-598aace5a152?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/tpbank/login?idBank=15",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"tpbank",
+						"login"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/tpbank/login?idBank=15",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tpbank",
+								"login"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 10:13:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=WCiPSOEC50Vsp98qyk1y8mC82rYMQGXzWgPz%2Bt%2BDllQiXvCFOVW2im%2BzCY93Uvl%2B%2BTD%2F8KxmDxZmLJahkLgPwsPqLw17Q4PPFrVuAU5mgVDMJSjI3atwS0xV1G5G\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "803ea8afcece29c9-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"ey************************\",\n    \"token_type\": \"Bearer\",\n    \"expires_in\": 900\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Info Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/tpbank/getinfo?idBank=15",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"tpbank",
+						"getinfo"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Info Account",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/tpbank/getinfo?idBank=15",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tpbank",
+								"getinfo"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:48:20 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=QMOASqpFgvHELjc3CK3MiI5tLJUyQI7yxjaOll%2B2XexNVDLHB12FMaQSjRbGvr6SODx6SS9YUJJuC3CU3SuHmEkrqXv6uAImE1%2FP0bXF5lrfZilNcrpCjupoI7Ly\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d69f79ebe7c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"52399677\",\n    \"icNumber\": \"346345453\",\n    \"icType\": \"CCCD\",\n    \"cifNumber\": \"45676268\",\n    \"timeCreated\": 1679456747000,\n    \"fullName\": \"LE HOANG SON\",\n    \"phoneNumber\": \"05595759818\",\n    \"referralCode\": \"GKDQ0CD9\",\n    \"disableAuthMethod\": 0,\n    \"authMethod\": \"biometrics\",\n    \"highRiskAuthMethod\": \"etoken\",\n    \"userName\": \"SELLTOOL1011\",\n    \"pinCode\": \"0\",\n    \"hasPinCode\": 0,\n    \"nationality\": {\n        \"id\": 1,\n        \"code\": \"VN\",\n        \"englishName\": \"VIETNAM\",\n        \"vietnameseName\": \"VIET NAM\"\n    },\n    \"dateOfBirth\": 974566800000,\n    \"address\": \"XXXXXXXXXXXXXXXXX YEN BAI\",\n    \"fullAddress\": \"XXXXXXXXXXXXXXXX YEN BAI\",\n    \"emailAddress\": \"XXXXXX@gmail.com\",\n    \"issuanceDate\": 1674147600000,\n    \"issuancePlace\": \"YEN BAI\",\n    \"gender\": \"M\",\n    \"kycLevel\": 1,\n    \"devices\": [\n        {\n            \"deviceIdentity\": \"12645346D-DFD1-4397-A9EA-07A571EBF4F7\",\n            \"operatingSystem\": \"iaS\",\n            \"operatingSystemVersion\": \"19.1.2\"\n        }\n    ],\n    \"accountNumber\": \"053454365125\",\n    \"bankBranchCode\": \"459\",\n    \"language\": \"vi\",\n    \"status\": \"ACTIVE\",\n    \"authenList\": \"OTP,MKS\",\n    \"regisBranchCode\": \"669\",\n    \"fundTransferToMobile\": \"1\",\n    \"aliasUserName\": \"SELLTOOL1011\",\n    \"issueDateStr\": \"20/01/2023\",\n    \"dobStr\": \"19/09/1982\",\n    \"risk\": \"VERIFIED\",\n    \"customerCategory\": \"CLASSIC\",\n    \"ecom2FA\": 1,\n    \"limitBypassEcom2fa\": \"1000000\",\n    \"personalDisplayConfigs\": [],\n    \"customerWidgetGroup\": \"MASS\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Số dư tài khoản",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/tpbank/balance?idBank=15",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"tpbank",
+						"balance"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Số dư tài khoản",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/tpbank/balance?idBank=15",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tpbank",
+								"balance"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:51:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=%2BEfm7KeQ6FXkBdr6205FR2jknBaNVLIjS9WbLQAOUEshZQKYhXe%2F4YmqCcuIqnu80t5E7jo5n1glSfQKFWdK6D%2BKiBQd8XSSW8iy9AruNTsQzYPc79r3Io3iIrMb\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d6f13eca07c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"bookedBalance\": \"9831\",\n    \"availableBalance\": \"9831\",\n    \"BBAN\": \"00001942125\",\n    \"currency\": \"VND\",\n    \"bankBranchCode\": \"669\",\n    \"id\": \"00001942125,VND-1694577110154-e6dc7f02f79bd9b7822e6c4d83ee602b45e0620d7c766f4475fd5a6793ff926a\",\n    \"name\": \"LE HONG SON\",\n    \"accountClass\": \"UHA200\",\n    \"canDoFundTopup\": true,\n    \"description\": \"RB_HD KKH_HYDROBANK_VND_LDHK_TKTT\",\n    \"branchName\": \"TPBANK DIGITAL 3\",\n    \"additionInformation\": {\n        \"AC_STAT_BLOCK\": \"\",\n        \"CUSTOMER_NAME1\": \"LE HONG SON\",\n        \"THAUCHI_STK_UDF\": \"\",\n        \"TOD_LIMIT\": \"\",\n        \"NGAY_BAT_DAU_HMTC\": \"\",\n        \"CITAD_NAME\": \"\",\n        \"RATE\": \"0.1\",\n        \"CUSTOMER_TYPE\": \"I\",\n        \"BLOCK_AMOUNT\": \"0\",\n        \"AC_OPEN_DATE\": \"2023-03-27T00:00:00\",\n        \"NGAY_KET_THUC_HMTC\": \"\",\n        \"AC_STAT_NO_CR\": \"N\",\n        \"CHK_EFFECT_OVERDRAFT\": \"0\",\n        \"AC_STAT_FROZEN\": \"N\",\n        \"JOINT_ACC\": \"no\",\n        \"RECORD_STAT\": \"O\",\n        \"ACCOUNT_DESCRIPTION\": \"LE HONG SON\",\n        \"ACCOUNT_UDF\": \"\",\n        \"AUTH_STAT\": \"A\",\n        \"BLTU_KSTV\": \"NOT_EXISTS\",\n        \"ATM_FACILITY\": \"Y\",\n        \"AC_STAT_STOP_PAY\": \"N\",\n        \"MONEY_UN_AUTHORIZE\": \"0\",\n        \"AC_STAT_NO_DR\": \"N\",\n        \"AC_CLASS_TYPE\": \"S\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Histories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/tpbank/histories?idBank=15&day=20",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"tpbank",
+						"histories"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "15"
+						},
+						{
+							"key": "day",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Histories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/tpbank/histories?idBank=15&day=20",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tpbank",
+								"histories"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "15"
+								},
+								{
+									"key": "day",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:51:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=gQAhZEZ4VprlpN7CAgprklBDZH4pGFp72MxPsRFu%2Bs7Up4IuLL7EEf0%2B6WolAqkonSCc0OV9mFJ%2B6dSgu9rDtgIH6t7MiOuWpJdDEJaXF6GtD%2FWyEvMQu2lp1yxO\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d6e834cca7c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"transactionInfos\": [\n        {\n            \"id\": \"11076653933\",\n            \"arrangementId\": \"00001942125,VND-1694577086847-c06702ad57c69aaa5313d732bed47b832cfaad5f01a7679bb955540aafaddee3\",\n            \"reference\": \"669V009232510659\",\n            \"description\": \"TestCk\",\n            \"category\": \"transaction_CategoryTransfer\",\n            \"bookingDate\": \"2023-09-08\",\n            \"valueDate\": \"2023-09-08\",\n            \"amount\": \"1000\",\n            \"currency\": \"VND\",\n            \"creditDebitIndicator\": \"DBIT\",\n            \"runningBalance\": \"9831\",\n            \"ofsAcctNo\": \"0491000157943\",\n            \"creditorBankNameVn\": \"Ngân hàng TMCP Ngoại Thương\",\n            \"creditorBankNameEn\": \"Joint Stock Commercial Bank for Foreign Trade of Vietnam\"\n        },\n        {\n            \"id\": \"10929386121\",\n            \"arrangementId\": \"00001942125,VND-1694577086847-c06702ad57c69aaa5313d732bed47b832cfaad5f01a7679bb955540aafaddee3\",\n            \"reference\": \"669ITC123238AA54\",\n            \"description\": \"LE HONG SON chuyen tien\",\n            \"category\": \"transaction_CategoryMoneyIn\",\n            \"bookingDate\": \"2023-08-26\",\n            \"valueDate\": \"2023-08-26\",\n            \"amount\": \"1111\",\n            \"currency\": \"VND\",\n            \"creditDebitIndicator\": \"CRDT\",\n            \"runningBalance\": \"10831\",\n            \"ofsAcctNo\": \"662663666999\",\n            \"creditorBankNameVn\": \"VietinBank VNM\",\n            \"creditorBankNameEn\": \"VietinBank VNM\"\n        },\n        {\n            \"id\": \"10899124300\",\n            \"arrangementId\": \"00001942125,VND-1694577086847-c06702ad57c69aaa5313d732bed47b832cfaad5f01a7679bb955540aafaddee3\",\n            \"reference\": \"669DDBBVND 00002\",\n            \"description\": \"TRA LAI TIEN GUI TK: 00001942125\",\n            \"category\": \"transaction_CategoryMoneyIn\",\n            \"bookingDate\": \"2023-08-24\",\n            \"valueDate\": \"2023-08-25\",\n            \"amount\": \"14\",\n            \"currency\": \"VND\",\n            \"creditDebitIndicator\": \"CRDT\",\n            \"runningBalance\": \"9720\"\n        },\n        {\n            \"id\": \"10894164365\",\n            \"arrangementId\": \"00001942125,VND-1694577086847-c06702ad57c69aaa5313d732bed47b832cfaad5f01a7679bb955540aafaddee3\",\n            \"reference\": \"669V00923236AIC2\",\n            \"description\": \"TestCk\",\n            \"bookingDate\": \"2023-08-24\",\n            \"valueDate\": \"2023-08-24\",\n            \"amount\": \"1000\",\n            \"currency\": \"VND\",\n            \"creditDebitIndicator\": \"DBIT\",\n            \"runningBalance\": \"9706\"\n        },\n        {\n            \"id\": \"10894153625\",\n            \"arrangementId\": \"00001942125,VND-1694577086847-c06702ad57c69aaa5313d732bed47b832cfaad5f01a7679bb955540aafaddee3\",\n            \"reference\": \"669ITC123236AGD6\",\n            \"description\": \"LE HONG SON chuyen tien\",\n            \"category\": \"transaction_CategoryMoneyIn\",\n            \"bookingDate\": \"2023-08-24\",\n            \"valueDate\": \"2023-08-24\",\n            \"amount\": \"10000\",\n            \"currency\": \"VND\",\n            \"creditDebitIndicator\": \"CRDT\",\n            \"runningBalance\": \"10706\"\n        },\n        {\n            \"id\": \"10894115425\",\n            \"arrangementId\": \"00001942125,VND-1694577086847-c06702ad57c69aaa5313d732bed47b832cfaad5f01a7679bb955540aafaddee3\",\n            \"reference\": \"669V00923236AIL4\",\n            \"description\": \"TestCk\",\n            \"bookingDate\": \"2023-08-24\",\n            \"valueDate\": \"2023-08-24\",\n            \"amount\": \"1000\",\n            \"currency\": \"VND\",\n            \"creditDebitIndicator\": \"DBIT\",\n            \"runningBalance\": \"706\"\n        },\n        {\n            \"id\": \"10893976227\",\n            \"arrangementId\": \"00001942125,VND-1694577086847-c06702ad57c69aaa5313d732bed47b832cfaad5f01a7679bb955540aafaddee3\",\n            \"reference\": \"669V00923236AHZZ\",\n            \"description\": \"TestCk\",\n            \"bookingDate\": \"2023-08-24\",\n            \"valueDate\": \"2023-08-24\",\n            \"amount\": \"1000\",\n            \"currency\": \"VND\",\n            \"creditDebitIndicator\": \"DBIT\",\n            \"runningBalance\": \"1706\"\n        },\n        {\n            \"id\": \"10891310900\",\n            \"arrangementId\": \"00001942125,VND-1694577086847-c06702ad57c69aaa5313d732bed47b832cfaad5f01a7679bb955540aafaddee3\",\n            \"reference\": \"669V00923236A9SB\",\n            \"description\": \"TestCk\",\n            \"bookingDate\": \"2023-08-24\",\n            \"valueDate\": \"2023-08-24\",\n            \"amount\": \"1000\",\n            \"currency\": \"VND\",\n            \"creditDebitIndicator\": \"DBIT\",\n            \"runningBalance\": \"2706\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/tpbank/getname?idBank=16&toBank=0491000157943&bankCode=970436",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"tpbank",
+						"getname"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "16"
+						},
+						{
+							"key": "toBank",
+							"value": "0491000157943",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970436",
+							"description": "Bankcode Napas 247"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/tpbank/getname?idBank=15&toBank=0491000157943&bankCode=970436",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tpbank",
+								"getname"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "15"
+								},
+								{
+									"key": "toBank",
+									"value": "0491000157943",
+									"description": "Số tài khoản nhận tiền"
+								},
+								{
+									"key": "bankCode",
+									"value": "970436",
+									"description": "Bankcode Napas 247"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:45:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=xnvdNxOuzCtEb%2BcZ6hKcwlDStaJN3qz4CQSvjX2sN2mN5IEkVkC1MZ2n3vcVfGLI0Kl365TfSx0Q98lXJh8FxrFbmuWVzzlfDK%2B%2BeVbEvS3R3CusNXSAVY9TXSHl\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d65cd69987c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"creditorInfo\": {\n        \"name\": \"LE HONG SON\",\n        \"accountNumber\": \"0491000157943\",\n        \"extBankId\": \"970436\",\n        \"extBankCode\": \"203\",\n        \"extBankNameEn\": \"Joint Stock Commercial Bank for Foreign Trade of Vietnam\",\n        \"extBankNameVn\": \"Ngân hàng TMCP Ngoại Thương\",\n        \"currency\": \"VND\",\n        \"guarantee\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/tpbank/transfer?idBank=15&toBank=0491000157943&bankCode=970436&amount=5000&memo=TestCk",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"tpbank",
+						"transfer"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "15"
+						},
+						{
+							"key": "toBank",
+							"value": "0491000157943",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970436",
+							"description": "Bankcode Napas 247"
+						},
+						{
+							"key": "amount",
+							"value": "5000"
+						},
+						{
+							"key": "memo",
+							"value": "TestCk",
+							"description": "Lời nhắn"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Transfer",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/tpbank/transfer?idBank=15&toBank=0491000157943&bankCode=970436&amount=1000&memo=TestCk",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tpbank",
+								"transfer"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "15"
+								},
+								{
+									"key": "toBank",
+									"value": "0491000157943",
+									"description": "Số tài khoản nhận tiền"
+								},
+								{
+									"key": "bankCode",
+									"value": "970436",
+									"description": "Bankcode Napas 247"
+								},
+								{
+									"key": "amount",
+									"value": "1000"
+								},
+								{
+									"key": "memo",
+									"value": "TestCk",
+									"description": "Lời nhắn"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:52:00 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=qubSRxwkuQXd0qwgXlpbvlJT1qUB9hg9tZkTc2U85F8krbaYNucnSwM4xBf1gAINTbki9W39lY2Ug93rGn0tTRuvF7I4HEP7bKFs%2BUYWA%2BPCkVOSeoM0XKzNkeh4\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d6f53deb17c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"data\": {\n        \"id\": \"48ea20d3-917d-43eb-b5ec-51077610854d\",\n        \"authMethod\": \"ETOKEN\",\n        \"feeAmount\": \"0\",\n        \"feeCurrency\": \"VND\",\n        \"feeDesc\": \"PHI CHUYEN TIEN 0\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Fast Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/tpbank/fast-transfer?idBank=15&toBank=662663666999&bankCode=970415&amount=1000&memo=TestCk&pinCode=120515",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"tpbank",
+						"fast-transfer"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "15"
+						},
+						{
+							"key": "toBank",
+							"value": "662663666999",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970415",
+							"description": "Bankcode Napas 247"
+						},
+						{
+							"key": "amount",
+							"value": "1000"
+						},
+						{
+							"key": "memo",
+							"value": "TestCk",
+							"description": "Lời nhắn"
+						},
+						{
+							"key": "pinCode",
+							"value": "120515"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Transfer",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/tpbank/transfer?idBank=15&toBank=0491000157943&bankCode=970436&amount=1000&memo=TestCk",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tpbank",
+								"transfer"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "15"
+								},
+								{
+									"key": "toBank",
+									"value": "0491000157943",
+									"description": "Số tài khoản nhận tiền"
+								},
+								{
+									"key": "bankCode",
+									"value": "970436",
+									"description": "Bankcode Napas 247"
+								},
+								{
+									"key": "amount",
+									"value": "1000"
+								},
+								{
+									"key": "memo",
+									"value": "TestCk",
+									"description": "Lời nhắn"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:52:00 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=qubSRxwkuQXd0qwgXlpbvlJT1qUB9hg9tZkTc2U85F8krbaYNucnSwM4xBf1gAINTbki9W39lY2Ug93rGn0tTRuvF7I4HEP7bKFs%2BUYWA%2BPCkVOSeoM0XKzNkeh4\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d6f53deb17c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"data\": {\n        \"id\": \"48ea20d3-917d-43eb-b5ec-51077610854d\",\n        \"authMethod\": \"ETOKEN\",\n        \"feeAmount\": \"0\",\n        \"feeCurrency\": \"VND\",\n        \"feeDesc\": \"PHI CHUYEN TIEN 0\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "One Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/tpbank/one-transfer?idBank=15&toBank=0491000157943&bankCode=970436&amount=5000&memo=TestCk",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"tpbank",
+						"one-transfer"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "15"
+						},
+						{
+							"key": "toBank",
+							"value": "0491000157943",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970436",
+							"description": "Bankcode Napas 247"
+						},
+						{
+							"key": "amount",
+							"value": "5000"
+						},
+						{
+							"key": "memo",
+							"value": "TestCk",
+							"description": "Lời nhắn"
+						},
+						{
+							"key": "requestId",
+							"value": "123123423",
+							"description": "Custom",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "One Transfer",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/tpbank/one-transfer?idBank=15&toBank=0491000157943&bankCode=970436&amount=1000&memo=TestCk",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tpbank",
+								"one-transfer"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "15"
+								},
+								{
+									"key": "toBank",
+									"value": "0491000157943",
+									"description": "Số tài khoản nhận tiền"
+								},
+								{
+									"key": "bankCode",
+									"value": "970436",
+									"description": "Bankcode Napas 247"
+								},
+								{
+									"key": "amount",
+									"value": "1000"
+								},
+								{
+									"key": "memo",
+									"value": "TestCk",
+									"description": "Lời nhắn"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:51:39 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=U8HzucJ4fadoB%2BILSNCH%2F6bw23VQ%2Bcy4z76AXLgUg57SHUnWc7QHPtKCZg0RLggFqul6%2B2Y6tCyI47l4mDqRXoMVDr0GGMyGM13xxIOO5PQSi46pVzjOYMU22WBz\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d6ecc78687c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"data\": {\n        \"id\": \"566a8d7c-915a-49f0-9aaa-495a95b4cf5e\",\n        \"authMethod\": \"ETOKEN\",\n        \"feeAmount\": \"0\",\n        \"feeCurrency\": \"VND\",\n        \"feeDesc\": \"PHI CHUYEN TIEN 0\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Thông tin giao dịch",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/tpbank/infotransfer?idBank=15&tranId=2039683c-7b06-4099-a98d-d8455b6b6a71",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"tpbank",
+						"infotransfer"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "15"
+						},
+						{
+							"key": "tranId",
+							"value": "2039683c-7b06-4099-a98d-d8455b6b6a71"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Thông tin giao dịch",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/tpbank/infotransfer?idBank=15&tranId=10b23518-c112-446c-a435-e1a4282f1eff",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tpbank",
+								"infotransfer"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "15"
+								},
+								{
+									"key": "tranId",
+									"value": "10b23518-c112-446c-a435-e1a4282f1eff"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:52:11 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "55"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=kI6phf%2BTiVLCKZS7oKjYMUWbKHC%2BwGvhdvIb7A5Rx7WXfIf8oPWXW8PTbvG1J9ewslBCSmyCoyxsCQpL7AgijsSWRQArdHQ86%2FMbJ%2FtT2%2Ffuj8LW%2BH1rLCeZyz6r\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d6f9b9be37c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 7,\n    \"username\": \"lesondev1911\",\n    \"owner\": \"1\",\n    \"idBank\": \"15\",\n    \"tranid\": \"10b23518-c112-446c-a435-e1a4282f1eff\",\n    \"messages\": \"https://ebank.tpb.vn/retail/vX/track?id=HY230824Y1yelOmn\",\n    \"debitAccountNo\": \"00001942125\",\n    \"creditAccountNo\": \"0491000157943\",\n    \"creditAccountName\": \"LE HONG SON\",\n    \"creditBankCode\": \"970436\",\n    \"amount\": \"1000\",\n    \"memo\": \"TestCk\",\n    \"status\": \"1\",\n    \"fullBank\": \"tpb\",\n    \"created_at\": \"2023-08-24T08:18:09.000000Z\",\n    \"updated_at\": \"2023-08-24T08:18:58.000000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Post Otp Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/tpbank/updatetransfer?idBank=15&id=bb744b3a-3d2a-4d22-b435-7709d7d93f2c&otp=946032",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"tpbank",
+						"updatetransfer"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "15"
+						},
+						{
+							"key": "id",
+							"value": "bb744b3a-3d2a-4d22-b435-7709d7d93f2c"
+						},
+						{
+							"key": "otp",
+							"value": "946032"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Proxy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/tpbank/proxy?token={{token}}&idBank=15",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"tpbank",
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "idBank",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

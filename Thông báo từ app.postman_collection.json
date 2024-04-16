@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "17fa832a-0b7b-4290-8c2b-cd171c123e20",
+		"name": "Thông báo từ app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-17fa832a-0b7b-4290-8c2b-cd171c123e20?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Lấy danh sách thông báo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/list/history-notify?limit=10",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"list",
+						"history-notify"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ẩn 1 giao dịch đã xử lý",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/list/history-hide?idRow=1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"list",
+						"history-hide"
+					],
+					"query": [
+						{
+							"key": "idRow",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "c6cee999-2a3c-45da-9dc1-a6c091ba7362",
+		"name": "Zác Sacombank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-c6cee999-2a3c-45da-9dc1-a6c091ba7362?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "32",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/sacombank/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"sacombank",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "32",
+							"type": "text"
+						},
+						{
+							"key": "cccd",
+							"value": "015200009241",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "254599",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/sacombank/login-otp",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"sacombank",
+						"login-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "32",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/sacombank/test",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"sacombank",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Transfer v2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "0387654818",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "toBank",
+							"value": "662663666999",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970415",
+							"description": "Bankcode Napas 247"
+						},
+						{
+							"key": "amount",
+							"value": "1000",
+							"description": "Số tiền"
+						},
+						{
+							"key": "memo",
+							"value": "Le Hong Son Chuyen Khoan",
+							"description": "Lời nhắn"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/apiv2/techcombank/transfer",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"apiv2",
+						"techcombank",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

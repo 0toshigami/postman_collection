@@ -1,0 +1,610 @@
+{
+	"info": {
+		"_postman_id": "892fd176-2e9f-4ed8-a2ee-a208a962c7e0",
+		"name": "21. Momo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-892fd176-2e9f-4ed8-a2ee-a208a962c7e0?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "01. Send OTP",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/momo/postphone?phone=0934567643",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"momo",
+						"postphone"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "0934567643"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "02. Post OTP",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/momo/postotp?phone=0855576421&otp=5406&password=290900",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"momo",
+						"postotp"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "0855576421"
+						},
+						{
+							"key": "otp",
+							"value": "5406"
+						},
+						{
+							"key": "password",
+							"value": "290900"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "02. Post OTP",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/momo/postotp?phone=0352883794&otp=0463",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"momo",
+								"postotp"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "0352883794"
+								},
+								{
+									"key": "otp",
+									"value": "0463"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 06 Sep 2023 12:07:48 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=BVbkP3bNfrCb0OzQ4xhZsgyWqXibBsfHfncpBKbLAPCR5b%2FnCaFERo29eEP66S56%2BpSf2S2%2Bj6EY2rBVy%2B9A57xSo8hrfsPSLWxgGRxRuY0o5nLq4ZeESUdXnJWa\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80269800ba922b58-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Thành công\"\n}"
+				}
+			]
+		},
+		{
+			"name": "03. Post Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/momo/postpass?phone=0888953492&password=051505",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"momo",
+						"postpass"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "0888953492"
+						},
+						{
+							"key": "password",
+							"value": "051505"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "03. Post Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/momo/postpass?phone=0352883794&password=120515",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"momo",
+								"postpass"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "0352883794"
+								},
+								{
+									"key": "password",
+									"value": "120515"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 06 Sep 2023 12:07:52 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=xNKSfOMCmchLshEtyI0I%2BqZTAb0E5%2BJuY%2FKmVP7LYjKSys9L42snNsijMKL3XvfFYpClJW7cmeCq%2Fb%2BY6WMZivjEpnnS2exikUHImgdSvArFekKlClVOpIafWUGT\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80269817c9ad2b58-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"key_login\": null,\n        \"phone\": \"0352883794\",\n        \"password\": \"120515\",\n        \"Name\": null,\n        \"email\": null,\n        \"imei\": \"f52e413d-5fb8-ebba-5215-de5bee7ba101\",\n        \"AAID\": \"7fad9dd7-d7c1-9370-d514-458b546a6d70\",\n        \"TOKEN\": \"YN3dQeIQqAdR0eqBXQcLcX:T1tGwLyzo-ZzuNZoRDxsCJltPqZ2go-ud4lhyPuERpe-WRtpPYR-LC1GYvw-m62B6GI58DZhiVRt5ZQxQw4zcRbbWAHARqzntJJHX2zus6sE9hCKI-JIKIhPAfq_0Kyp40jcult-NTuI\",\n        \"ohash\": \"839881ca28107e4153fdbde312e0f262868881552aee15cf112cdcc89703ed32\",\n        \"SECUREID\": \"ae42ec38334d92a3d\",\n        \"rkey\": \"kEtqTDil29LlJ3aRXY1O\",\n        \"rowCardId\": null,\n        \"authorization\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyIjoiMDE2NTI4ODM3OTQiLCJpbWVpIjoiZjUyZTQxM2QtNWZiOC1lYmJhLTUyMTUtZGU1YmVlN2JhMTAxIiwiQkFOS19DT0RFIjoiMTAyIiwiQkFOS19OQU1FIjoiVklFVElOIEJBTksiLCJNQVBfU0FDT01fQ0FSRCI6MCwiTkFNRSI6IlRSQU4gVEhJIEhBTkciLCJJREVOVElGWSI6IlVOQ09ORklSTSIsIkRFVklDRV9PUyI6IkFuZHJvaWQiLCJBUFBfVkVSIjo0MDIyMSwiYWdlbnRfaWQiOjQ3ODc2NDIsInNlc3Npb25LZXkiOiJqL0IxT1h6b1ZTVk1zdUZmZFlUeVMrTmxvWHdwcGtRTGx4QlJiUEJwc2J0eEVvbEc5L0lITnc9PSIsInBpbiI6InVsTEVPUjl6anFFPSIsImlzU2hvcCI6ZmFsc2UsInVzZXJfdHlwZSI6MSwia2V5IjoibW9tbyIsInJhcGlkX2lkIjoiaFpFcW5MajhIejFPTHNWZ2pMajlic1hOakZVVXFSbkliMUtOZkRyNDlZajFvVGlLVGFTTHNTaVQwaFRQVWU2SlRjYm1hVnNVdHhNPSIsImV4cCI6MTY5NDAwNzQ3Mn0.s_RjK0TxptBZ9UgWgonnd9zgQJAzfpYgRdPd5VX4jJkU-REc0apxvjVGFQrdxAolc6N0fYgyMZimoro6xbvFYfhH3yxs1yEClAMzQ7BKCJ7XVs9y_CUGHcUkfhTOcUixazeT6sh_pVM7ythLvPDs7UWFRSxbam7kuAx-hxhK5QnFeLRFySZx8bgq7sm1I-FAzSekeGzuiL27pxNrU0LtpkTXM8Xxn9NfX4QTFzX-6BaaNOrkCr8l4u0-zdFNZ46RtVybIDy77hPPC7ZCDvWJRK6GGV6IpP92SPN2FZGyH7zPkdyi-IWBbVaN4Db0U9NOZ-P6bCCFqf1FBQD3_Z7bJA\",\n        \"refreshToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJ1c2VyIjoiMDE2NTI4ODM3OTQiLCJpbWVpIjoiZjUyZTQxM2QtNWZiOC1lYmJhLTUyMTUtZGU1YmVlN2JhMTAxIiwiQkFOS19DT0RFIjoiMTAyIiwiQkFOS19OQU1FIjoiVklFVElOIEJBTksiLCJNQVBfU0FDT01fQ0FSRCI6MCwiTkFNRSI6IlRSQU4gVEhJIEhBTkciLCJJREVOVElGWSI6IlVOQ09ORklSTSIsIkRFVklDRV9PUyI6IkFuZHJvaWQiLCJBUFBfVkVSIjo0MDIyMSwiYWdlbnRfaWQiOjQ3ODc2NDIsInNlc3Npb25LZXkiOiJqL0IxT1h6b1ZTVk1zdUZmZFlUeVMrTmxvWHdwcGtRTGx4QlJiUEJwc2J0RTVFOGN0R2FTSkpkUTFVOVFhNU9CSmR0bGZ3OHp2WDg9IiwicGluIjoidWxMRU9SOXpqcUU9IiwiaXNTaG9wIjpmYWxzZSwidXNlcl90eXBlIjoxLCJrZXkiOiJtb21vLXJlZnJlc2gtdG9rZW4iLCJyYXBpZF9pZCI6ImhaRXFuTGo4SHoxT0xzVmdqTGo5YnNYTmpGVVVxUm5JYjFLTmZEcjQ5WWoxb1RpS1RhU0xzU2lUMGhUUFVlNkpUY2JtYVZzVXR4TT0iLCJleHAiOjE2OTQ0MzQwNzJ9.ve6pIUj2ypz5PyhpyeP3vmONRc0Tu1LLtqNbeXCmCVPl9JmnEeBe1yaVir0wcmhvB5pMKLD6L38t-gUQaHj8GA\",\n        \"agent_id\": \"4787642\",\n        \"setupKeyDecrypt\": \"2349cfff-f241-4b04-8cc2-47455a9b1cf9\",\n        \"setupKey\": \"/VvD9xEUYh6J1yrDqFM5sT0q8EFZLIgvWJ7iS3blcUyADfM0Nsr1EGuQYpOnIiq0\",\n        \"sessionkey\": \"7ab88157-f0f2-4ea4-9664-74cba83b3670\",\n        \"RSA_PUBLIC_KEY\": \"-----BEGIN RSA PUBLIC KEY-----\\nMEgCQQDjtTNZJnbMWXON/mhhLzENzQW8TOH/gaOZ72u6FEzfjyWSfGsP6/rMIVjY\\n2w44ZyqNG2p45PGmp3Y8bquPAQGnAgMBAAE=\\n-----END RSA PUBLIC KEY-----\\n\",\n        \"BALANCE\": 800,\n        \"BankVerify\": 2,\n        \"device\": \"MI 9\",\n        \"hardware\": \"equuleus\",\n        \"facture\": \"Xiaomi\",\n        \"MODELID\": \"Xiaomi equuleus\",\n        \"TimeLogin\": 1694002010,\n        \"errorDesc\": \"0\",\n        \"status\": \"success\",\n        \"withdraw_status\": 1,\n        \"share_fund\": 1,\n        \"today\": 0,\n        \"month\": 0,\n        \"today_gd\": 0,\n        \"noidungtra\": null,\n        \"limit_day\": 30000000,\n        \"limit_month\": 100000000,\n        \"try\": 0,\n        \"created_at\": null,\n        \"updated_at\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "04. List Transaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "0888953492"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/momo/histories",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"momo",
+						"histories"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "04. Lịch sử giao dịch",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "0888953492"
+								},
+								{
+									"key": "amount",
+									"value": "10"
+								},
+								{
+									"key": "time",
+									"value": "5"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/momo/histories",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"momo",
+								"histories"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 06 Sep 2023 12:12:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=ev9XNetDyjbwWuGBHxc0WnPX7T1UAe8jDk6BR4PgI%2FgwyIQmK5Mu3GIu60F81wrOk7bjRO2ZQhvCXDO2bhhENphvI3bGEVO2MinkNFsaoMkpzAjHMnWrjOsmJ7Z8\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80269ec06b932b58-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"time\": 1694002345243,\n    \"statusCode\": 200,\n    \"resultCode\": 0,\n    \"message\": \"Giao dịch thành công\",\n    \"momoMsg\": [\n        {\n            \"id\": \"8608295295\",\n            \"username\": \"0888953492\",\n            \"transId\": 43728058827,\n            \"serviceId\": \"MOMOLAN220200121\",\n            \"lastUpdate\": 1691813221498,\n            \"transCategory\": \"th_sdk_cat2\",\n            \"status\": 2,\n            \"billId\": \"CARTID_MOMOLAN220200121_f8778d863a924c56a53cc018fd0aa045_xn78ea4tmnll7hwchh\",\n            \"quantity\": 1,\n            \"totalOriginalAmount\": 19500,\n            \"totalAmount\": 19500,\n            \"useVoucher\": 0,\n            \"usePoint\": null,\n            \"totalFee\": 0,\n            \"sourceId\": \"0888953492\",\n            \"sourceName\": \"PHẠM ĐÌNH THÁI\",\n            \"targetId\": \"m4becomfuntek\",\n            \"targetName\": \"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\",\n            \"usePrepaid\": 0,\n            \"io\": -1,\n            \"moneySource\": 1,\n            \"postBalance\": 1750,\n            \"totalSubTotalAmount\": null,\n            \"totalFeeSof\": 0,\n            \"totalDiscountAmount\": 0,\n            \"totalDiscountFee\": null,\n            \"moneySourceName\": \"Ví momo\",\n            \"purchaseId\": \"PO-B5E36FA0F92345EF9CA264EF939A2D43\",\n            \"cashbackIncr\": 0,\n            \"pointIncr\": 0,\n            \"bonusIncr\": 0,\n            \"prepaidIds\": null,\n            \"giftPrepaidId\": null,\n            \"serviceName\": \"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\",\n            \"errorType\": null,\n            \"errorCode\": 0,\n            \"errorDesc\": null,\n            \"transhisData\": \"{\\\"visibleServiceFee\\\":\\\"false\\\",\\\"baseInfo\\\":{\\\"title\\\":{\\\"vi\\\":\\\"Thanh toán CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\\\",\\\"en\\\":\\\"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM payment\\\"},\\\"shortTitle\\\":{\\\"vi\\\":\\\"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\\\",\\\"en\\\":\\\"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\\\"},\\\"icon\\\":\\\"https://img.mservice.io/momo_app_v2/new_version/img/appx_icon/ic_tranhis_consumer_loan.png\\\"}}\",\n            \"discountAmount\": 0,\n            \"createdAt\": 1691813217484,\n            \"directDiscount\": 0,\n            \"momoDiscount\": 0,\n            \"momoTid\": null,\n            \"type\": \"m4bpay\",\n            \"isDeleted\": false\n        },\n        {\n            \"id\": \"8608220382\",\n            \"username\": \"0888953492\",\n            \"transId\": 43726797114,\n            \"serviceId\": \"MOMOLAN220200121\",\n            \"lastUpdate\": 1691812755192,\n            \"transCategory\": \"th_sdk_cat2\",\n            \"status\": 2,\n            \"billId\": \"CARTID_MOMOLAN220200121_fa97916f7a32456bb20797462bdcb2aa_c14yn4smz87ll7hmfzo\",\n            \"quantity\": 1,\n            \"totalOriginalAmount\": 48750,\n            \"totalAmount\": 48750,\n            \"useVoucher\": 0,\n            \"usePoint\": null,\n            \"totalFee\": 0,\n            \"sourceId\": \"0888953492\",\n            \"sourceName\": \"PHẠM ĐÌNH THÁI\",\n            \"targetId\": \"m4becomfuntek\",\n            \"targetName\": \"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\",\n            \"usePrepaid\": 0,\n            \"io\": -1,\n            \"moneySource\": 1,\n            \"postBalance\": 21250,\n            \"totalSubTotalAmount\": null,\n            \"totalFeeSof\": 0,\n            \"totalDiscountAmount\": 0,\n            \"totalDiscountFee\": null,\n            \"moneySourceName\": \"Ví momo\",\n            \"purchaseId\": \"PO-FE5BBCD4D3D44885AD71B6D6E17942BE\",\n            \"cashbackIncr\": 0,\n            \"pointIncr\": 0,\n            \"bonusIncr\": 0,\n            \"prepaidIds\": null,\n            \"giftPrepaidId\": null,\n            \"serviceName\": \"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\",\n            \"errorType\": null,\n            \"errorCode\": 0,\n            \"errorDesc\": null,\n            \"transhisData\": \"{\\\"visibleServiceFee\\\":\\\"false\\\",\\\"baseInfo\\\":{\\\"title\\\":{\\\"vi\\\":\\\"Thanh toán CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\\\",\\\"en\\\":\\\"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM payment\\\"},\\\"shortTitle\\\":{\\\"vi\\\":\\\"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\\\",\\\"en\\\":\\\"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\\\"},\\\"icon\\\":\\\"https://img.mservice.io/momo_app_v2/new_version/img/appx_icon/ic_tranhis_consumer_loan.png\\\"}}\",\n            \"discountAmount\": 0,\n            \"createdAt\": 1691812751766,\n            \"directDiscount\": 0,\n            \"momoDiscount\": 0,\n            \"momoTid\": null,\n            \"type\": \"m4bpay\",\n            \"isDeleted\": false\n        },\n        {\n            \"id\": \"8608203049\",\n            \"username\": \"0888953492\",\n            \"transId\": 43727289314,\n            \"serviceId\": \"banklink_cashin\",\n            \"lastUpdate\": 1691812685082,\n            \"transCategory\": \"th_cashin_nhlk_cat2\",\n            \"status\": 2,\n            \"billId\": null,\n            \"quantity\": 1,\n            \"totalOriginalAmount\": 70000,\n            \"totalAmount\": 70000,\n            \"useVoucher\": 0,\n            \"usePoint\": null,\n            \"totalFee\": 0,\n            \"sourceId\": \"mbbank19.bank\",\n            \"sourceName\": \"MBBank\",\n            \"targetId\": \"0888953492\",\n            \"targetName\": \"PHẠM ĐÌNH THÁI\",\n            \"usePrepaid\": 0,\n            \"io\": 1,\n            \"moneySource\": 2,\n            \"postBalance\": 70000,\n            \"totalSubTotalAmount\": null,\n            \"totalFeeSof\": 0,\n            \"totalDiscountAmount\": 0,\n            \"totalDiscountFee\": null,\n            \"moneySourceName\": \"MBBank\",\n            \"purchaseId\": null,\n            \"cashbackIncr\": 0,\n            \"pointIncr\": 0,\n            \"bonusIncr\": 0,\n            \"prepaidIds\": null,\n            \"giftPrepaidId\": null,\n            \"serviceName\": \"PHẠM ĐÌNH THÁI\",\n            \"errorType\": null,\n            \"errorCode\": 0,\n            \"errorDesc\": null,\n            \"transhisData\": \"{\\\"baseInfo\\\":{\\\"title\\\":{\\\"vi\\\":\\\"Nạp tiền vào ví từ MBBank\\\",\\\"en\\\":\\\"Topped-up money to wallet from MBBank\\\"},\\\"shortTitle\\\":{\\\"vi\\\":\\\"Nạp tiền vào ví\\\",\\\"en\\\":\\\"Topped-up money to wallet\\\"},\\\"icon\\\":\\\"https://img.mservice.io/momo_app_v2/new_version/img/appx_icon/ic_tranhis_recharge.png\\\"}}\",\n            \"discountAmount\": 0,\n            \"createdAt\": 1691812643786,\n            \"directDiscount\": 0,\n            \"momoDiscount\": 0,\n            \"momoTid\": null,\n            \"type\": \"portal/bankcashin\",\n            \"isDeleted\": false\n        },\n        {\n            \"id\": \"8423004862\",\n            \"username\": \"0888953492\",\n            \"transId\": 43168233945,\n            \"serviceId\": \"MOMO5DNK20230718\",\n            \"lastUpdate\": 1690778749150,\n            \"transCategory\": \"th_sdk_cat2\",\n            \"status\": 2,\n            \"billId\": \"CARTID_MOMO5DNK20230718_G22.99.2-230731068627_im53sa4vgxolkqdw64z\",\n            \"quantity\": 1,\n            \"totalOriginalAmount\": 60000,\n            \"totalAmount\": 60000,\n            \"useVoucher\": 0,\n            \"usePoint\": null,\n            \"totalFee\": 0,\n            \"sourceId\": \"0888953492\",\n            \"sourceName\": \"PHẠM ĐÌNH THÁI\",\n            \"targetId\": \"m4bvttidvc_dkts\",\n            \"targetName\": \"Tuyển sinh Đại học\",\n            \"usePrepaid\": 0,\n            \"io\": -1,\n            \"moneySource\": 1,\n            \"postBalance\": 0,\n            \"totalSubTotalAmount\": null,\n            \"totalFeeSof\": 0,\n            \"totalDiscountAmount\": 0,\n            \"totalDiscountFee\": null,\n            \"moneySourceName\": \"Ví momo\",\n            \"purchaseId\": \"PO-781256C3B7BC456BB5E22F042868494B\",\n            \"cashbackIncr\": 0,\n            \"pointIncr\": 0,\n            \"bonusIncr\": 0,\n            \"prepaidIds\": null,\n            \"giftPrepaidId\": null,\n            \"serviceName\": \"Tuyển sinh Đại học\",\n            \"errorType\": null,\n            \"errorCode\": 0,\n            \"errorDesc\": null,\n            \"transhisData\": \"{\\\"visibleServiceFee\\\":\\\"false\\\",\\\"baseInfo\\\":{\\\"title\\\":{\\\"vi\\\":\\\"Thanh toán Tuyển sinh Đại học\\\",\\\"en\\\":\\\"Tuyển sinh Đại học payment\\\"},\\\"shortTitle\\\":{\\\"vi\\\":\\\"Tuyển sinh Đại học\\\",\\\"en\\\":\\\"Tuyển sinh Đại học\\\"},\\\"icon\\\":\\\"https://img.mservice.io/momo_app_v2/new_version/img/appx_icon/ic_tranhis_consumer_loan.png\\\"}}\",\n            \"discountAmount\": 0,\n            \"createdAt\": 1690778748673,\n            \"directDiscount\": 0,\n            \"momoDiscount\": 0,\n            \"momoTid\": null,\n            \"type\": \"m4bpay\",\n            \"isDeleted\": false\n        },\n        {\n            \"id\": \"8422956147\",\n            \"username\": \"0888953492\",\n            \"transId\": 43168134662,\n            \"serviceId\": \"banklink_cashin\",\n            \"lastUpdate\": 1690778459822,\n            \"transCategory\": \"th_cashin_nhlk_cat2\",\n            \"status\": 2,\n            \"billId\": null,\n            \"quantity\": 1,\n            \"totalOriginalAmount\": 60000,\n            \"totalAmount\": 60000,\n            \"useVoucher\": 0,\n            \"usePoint\": null,\n            \"totalFee\": 0,\n            \"sourceId\": \"mbbank06.bank\",\n            \"sourceName\": \"MBBank\",\n            \"targetId\": \"0888953492\",\n            \"targetName\": \"PHẠM ĐÌNH THÁI\",\n            \"usePrepaid\": 0,\n            \"io\": 1,\n            \"moneySource\": 2,\n            \"postBalance\": 60000,\n            \"totalSubTotalAmount\": null,\n            \"totalFeeSof\": 0,\n            \"totalDiscountAmount\": 0,\n            \"totalDiscountFee\": null,\n            \"moneySourceName\": \"MBBank\",\n            \"purchaseId\": null,\n            \"cashbackIncr\": 0,\n            \"pointIncr\": 0,\n            \"bonusIncr\": 0,\n            \"prepaidIds\": null,\n            \"giftPrepaidId\": null,\n            \"serviceName\": \"PHẠM ĐÌNH THÁI\",\n            \"errorType\": null,\n            \"errorCode\": 0,\n            \"errorDesc\": null,\n            \"transhisData\": \"{\\\"baseInfo\\\":{\\\"title\\\":{\\\"vi\\\":\\\"Nạp tiền vào ví từ MBBank\\\",\\\"en\\\":\\\"Topped-up money to wallet from MBBank\\\"},\\\"shortTitle\\\":{\\\"vi\\\":\\\"Nạp tiền vào ví\\\",\\\"en\\\":\\\"Topped-up money to wallet\\\"},\\\"icon\\\":\\\"https://img.mservice.io/momo_app_v2/new_version/img/appx_icon/ic_tranhis_recharge.png\\\"}}\",\n            \"discountAmount\": 0,\n            \"createdAt\": 1690778448189,\n            \"directDiscount\": 0,\n            \"momoDiscount\": 0,\n            \"momoTid\": null,\n            \"type\": \"portal/bankcashin\",\n            \"isDeleted\": false\n        },\n        {\n            \"id\": \"8422291195\",\n            \"username\": \"0888953492\",\n            \"transId\": 43166691947,\n            \"serviceId\": \"banklink_cashin\",\n            \"lastUpdate\": 1690775667879,\n            \"transCategory\": \"th_cashin_nhlk_cat2\",\n            \"status\": 6,\n            \"billId\": null,\n            \"quantity\": 1,\n            \"totalOriginalAmount\": 60000,\n            \"totalAmount\": 60000,\n            \"useVoucher\": 0,\n            \"usePoint\": null,\n            \"totalFee\": 0,\n            \"sourceId\": \"mbbank.bank\",\n            \"sourceName\": \"MBBank\",\n            \"targetId\": \"0888953492\",\n            \"targetName\": \"PHẠM ĐÌNH THÁI\",\n            \"usePrepaid\": 0,\n            \"io\": 1,\n            \"moneySource\": 2,\n            \"postBalance\": 0,\n            \"totalSubTotalAmount\": null,\n            \"totalFeeSof\": 0,\n            \"totalDiscountAmount\": 0,\n            \"totalDiscountFee\": null,\n            \"moneySourceName\": \"MBBank\",\n            \"purchaseId\": null,\n            \"cashbackIncr\": 0,\n            \"pointIncr\": 0,\n            \"bonusIncr\": 0,\n            \"prepaidIds\": null,\n            \"giftPrepaidId\": null,\n            \"serviceName\": \"PHẠM ĐÌNH THÁI\",\n            \"errorType\": null,\n            \"errorCode\": 0,\n            \"errorDesc\": null,\n            \"transhisData\": \"{\\\"baseInfo\\\":{\\\"title\\\":{\\\"vi\\\":\\\"Nạp tiền vào ví từ MBBank\\\",\\\"en\\\":\\\"Topped-up money to wallet from MBBank\\\"},\\\"shortTitle\\\":{\\\"vi\\\":\\\"Nạp tiền vào ví\\\",\\\"en\\\":\\\"Topped-up money to wallet\\\"},\\\"icon\\\":\\\"https://img.mservice.io/momo_app_v2/new_version/img/appx_icon/ic_tranhis_recharge.png\\\"}}\",\n            \"discountAmount\": 0,\n            \"createdAt\": 1690775638672,\n            \"directDiscount\": 0,\n            \"momoDiscount\": 0,\n            \"momoTid\": null,\n            \"type\": \"portal/bankcashin\",\n            \"isDeleted\": false\n        }\n    ],\n    \"currentLimit\": 10,\n    \"listOver\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "05. Detail Transaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "0855576421"
+						},
+						{
+							"key": "transId",
+							"value": "46512828546"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/momo/detail-histories",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"momo",
+						"detail-histories"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "04. Lịch sử giao dịch",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "0888953492"
+								},
+								{
+									"key": "amount",
+									"value": "10"
+								},
+								{
+									"key": "time",
+									"value": "5"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/momo/histories",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"momo",
+								"histories"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 06 Sep 2023 12:12:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=ev9XNetDyjbwWuGBHxc0WnPX7T1UAe8jDk6BR4PgI%2FgwyIQmK5Mu3GIu60F81wrOk7bjRO2ZQhvCXDO2bhhENphvI3bGEVO2MinkNFsaoMkpzAjHMnWrjOsmJ7Z8\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80269ec06b932b58-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"time\": 1694002345243,\n    \"statusCode\": 200,\n    \"resultCode\": 0,\n    \"message\": \"Giao dịch thành công\",\n    \"momoMsg\": [\n        {\n            \"id\": \"8608295295\",\n            \"username\": \"0888953492\",\n            \"transId\": 43728058827,\n            \"serviceId\": \"MOMOLAN220200121\",\n            \"lastUpdate\": 1691813221498,\n            \"transCategory\": \"th_sdk_cat2\",\n            \"status\": 2,\n            \"billId\": \"CARTID_MOMOLAN220200121_f8778d863a924c56a53cc018fd0aa045_xn78ea4tmnll7hwchh\",\n            \"quantity\": 1,\n            \"totalOriginalAmount\": 19500,\n            \"totalAmount\": 19500,\n            \"useVoucher\": 0,\n            \"usePoint\": null,\n            \"totalFee\": 0,\n            \"sourceId\": \"0888953492\",\n            \"sourceName\": \"PHẠM ĐÌNH THÁI\",\n            \"targetId\": \"m4becomfuntek\",\n            \"targetName\": \"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\",\n            \"usePrepaid\": 0,\n            \"io\": -1,\n            \"moneySource\": 1,\n            \"postBalance\": 1750,\n            \"totalSubTotalAmount\": null,\n            \"totalFeeSof\": 0,\n            \"totalDiscountAmount\": 0,\n            \"totalDiscountFee\": null,\n            \"moneySourceName\": \"Ví momo\",\n            \"purchaseId\": \"PO-B5E36FA0F92345EF9CA264EF939A2D43\",\n            \"cashbackIncr\": 0,\n            \"pointIncr\": 0,\n            \"bonusIncr\": 0,\n            \"prepaidIds\": null,\n            \"giftPrepaidId\": null,\n            \"serviceName\": \"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\",\n            \"errorType\": null,\n            \"errorCode\": 0,\n            \"errorDesc\": null,\n            \"transhisData\": \"{\\\"visibleServiceFee\\\":\\\"false\\\",\\\"baseInfo\\\":{\\\"title\\\":{\\\"vi\\\":\\\"Thanh toán CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\\\",\\\"en\\\":\\\"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM payment\\\"},\\\"shortTitle\\\":{\\\"vi\\\":\\\"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\\\",\\\"en\\\":\\\"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\\\"},\\\"icon\\\":\\\"https://img.mservice.io/momo_app_v2/new_version/img/appx_icon/ic_tranhis_consumer_loan.png\\\"}}\",\n            \"discountAmount\": 0,\n            \"createdAt\": 1691813217484,\n            \"directDiscount\": 0,\n            \"momoDiscount\": 0,\n            \"momoTid\": null,\n            \"type\": \"m4bpay\",\n            \"isDeleted\": false\n        },\n        {\n            \"id\": \"8608220382\",\n            \"username\": \"0888953492\",\n            \"transId\": 43726797114,\n            \"serviceId\": \"MOMOLAN220200121\",\n            \"lastUpdate\": 1691812755192,\n            \"transCategory\": \"th_sdk_cat2\",\n            \"status\": 2,\n            \"billId\": \"CARTID_MOMOLAN220200121_fa97916f7a32456bb20797462bdcb2aa_c14yn4smz87ll7hmfzo\",\n            \"quantity\": 1,\n            \"totalOriginalAmount\": 48750,\n            \"totalAmount\": 48750,\n            \"useVoucher\": 0,\n            \"usePoint\": null,\n            \"totalFee\": 0,\n            \"sourceId\": \"0888953492\",\n            \"sourceName\": \"PHẠM ĐÌNH THÁI\",\n            \"targetId\": \"m4becomfuntek\",\n            \"targetName\": \"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\",\n            \"usePrepaid\": 0,\n            \"io\": -1,\n            \"moneySource\": 1,\n            \"postBalance\": 21250,\n            \"totalSubTotalAmount\": null,\n            \"totalFeeSof\": 0,\n            \"totalDiscountAmount\": 0,\n            \"totalDiscountFee\": null,\n            \"moneySourceName\": \"Ví momo\",\n            \"purchaseId\": \"PO-FE5BBCD4D3D44885AD71B6D6E17942BE\",\n            \"cashbackIncr\": 0,\n            \"pointIncr\": 0,\n            \"bonusIncr\": 0,\n            \"prepaidIds\": null,\n            \"giftPrepaidId\": null,\n            \"serviceName\": \"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\",\n            \"errorType\": null,\n            \"errorCode\": 0,\n            \"errorDesc\": null,\n            \"transhisData\": \"{\\\"visibleServiceFee\\\":\\\"false\\\",\\\"baseInfo\\\":{\\\"title\\\":{\\\"vi\\\":\\\"Thanh toán CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\\\",\\\"en\\\":\\\"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM payment\\\"},\\\"shortTitle\\\":{\\\"vi\\\":\\\"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\\\",\\\"en\\\":\\\"CÔNG TY CỔ PHẦN FUNTEK VIỆT NAM\\\"},\\\"icon\\\":\\\"https://img.mservice.io/momo_app_v2/new_version/img/appx_icon/ic_tranhis_consumer_loan.png\\\"}}\",\n            \"discountAmount\": 0,\n            \"createdAt\": 1691812751766,\n            \"directDiscount\": 0,\n            \"momoDiscount\": 0,\n            \"momoTid\": null,\n            \"type\": \"m4bpay\",\n            \"isDeleted\": false\n        },\n        {\n            \"id\": \"8608203049\",\n            \"username\": \"0888953492\",\n            \"transId\": 43727289314,\n            \"serviceId\": \"banklink_cashin\",\n            \"lastUpdate\": 1691812685082,\n            \"transCategory\": \"th_cashin_nhlk_cat2\",\n            \"status\": 2,\n            \"billId\": null,\n            \"quantity\": 1,\n            \"totalOriginalAmount\": 70000,\n            \"totalAmount\": 70000,\n            \"useVoucher\": 0,\n            \"usePoint\": null,\n            \"totalFee\": 0,\n            \"sourceId\": \"mbbank19.bank\",\n            \"sourceName\": \"MBBank\",\n            \"targetId\": \"0888953492\",\n            \"targetName\": \"PHẠM ĐÌNH THÁI\",\n            \"usePrepaid\": 0,\n            \"io\": 1,\n            \"moneySource\": 2,\n            \"postBalance\": 70000,\n            \"totalSubTotalAmount\": null,\n            \"totalFeeSof\": 0,\n            \"totalDiscountAmount\": 0,\n            \"totalDiscountFee\": null,\n            \"moneySourceName\": \"MBBank\",\n            \"purchaseId\": null,\n            \"cashbackIncr\": 0,\n            \"pointIncr\": 0,\n            \"bonusIncr\": 0,\n            \"prepaidIds\": null,\n            \"giftPrepaidId\": null,\n            \"serviceName\": \"PHẠM ĐÌNH THÁI\",\n            \"errorType\": null,\n            \"errorCode\": 0,\n            \"errorDesc\": null,\n            \"transhisData\": \"{\\\"baseInfo\\\":{\\\"title\\\":{\\\"vi\\\":\\\"Nạp tiền vào ví từ MBBank\\\",\\\"en\\\":\\\"Topped-up money to wallet from MBBank\\\"},\\\"shortTitle\\\":{\\\"vi\\\":\\\"Nạp tiền vào ví\\\",\\\"en\\\":\\\"Topped-up money to wallet\\\"},\\\"icon\\\":\\\"https://img.mservice.io/momo_app_v2/new_version/img/appx_icon/ic_tranhis_recharge.png\\\"}}\",\n            \"discountAmount\": 0,\n            \"createdAt\": 1691812643786,\n            \"directDiscount\": 0,\n            \"momoDiscount\": 0,\n            \"momoTid\": null,\n            \"type\": \"portal/bankcashin\",\n            \"isDeleted\": false\n        },\n        {\n            \"id\": \"8423004862\",\n            \"username\": \"0888953492\",\n            \"transId\": 43168233945,\n            \"serviceId\": \"MOMO5DNK20230718\",\n            \"lastUpdate\": 1690778749150,\n            \"transCategory\": \"th_sdk_cat2\",\n            \"status\": 2,\n            \"billId\": \"CARTID_MOMO5DNK20230718_G22.99.2-230731068627_im53sa4vgxolkqdw64z\",\n            \"quantity\": 1,\n            \"totalOriginalAmount\": 60000,\n            \"totalAmount\": 60000,\n            \"useVoucher\": 0,\n            \"usePoint\": null,\n            \"totalFee\": 0,\n            \"sourceId\": \"0888953492\",\n            \"sourceName\": \"PHẠM ĐÌNH THÁI\",\n            \"targetId\": \"m4bvttidvc_dkts\",\n            \"targetName\": \"Tuyển sinh Đại học\",\n            \"usePrepaid\": 0,\n            \"io\": -1,\n            \"moneySource\": 1,\n            \"postBalance\": 0,\n            \"totalSubTotalAmount\": null,\n            \"totalFeeSof\": 0,\n            \"totalDiscountAmount\": 0,\n            \"totalDiscountFee\": null,\n            \"moneySourceName\": \"Ví momo\",\n            \"purchaseId\": \"PO-781256C3B7BC456BB5E22F042868494B\",\n            \"cashbackIncr\": 0,\n            \"pointIncr\": 0,\n            \"bonusIncr\": 0,\n            \"prepaidIds\": null,\n            \"giftPrepaidId\": null,\n            \"serviceName\": \"Tuyển sinh Đại học\",\n            \"errorType\": null,\n            \"errorCode\": 0,\n            \"errorDesc\": null,\n            \"transhisData\": \"{\\\"visibleServiceFee\\\":\\\"false\\\",\\\"baseInfo\\\":{\\\"title\\\":{\\\"vi\\\":\\\"Thanh toán Tuyển sinh Đại học\\\",\\\"en\\\":\\\"Tuyển sinh Đại học payment\\\"},\\\"shortTitle\\\":{\\\"vi\\\":\\\"Tuyển sinh Đại học\\\",\\\"en\\\":\\\"Tuyển sinh Đại học\\\"},\\\"icon\\\":\\\"https://img.mservice.io/momo_app_v2/new_version/img/appx_icon/ic_tranhis_consumer_loan.png\\\"}}\",\n            \"discountAmount\": 0,\n            \"createdAt\": 1690778748673,\n            \"directDiscount\": 0,\n            \"momoDiscount\": 0,\n            \"momoTid\": null,\n            \"type\": \"m4bpay\",\n            \"isDeleted\": false\n        },\n        {\n            \"id\": \"8422956147\",\n            \"username\": \"0888953492\",\n            \"transId\": 43168134662,\n            \"serviceId\": \"banklink_cashin\",\n            \"lastUpdate\": 1690778459822,\n            \"transCategory\": \"th_cashin_nhlk_cat2\",\n            \"status\": 2,\n            \"billId\": null,\n            \"quantity\": 1,\n            \"totalOriginalAmount\": 60000,\n            \"totalAmount\": 60000,\n            \"useVoucher\": 0,\n            \"usePoint\": null,\n            \"totalFee\": 0,\n            \"sourceId\": \"mbbank06.bank\",\n            \"sourceName\": \"MBBank\",\n            \"targetId\": \"0888953492\",\n            \"targetName\": \"PHẠM ĐÌNH THÁI\",\n            \"usePrepaid\": 0,\n            \"io\": 1,\n            \"moneySource\": 2,\n            \"postBalance\": 60000,\n            \"totalSubTotalAmount\": null,\n            \"totalFeeSof\": 0,\n            \"totalDiscountAmount\": 0,\n            \"totalDiscountFee\": null,\n            \"moneySourceName\": \"MBBank\",\n            \"purchaseId\": null,\n            \"cashbackIncr\": 0,\n            \"pointIncr\": 0,\n            \"bonusIncr\": 0,\n            \"prepaidIds\": null,\n            \"giftPrepaidId\": null,\n            \"serviceName\": \"PHẠM ĐÌNH THÁI\",\n            \"errorType\": null,\n            \"errorCode\": 0,\n            \"errorDesc\": null,\n            \"transhisData\": \"{\\\"baseInfo\\\":{\\\"title\\\":{\\\"vi\\\":\\\"Nạp tiền vào ví từ MBBank\\\",\\\"en\\\":\\\"Topped-up money to wallet from MBBank\\\"},\\\"shortTitle\\\":{\\\"vi\\\":\\\"Nạp tiền vào ví\\\",\\\"en\\\":\\\"Topped-up money to wallet\\\"},\\\"icon\\\":\\\"https://img.mservice.io/momo_app_v2/new_version/img/appx_icon/ic_tranhis_recharge.png\\\"}}\",\n            \"discountAmount\": 0,\n            \"createdAt\": 1690778448189,\n            \"directDiscount\": 0,\n            \"momoDiscount\": 0,\n            \"momoTid\": null,\n            \"type\": \"portal/bankcashin\",\n            \"isDeleted\": false\n        },\n        {\n            \"id\": \"8422291195\",\n            \"username\": \"0888953492\",\n            \"transId\": 43166691947,\n            \"serviceId\": \"banklink_cashin\",\n            \"lastUpdate\": 1690775667879,\n            \"transCategory\": \"th_cashin_nhlk_cat2\",\n            \"status\": 6,\n            \"billId\": null,\n            \"quantity\": 1,\n            \"totalOriginalAmount\": 60000,\n            \"totalAmount\": 60000,\n            \"useVoucher\": 0,\n            \"usePoint\": null,\n            \"totalFee\": 0,\n            \"sourceId\": \"mbbank.bank\",\n            \"sourceName\": \"MBBank\",\n            \"targetId\": \"0888953492\",\n            \"targetName\": \"PHẠM ĐÌNH THÁI\",\n            \"usePrepaid\": 0,\n            \"io\": 1,\n            \"moneySource\": 2,\n            \"postBalance\": 0,\n            \"totalSubTotalAmount\": null,\n            \"totalFeeSof\": 0,\n            \"totalDiscountAmount\": 0,\n            \"totalDiscountFee\": null,\n            \"moneySourceName\": \"MBBank\",\n            \"purchaseId\": null,\n            \"cashbackIncr\": 0,\n            \"pointIncr\": 0,\n            \"bonusIncr\": 0,\n            \"prepaidIds\": null,\n            \"giftPrepaidId\": null,\n            \"serviceName\": \"PHẠM ĐÌNH THÁI\",\n            \"errorType\": null,\n            \"errorCode\": 0,\n            \"errorDesc\": null,\n            \"transhisData\": \"{\\\"baseInfo\\\":{\\\"title\\\":{\\\"vi\\\":\\\"Nạp tiền vào ví từ MBBank\\\",\\\"en\\\":\\\"Topped-up money to wallet from MBBank\\\"},\\\"shortTitle\\\":{\\\"vi\\\":\\\"Nạp tiền vào ví\\\",\\\"en\\\":\\\"Topped-up money to wallet\\\"},\\\"icon\\\":\\\"https://img.mservice.io/momo_app_v2/new_version/img/appx_icon/ic_tranhis_recharge.png\\\"}}\",\n            \"discountAmount\": 0,\n            \"createdAt\": 1690775638672,\n            \"directDiscount\": 0,\n            \"momoDiscount\": 0,\n            \"momoTid\": null,\n            \"type\": \"portal/bankcashin\",\n            \"isDeleted\": false\n        }\n    ],\n    \"currentLimit\": 10,\n    \"listOver\": true\n}"
+				}
+			]
+		}
+	]
+}

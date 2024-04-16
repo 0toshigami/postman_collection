@@ -1,0 +1,1132 @@
+{
+	"info": {
+		"_postman_id": "084213e6-386e-4623-9754-c410bcb86619",
+		"name": "1.k. Techcombank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-084213e6-386e-4623-9754-c410bcb86619?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "01. Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/techcombank/login?idBank=28",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"techcombank",
+						"login"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "28"
+						},
+						{
+							"key": "stopauto",
+							"value": "1",
+							"description": "Auto Login tool ADB",
+							"disabled": true
+						}
+					]
+				},
+				"description": "If \"type\" = 1 then SMS will be sent"
+			},
+			"response": [
+				{
+					"name": "Device timeout",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/techcombank/login?idBank=28",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"techcombank",
+								"login"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "28"
+								},
+								{
+									"key": "stopauto",
+									"value": "1",
+									"description": "Auto Login tool ADB",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 07:42:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=%2FUokLkZjRX835Pk6QQZGUII%2FRKhKsXQXslO7qwkfffaWAUuIeFF7t1r0JqUTQH%2BGMrXRAYsaeNZ7%2FmZv6UIBzGew56r1vx5tbAxSrdgfPTPEeoNBlYTpK6nAs3Ae\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "87109e25584d0eb8-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": false,\n    \"message\": \"TCB Login: ADB not open app\"\n}"
+				},
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/techcombank/login?idBank=28",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"techcombank",
+								"login"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "28"
+								},
+								{
+									"key": "stopauto",
+									"value": "1",
+									"description": "Auto Login tool ADB",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 07:43:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=GlEtR7g4rU%2F56zXGazJ9gh7O%2BeERW5v786vDxbaHLhOY9GckfJwXhmoNCN7UHKYfjhNUIYYvWUvNYL95PxBVU4QIzzaY7aQQ1WefKrw%2BCqzF2DtGz%2FgL21epU2AP\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8710a0590ad20eb8-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Đăng nhập thành công\",\n    \"data\": {\n        \"access_token\": \"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICItSUt0TzlZUVNBXy1jN08tQTNTcERfNzZGajAwT0psR3lSRVVJS1VBY2QwIn0.eyJleHAiOjE3MTI1NjI1MjEsImlhdCI6MTcxMjU2MjIyMSwiYXV0aF90aW1lIjoxNzEyNTYyMjIxLCJqdGkiOiIyYmNjYjljYy05MWIyLTQ3N2ItYTI0ZS0xZmY4Y2UyNDU1Y2YiLCJpc3MiOiJodHRwczovL2lkZW50aXR5LXRjYi50ZWNoY29tYmFuay5jb20udm4vYXV0aC9yZWFsbXMvYmFja2Jhc2UiLCJzdWIiOiIyZWE0YzBmNS0zYmE0LTQ3OGEtODUwZi04YmY4YWQ5YmE3YWIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0Y2Itd2ViLWNsaWVudCIsIm5vbmNlIjoiMDUyNjBERDQtN0UxRS1ERkVBLTRGOEEtRjhBODBCRDc0REYzIiwic2Vzc2lvbl9zdGF0ZSI6ImMxNmI5MGIyLTgxZWYtNDA2MS1hMTVlLTZjNDkyMTM0MWM2ZSIsImFjciI6IjEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwic2lkIjoiYzE2YjkwYjItODFlZi00MDYxLWExNWUtNmM0OTIxMzQxYzZlIiwiY3VzdG9tZXJUeXBlIjoiMjAwIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInVzZXJfbmFtZSI6IjAzODc2NTQ4MTgiLCJtb2JpbGVOdW1iZXIiOiIwMzg3NjU0ODE4IiwibmFtZSI6IkxFIEhPTkcgU09OIiwiY3VzdG9tZXJJZCI6IjM2MTM0NjA5IiwiY2l0aXplbklkIjoiMDE1MjAwMDA5MjQxIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiMDM4NzY1NDgxOCIsImdpdmVuX25hbWUiOiJMRSBIT05HIiwibG9jYWxlIjoiZW4tVVMiLCJmYW1pbHlfbmFtZSI6IlNPTiIsImVtYWlsIjoibGVzb25kZXZAZ21haWwuY29tIn0.GwuOzLMXIp-8Bd5xQVox5RJEkJuKd7My-v8mfA-ilcTq6gOzSk1x6Uzq3CaQ3gezLLWfvog_8NEQN00M2xRHiPbhaH2WpQUdUzr5G_kVe_Knq7opztWsj8OWP8cL6GKdGOT-Qj4kX-v5tLvTKUpZa7CEcC1nA_AWPNyQzOlnSE74fbuOQIVAJanYoXL-C7kb4Ft-BUqEKqDDMJ3IOOWAj1H-GDLqjjtzraRdsoFyIfY1VcLEchngI_VuZQLbQhKWC2l1dafUxiq9alYD-UarPymuOayzJAU0JkezzOjUdyrYcglkFwSTaFbNfv25an85h5O-sXRm9kz5OSpx8nueJg\",\n        \"expires_in\": 300,\n        \"refresh_expires_in\": 300,\n        \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjZjExOTlhMi0yNTM5LTRmMmItYTZjMy01NjQwNWI0MmU0ZGMifQ.eyJleHAiOjE3MTI1NjI1MjEsImlhdCI6MTcxMjU2MjIyMSwianRpIjoiOTI5NTcyMWQtNDcwNy00NzRiLTliYmUtZTRhOGJmOTllMGIwIiwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS10Y2IudGVjaGNvbWJhbmsuY29tLnZuL2F1dGgvcmVhbG1zL2JhY2tiYXNlIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eS10Y2IudGVjaGNvbWJhbmsuY29tLnZuL2F1dGgvcmVhbG1zL2JhY2tiYXNlIiwic3ViIjoiMmVhNGMwZjUtM2JhNC00NzhhLTg1MGYtOGJmOGFkOWJhN2FiIiwidHlwIjoiUmVmcmVzaCIsImF6cCI6InRjYi13ZWItY2xpZW50Iiwibm9uY2UiOiIwNTI2MERENC03RTFFLURGRUEtNEY4QS1GOEE4MEJENzRERjMiLCJzZXNzaW9uX3N0YXRlIjoiYzE2YjkwYjItODFlZi00MDYxLWExNWUtNmM0OTIxMzQxYzZlIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInNpZCI6ImMxNmI5MGIyLTgxZWYtNDA2MS1hMTVlLTZjNDkyMTM0MWM2ZSJ9.2BrF9B5QbBA-glbdbqGpFdXOoaIBebpwDsQC0Rx4-20\",\n        \"token_type\": \"Bearer\",\n        \"id_token\": \"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICItSUt0TzlZUVNBXy1jN08tQTNTcERfNzZGajAwT0psR3lSRVVJS1VBY2QwIn0.eyJleHAiOjE3MTI1NjI1MjEsImlhdCI6MTcxMjU2MjIyMSwiYXV0aF90aW1lIjoxNzEyNTYyMjIxLCJqdGkiOiJlODM4NGM2ZS1kMjMwLTRlMmYtOTRkNS1jNzkyNzAyN2ZjZDQiLCJpc3MiOiJodHRwczovL2lkZW50aXR5LXRjYi50ZWNoY29tYmFuay5jb20udm4vYXV0aC9yZWFsbXMvYmFja2Jhc2UiLCJhdWQiOiJ0Y2Itd2ViLWNsaWVudCIsInN1YiI6IjJlYTRjMGY1LTNiYTQtNDc4YS04NTBmLThiZjhhZDliYTdhYiIsInR5cCI6IklEIiwiYXpwIjoidGNiLXdlYi1jbGllbnQiLCJub25jZSI6IjA1MjYwREQ0LTdFMUUtREZFQS00RjhBLUY4QTgwQkQ3NERGMyIsInNlc3Npb25fc3RhdGUiOiJjMTZiOTBiMi04MWVmLTQwNjEtYTE1ZS02YzQ5MjEzNDFjNmUiLCJhdF9oYXNoIjoiTmpDUlNPVC1YT0U4SnpGMkFkMUk1QSIsImFjciI6IjEiLCJzaWQiOiJjMTZiOTBiMi04MWVmLTQwNjEtYTE1ZS02YzQ5MjEzNDFjNmUiLCJjdXN0b21lclR5cGUiOiIyMDAiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibW9iaWxlTnVtYmVyIjoiMDM4NzY1NDgxOCIsIm5hbWUiOiJMRSBIT05HIFNPTiIsImN1c3RvbWVySWQiOiIzNjEzNDYwOSIsImNpdGl6ZW5JZCI6IjAxNTIwMDAwOTI0MSIsInByZWZlcnJlZF91c2VybmFtZSI6IjAzODc2NTQ4MTgiLCJnaXZlbl9uYW1lIjoiTEUgSE9ORyIsImxvY2FsZSI6ImVuLVVTIiwiZmFtaWx5X25hbWUiOiJTT04iLCJlbWFpbCI6Imxlc29uZGV2QGdtYWlsLmNvbSJ9.OKfoK2uidYh7bN2ncO8ilSn9pN1FuIfKTkQJ14D7N9P2Mbemmnq4gWqfkQkqsWBX7nef0JhiCN0BCVFeh6Ma1AbN2FIZ6GXQIQEHkfp1QWEjDYv1CH9PJjMDfOLsYBrRKjvajBpKcL1oSjcm10xeeZm6c4LiTIremxOVTv6wuyVeeX6do80hjR83qb0Wdi5XGMSoWpkAPnSrOdZDmXdRvKup_djimwbIv9KTr8IARel0XVhrP25QtZVUyUNPviSwf1F5sXWvBn6uQncggKcj9fcOZi7-trpEvOvdEhrK77sTxCPuMPcT6URoL1A5i22Jip-1-DR_fDq5yOAl0y-JxQ\",\n        \"not-before-policy\": 1622545284,\n        \"session_state\": \"c16b90b2-81ef-4061-a15e-6c4921341c6e\",\n        \"scope\": \"openid profile email\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Histories Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/techcombank/histories?idBank=28&day=20",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"techcombank",
+						"histories"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "28",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "day",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Histories Account",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/techcombank/histories?idBank=28&day=20",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"techcombank",
+								"histories"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "28",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "day",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 07:43:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=y8a0GpeBQd%2FJOZOGKYgxt8DZQNMPQ9XlVL91XUIWmpTs0goSoSCkZCtZUj%2BaFjYZ%2BVpe8gD3VbIi%2BDqkwfRoHtDGw3icchJuZPSgvxM8TZ6ftQJKw0xdz27AERAv\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8710a11d89c30eb8-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309db\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"HB.36134609-20240408\",\n        \"description\": \"Thu phi Homebanking thang 3/2024 cua KH 36134609\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"DBIT\",\n        \"category\": \"Spending\",\n        \"bookingDate\": \"2024-04-07\",\n        \"valueDate\": \"2024-04-07\",\n        \"creditDebitIndicator\": \"DBIT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"12000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 84088,\n        \"additions\": {\n            \"debitBank\": \"Techcombank\",\n            \"debitAcctName\": \"LE HONG SON\",\n            \"debitAcctNo\": \"3606666888\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-07T08:39:09+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309e1\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"HB.36134609-20240408\",\n        \"description\": \"Thu phi Homebanking thang 3/2024 cua KH 36134609\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"DBIT\",\n        \"category\": \"Spending\",\n        \"bookingDate\": \"2024-04-07\",\n        \"valueDate\": \"2024-04-07\",\n        \"creditDebitIndicator\": \"DBIT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"1200\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 96088,\n        \"additions\": {\n            \"debitBank\": \"Techcombank\",\n            \"debitAcctName\": \"LE HONG SON\",\n            \"debitAcctNo\": \"3606666888\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-07T08:39:09+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309e2\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097223356919\\\\BNK\",\n        \"description\": \"IBVCB.5687934168.691662.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 97288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T13:09:54+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309e0\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097720555509\\\\BNK\",\n        \"description\": \"IBVCB.5687916841.679588.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 95288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T13:06:44+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309dc\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097056452729\\\\BNK\",\n        \"description\": \"IBVCB.5687900762.671907.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 93288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T13:05:08+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309e5\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097240486303\\\\BNK\",\n        \"description\": \"IBVCB.5687667699.543360.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 91288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T12:33:18+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309dd\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097815301011\\\\BNK\",\n        \"description\": \"IBVCB.5687656955.533445.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 89288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T12:31:10+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309df\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097728667913\\\\BNK\",\n        \"description\": \"IBVCB.5687534104.467650.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 87288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T12:17:07+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309da\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097083214937\\\\BNK\",\n        \"description\": \"IBVCB.5687502380.449840.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 85288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T12:13:22+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309e3\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097666280058\\\\BNK\",\n        \"description\": \"IBVCB.5687487246.435850.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 83288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T12:11:11+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309de\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24096460835877\\\\BNK\",\n        \"description\": \"IBVCB.5682601252.208229.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-05\",\n        \"valueDate\": \"2024-04-05\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 81288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-05T19:00:48+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309d9\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24096658169492\\\\BNK\",\n        \"description\": \"IBVCB.5682087958.921175.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-05\",\n        \"valueDate\": \"2024-04-05\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 79288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-05T18:15:47+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309e4\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24096241615758\\\\BNK\",\n        \"description\": \"IBVCB.5681966948.852303.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-05\",\n        \"valueDate\": \"2024-04-05\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 77288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-05T18:05:02+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a04a1da8e004171018ea945ea0d1209\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"3606666888-20240330\",\n        \"description\": \"Interest amount for account in 03/2024\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-03-31\",\n        \"valueDate\": \"2024-03-31\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"36\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 75288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-03-31T01:19:09+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a04a1da8e004171018ea945ea0d120a\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24090654086009\",\n        \"description\": \"LE HONG SON chuyen\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"DBIT\",\n        \"category\": \"Spending\",\n        \"bookingDate\": \"2024-03-30\",\n        \"valueDate\": \"2024-03-30\",\n        \"creditDebitIndicator\": \"DBIT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"500000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"counterPartyName\": \"DO MINH DUC\",\n        \"counterPartyAccountNumber\": \"0691000319983\",\n        \"counterPartyBankName\": \"NGAN HANG TMCP NGOAI THUONG VIET NAM (VIETCOMBANK)\",\n        \"runningBalance\": 75252,\n        \"additions\": {\n            \"creditBank\": \"NGAN HANG TMCP NGOAI THUONG VIET NAM (VIETCOMBANK)\",\n            \"debitAcctName\": \"LE HONG SON\",\n            \"creditAcctNo\": \"0691000319983\",\n            \"debitBank\": \"Techcombank\",\n            \"debitAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"DO MINH DUC\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-03-30T17:56:03+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a06a1cf8e004230018e8eff871c45e2\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24089768673090\\\\BNK\",\n        \"description\": \"IBVCB.5622118598.096124.Le Hong Son  Chuyen Khoan.CT tu 1042399660 NGO THI MY KIEU toi 3606666888 LE HONG SON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-03-29\",\n        \"valueDate\": \"2024-03-29\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 575252,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-03-29T12:55:35+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a06a1cf8e004230018e8eff871b45ac\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24089899933506\\\\BNK\",\n        \"description\": \"IBVCB.5622093852.087566.Le Hong Son  Chuyen Khoan.CT tu 1042399660 NGO THI MY KIEU toi 3606666888 LE HONG SON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-03-29\",\n        \"valueDate\": \"2024-03-29\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 573252,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-03-29T12:53:19+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a06a1cf8e004230018e8eff871b45be\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24083205562646\\\\BNK\",\n        \"description\": \"IBVCB.5578460633.086764.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-03-23\",\n        \"valueDate\": \"2024-03-23\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 571252,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-03-23T18:55:32+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a06a1cf8e004230018e8eff871c45e7\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24083389317165\\\\BNK\",\n        \"description\": \"IBVCB.5578412060.062755.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-03-23\",\n        \"valueDate\": \"2024-03-23\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 569252,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-03-23T18:52:31+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a06a1cf8e004230018e8eff871b45cb\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24083780745035\\\\BNK\",\n        \"description\": \"IBVCB.5578298506.071231.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-03-23\",\n        \"valueDate\": \"2024-03-23\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 567252,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-03-23T18:39:29+07:00\",\n        \"state\": \"COMPLETED\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Last Histories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/techcombank/histories-last?idBank=28&index=0",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"techcombank",
+						"histories-last"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "28",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "index",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Last Histories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/techcombank/histories-last?idBank=28&index=0",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"techcombank",
+								"histories-last"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "28",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "index",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 07:44:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=jL55AS1m0O3sRZ%2FmvXaRNMKMvDXDateo3Nn1FBkUtx5PaxELHqUtGOOglnWdQJ8pWuQ2XkTh3JsBdUWVzoD5fFzcCrVl3PXuucq%2F09rKxq5bcOlc%2BF6MIdfIC4b2\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8710a214f8320eb8-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309db\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"HB.36134609-20240408\",\n        \"description\": \"Thu phi Homebanking thang 3/2024 cua KH 36134609\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"DBIT\",\n        \"category\": \"Spending\",\n        \"bookingDate\": \"2024-04-07\",\n        \"valueDate\": \"2024-04-07\",\n        \"creditDebitIndicator\": \"DBIT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"12000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 84088,\n        \"additions\": {\n            \"debitBank\": \"Techcombank\",\n            \"debitAcctName\": \"LE HONG SON\",\n            \"debitAcctNo\": \"3606666888\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-07T08:39:09+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309e1\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"HB.36134609-20240408\",\n        \"description\": \"Thu phi Homebanking thang 3/2024 cua KH 36134609\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"DBIT\",\n        \"category\": \"Spending\",\n        \"bookingDate\": \"2024-04-07\",\n        \"valueDate\": \"2024-04-07\",\n        \"creditDebitIndicator\": \"DBIT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"1200\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 96088,\n        \"additions\": {\n            \"debitBank\": \"Techcombank\",\n            \"debitAcctName\": \"LE HONG SON\",\n            \"debitAcctNo\": \"3606666888\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-07T08:39:09+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309e2\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097223356919\\\\BNK\",\n        \"description\": \"IBVCB.5687934168.691662.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 97288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T13:09:54+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309e0\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097720555509\\\\BNK\",\n        \"description\": \"IBVCB.5687916841.679588.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 95288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T13:06:44+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309dc\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097056452729\\\\BNK\",\n        \"description\": \"IBVCB.5687900762.671907.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 93288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T13:05:08+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309e5\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097240486303\\\\BNK\",\n        \"description\": \"IBVCB.5687667699.543360.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 91288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T12:33:18+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309dd\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097815301011\\\\BNK\",\n        \"description\": \"IBVCB.5687656955.533445.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 89288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T12:31:10+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309df\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097728667913\\\\BNK\",\n        \"description\": \"IBVCB.5687534104.467650.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 87288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T12:17:07+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309da\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097083214937\\\\BNK\",\n        \"description\": \"IBVCB.5687502380.449840.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 85288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T12:13:22+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309e3\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24097666280058\\\\BNK\",\n        \"description\": \"IBVCB.5687487246.435850.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-06\",\n        \"valueDate\": \"2024-04-06\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 83288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-06T12:11:11+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309de\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24096460835877\\\\BNK\",\n        \"description\": \"IBVCB.5682601252.208229.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-05\",\n        \"valueDate\": \"2024-04-05\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 81288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-05T19:00:48+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309d9\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24096658169492\\\\BNK\",\n        \"description\": \"IBVCB.5682087958.921175.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-05\",\n        \"valueDate\": \"2024-04-05\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 79288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-05T18:15:47+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a05a2e88e003862018ebca9f34309e4\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24096241615758\\\\BNK\",\n        \"description\": \"IBVCB.5681966948.852303.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-04-05\",\n        \"valueDate\": \"2024-04-05\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 77288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-04-05T18:05:02+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a04a1da8e004171018ea945ea0d1209\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"3606666888-20240330\",\n        \"description\": \"Interest amount for account in 03/2024\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-03-31\",\n        \"valueDate\": \"2024-03-31\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"36\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 75288,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-03-31T01:19:09+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a04a1da8e004171018ea945ea0d120a\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24090654086009\",\n        \"description\": \"LE HONG SON chuyen\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"DBIT\",\n        \"category\": \"Spending\",\n        \"bookingDate\": \"2024-03-30\",\n        \"valueDate\": \"2024-03-30\",\n        \"creditDebitIndicator\": \"DBIT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"500000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"counterPartyName\": \"DO MINH DUC\",\n        \"counterPartyAccountNumber\": \"0691000319983\",\n        \"counterPartyBankName\": \"NGAN HANG TMCP NGOAI THUONG VIET NAM (VIETCOMBANK)\",\n        \"runningBalance\": 75252,\n        \"additions\": {\n            \"creditBank\": \"NGAN HANG TMCP NGOAI THUONG VIET NAM (VIETCOMBANK)\",\n            \"debitAcctName\": \"LE HONG SON\",\n            \"creditAcctNo\": \"0691000319983\",\n            \"debitBank\": \"Techcombank\",\n            \"debitAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"DO MINH DUC\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-03-30T17:56:03+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a06a1cf8e004230018e8eff871c45e2\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24089768673090\\\\BNK\",\n        \"description\": \"IBVCB.5622118598.096124.Le Hong Son  Chuyen Khoan.CT tu 1042399660 NGO THI MY KIEU toi 3606666888 LE HONG SON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-03-29\",\n        \"valueDate\": \"2024-03-29\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 575252,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-03-29T12:55:35+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a06a1cf8e004230018e8eff871b45ac\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24089899933506\\\\BNK\",\n        \"description\": \"IBVCB.5622093852.087566.Le Hong Son  Chuyen Khoan.CT tu 1042399660 NGO THI MY KIEU toi 3606666888 LE HONG SON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-03-29\",\n        \"valueDate\": \"2024-03-29\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 573252,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-03-29T12:53:19+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a06a1cf8e004230018e8eff871b45be\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24083205562646\\\\BNK\",\n        \"description\": \"IBVCB.5578460633.086764.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-03-23\",\n        \"valueDate\": \"2024-03-23\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 571252,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-03-23T18:55:32+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a06a1cf8e004230018e8eff871c45e7\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24083389317165\\\\BNK\",\n        \"description\": \"IBVCB.5578412060.062755.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-03-23\",\n        \"valueDate\": \"2024-03-23\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 569252,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-03-23T18:52:31+07:00\",\n        \"state\": \"COMPLETED\"\n    },\n    {\n        \"id\": \"8a06a1cf8e004230018e8eff871b45cb\",\n        \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"reference\": \"FT24083780745035\\\\BNK\",\n        \"description\": \"IBVCB.5578298506.071231.Le Hong Son  Chuyen Khoan.CT tu 0491000157943 L E HONG SON toi 3606666888 LE HONG S ON tai TECHCOMBANK\",\n        \"typeGroup\": \"OTHERS\",\n        \"type\": \"CRDT\",\n        \"category\": \"Income\",\n        \"bookingDate\": \"2024-03-23\",\n        \"valueDate\": \"2024-03-23\",\n        \"creditDebitIndicator\": \"CRDT\",\n        \"transactionAmountCurrency\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"runningBalance\": 567252,\n        \"additions\": {\n            \"creditBank\": \"Techcombank\",\n            \"creditAcctNo\": \"3606666888\",\n            \"creditAcctName\": \"LE HONG SON\"\n        },\n        \"checkImageAvailability\": \"UNAVAILABLE\",\n        \"creationTime\": \"2024-03-23T18:39:29+07:00\",\n        \"state\": \"COMPLETED\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Info Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/techcombank/getinfo?idBank=28",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"techcombank",
+						"getinfo"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "28",
+							"description": "Bank ID trong hệ thống"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Info Account",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/techcombank/getinfo?idBank=28",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"techcombank",
+								"getinfo"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "28",
+									"description": "Bank ID trong hệ thống"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 07:44:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=7Z%2FFBH4TlEVRZleuCyWWF8m%2FGEjFvGFGqUvi4rjkdhPcTdSUsgoYlNUOyC%2FL9XJnSjE6DOH3RbejSe1AsJMz%2BMJBogAy9vXo3WmNe7RmrROUcM8SJiDRb2f9F9gv\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8710a250ed420eb8-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"additions\": {\n            \"alias\": \"YENBAI\"\n        },\n        \"id\": \"cf8ae509-2f84-4b23-965a-9b78c02dfc79\",\n        \"legalEntityIds\": [\n            \"8a03815b7c5ec5ef017c6a8876a12072\"\n        ],\n        \"name\": \"LE HONG SON\",\n        \"BBAN\": \"19036134609015\",\n        \"currency\": \"VND\",\n        \"productKindName\": \"Current Account\",\n        \"productTypeName\": \"Current Account\",\n        \"bankBranchCode\": \"VN0010375\",\n        \"creditAccount\": true,\n        \"debitAccount\": true,\n        \"bookedBalance\": 752,\n        \"availableBalance\": 752,\n        \"creditLimit\": 0,\n        \"productId\": \"884d3580-9e0b-4cf9-9862-ae13a4a23e41\",\n        \"visible\": true,\n        \"accountOpeningDate\": \"2020-07-31T00:00:00Z\",\n        \"accountHolderNames\": \"LE HONG SON\",\n        \"favorite\": false,\n        \"product\": {\n            \"externalId\": \"1001\",\n            \"externalTypeId\": \"1001\",\n            \"typeName\": \"Current Account\",\n            \"productKind\": {\n                \"id\": 1,\n                \"externalKindId\": \"kind1\",\n                \"kindName\": \"Current Account\",\n                \"kindUri\": \"current-account\"\n            }\n        },\n        \"displayName\": \"LE HONG SON\",\n        \"debitCards\": []\n    },\n    {\n        \"additions\": {\n            \"alias\": \"SONDEV\"\n        },\n        \"id\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n        \"legalEntityIds\": [\n            \"8a03815b7c5ec5ef017c6a8876a12072\"\n        ],\n        \"name\": \"LE HONG SON\",\n        \"BBAN\": \"3606666888\",\n        \"currency\": \"VND\",\n        \"productKindName\": \"Current Account\",\n        \"productTypeName\": \"Current Account\",\n        \"bankBranchCode\": \"VN0010307\",\n        \"creditAccount\": true,\n        \"debitAccount\": true,\n        \"bookedBalance\": 84088,\n        \"availableBalance\": 84088,\n        \"creditLimit\": 0,\n        \"productId\": \"884d3580-9e0b-4cf9-9862-ae13a4a23e41\",\n        \"visible\": true,\n        \"accountOpeningDate\": \"2023-03-07T00:00:00Z\",\n        \"accountHolderNames\": \"LE HONG SON\",\n        \"favorite\": false,\n        \"product\": {\n            \"externalId\": \"1001\",\n            \"externalTypeId\": \"1001\",\n            \"typeName\": \"Current Account\",\n            \"productKind\": {\n                \"id\": 1,\n                \"externalKindId\": \"kind1\",\n                \"kindName\": \"Current Account\",\n                \"kindUri\": \"current-account\"\n            }\n        },\n        \"displayName\": \"LE HONG SON\",\n        \"debitCards\": []\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "28",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "toBank",
+							"value": "0491000157943",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970436",
+							"description": "Bankcode Napas 247"
+						},
+						{
+							"key": "amount",
+							"value": "2000",
+							"description": "Số tiền"
+						},
+						{
+							"key": "memo",
+							"value": "Le Hong Son tEST",
+							"description": "Lời nhắn"
+						},
+						{
+							"key": "requestId",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "stopauto",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/techcombank/transfer",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"techcombank",
+						"transfer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Transfer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idBank",
+									"value": "28",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "toBank",
+									"value": "0491000157943",
+									"description": "Số tài khoản nhận tiền"
+								},
+								{
+									"key": "bankCode",
+									"value": "970436",
+									"description": "Bankcode Napas 247"
+								},
+								{
+									"key": "amount",
+									"value": "2000",
+									"description": "Số tiền"
+								},
+								{
+									"key": "memo",
+									"value": "Le Hong Son tEST",
+									"description": "Lời nhắn"
+								},
+								{
+									"key": "requestId",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "stopauto",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/techcombank/transfer",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"techcombank",
+								"transfer"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 28 Nov 2023 13:18:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=N1lKCEIP7nzSk47lLeP5hieLz7qTcb2heLphOVj6rl4e4TFo1pPuZT%2BIPROUQ%2BBYFb%2BE56clbV7iTEv59lGJEqW3qNXxA%2Bv%2FiMVJRlWrEVBZZ33k%2Fkz2fPYqKRBN\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "82d2e55b2b2704c2-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"paymentId\": \"53c69d49-05ca-4853-aeed-a55a8bb722f8\",\n    \"message\": \"Giao dịch thành công\",\n    \"data\": {\n        \"id\": \"53c69d49-05ca-4853-aeed-a55a8bb722f8\",\n        \"status\": \"PROCESSED\",\n        \"bankStatus\": \"PROCESSED\",\n        \"reasonText\": \"FT23332901555953\",\n        \"createdBy\": \"0387654818\",\n        \"createdAt\": \"2023-11-28T13:18:32.229677Z\",\n        \"updatedBy\": \"0387654818\",\n        \"updatedAt\": \"2023-11-28T13:18:39.454363Z\",\n        \"permissibleActions\": {\n            \"approve\": false,\n            \"finalApprove\": false,\n            \"reject\": false,\n            \"cancel\": false,\n            \"delete\": false,\n            \"edit\": false,\n            \"create\": true,\n            \"export\": false\n        },\n        \"version\": 370471030,\n        \"intraLegalEntity\": false,\n        \"originatorAccountCurrency\": \"VND\",\n        \"confirmationId\": \"f20a977e-5dab-4eab-bb77-2d7e73fc734b\",\n        \"originator\": {\n            \"name\": \"LE HONG SON\",\n            \"role\": \"DEBTOR\"\n        },\n        \"originatorAccount\": {\n            \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n            \"identification\": {\n                \"identification\": \"••••••6888\",\n                \"schemeName\": \"BBAN\"\n            }\n        },\n        \"batchBooking\": false,\n        \"instructionPriority\": \"NORM\",\n        \"requestedExecutionDate\": \"2023-11-28\",\n        \"paymentMode\": \"SINGLE\",\n        \"paymentType\": \"TCB_EXTERNAL_NAPAS\",\n        \"transferTransactionInformation\": {\n            \"counterparty\": {\n                \"name\": \"LE HONG SON\",\n                \"role\": \"CREDITOR\"\n            },\n            \"counterpartyAccount\": {\n                \"identification\": {\n                    \"identification\": \"0491000157943\",\n                    \"schemeName\": \"BBAN\"\n                }\n            },\n            \"counterpartyBank\": {\n                \"name\": \"970436\"\n            },\n            \"instructedAmount\": {\n                \"amount\": \"2000\",\n                \"currencyCode\": \"VND\"\n            },\n            \"messageToBank\": \"Le Hong Son tEST\",\n            \"remittanceInformation\": {\n                \"type\": \"UNSTRUCTURED\",\n                \"content\": \"Le Hong Son tEST\"\n            },\n            \"additions\": {\n                \"counterpartyBankName\": \"Ngân hàng TMCP Ngoại thương Việt Nam\",\n                \"counterpartyBankShortName\": \"Vietcombank\"\n            }\n        },\n        \"totalAmount\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"edited\": false,\n        \"additions\": {\n            \"customerId\": \"36134609\",\n            \"ipAddress\": \"103.130.219.240\",\n            \"userNameBB\": \"0387654818\",\n            \"userAgent\": \"BBW\",\n            \"lang\": \"en\",\n            \"paymentDate\": \"2023-11-28T13:18:39Z\",\n            \"internalUserId\": \"2ea4c0f5-3ba4-478a-850f-8bf8ad9ba7ab\",\n            \"transactionRemarks\": \"Le Hong Son tEST\"\n        }\n    }\n}"
+				},
+				{
+					"name": "Transfer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idBank",
+									"value": "28",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "toBank",
+									"value": "0491000157943",
+									"description": "Số tài khoản nhận tiền"
+								},
+								{
+									"key": "bankCode",
+									"value": "970436",
+									"description": "Bankcode Napas 247"
+								},
+								{
+									"key": "amount",
+									"value": "2000",
+									"description": "Số tiền"
+								},
+								{
+									"key": "memo",
+									"value": "Le Hong Son tEST",
+									"description": "Lời nhắn"
+								},
+								{
+									"key": "requestId",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "stopauto",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/techcombank/transfer",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"techcombank",
+								"transfer"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 07:45:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=uvDVVd1EKE2NNjZW2F3u5qPZzbmfyT3bWl67jAQvOTQEgmUTa1RutnjRkweW4ye7wRYleDuWeAlG%2Bix03J1pytdKZ90kU%2FYu%2F%2F9%2B0bfmw4hc9LkoX3DgeWziJ3P%2F\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8710a2b44dca0eb8-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"paymentId\": \"15cbcbfc-0693-45d1-a46e-3fd99f2ea0a7\",\n    \"message\": \"Giao dịch thành công\",\n    \"data\": {\n        \"id\": \"15cbcbfc-0693-45d1-a46e-3fd99f2ea0a7\",\n        \"status\": \"PROCESSED\",\n        \"bankStatus\": \"PROCESSED\",\n        \"reasonText\": \"FT24099000095426\",\n        \"createdBy\": \"0387654818\",\n        \"createdAt\": \"2024-04-08T07:45:04.611840Z\",\n        \"updatedBy\": \"0387654818\",\n        \"updatedAt\": \"2024-04-08T07:45:18.197825Z\",\n        \"permissibleActions\": {\n            \"approve\": false,\n            \"finalApprove\": false,\n            \"reject\": false,\n            \"cancel\": false,\n            \"delete\": false,\n            \"edit\": false,\n            \"create\": true,\n            \"export\": false\n        },\n        \"version\": 1017851538,\n        \"intraLegalEntity\": false,\n        \"originatorAccountCurrency\": \"VND\",\n        \"confirmationId\": \"138d9420-b09b-46f8-886d-69424d3b150f\",\n        \"paymentSetupId\": \"BBWulDMzrSc6UAQC\",\n        \"paymentSubmissionId\": \"457223\",\n        \"originator\": {\n            \"name\": \"LE HONG SON\",\n            \"role\": \"DEBTOR\"\n        },\n        \"originatorAccount\": {\n            \"arrangementId\": \"0a3f2bf8-81a9-493c-9e25-11a7ceafa232\",\n            \"identification\": {\n                \"identification\": \"••••••6888\",\n                \"schemeName\": \"BBAN\"\n            }\n        },\n        \"batchBooking\": false,\n        \"instructionPriority\": \"NORM\",\n        \"requestedExecutionDate\": \"2024-04-08\",\n        \"paymentMode\": \"SINGLE\",\n        \"paymentType\": \"TCB_EXTERNAL_NAPAS\",\n        \"transferTransactionInformation\": {\n            \"counterparty\": {\n                \"name\": \"LE HONG SON\",\n                \"role\": \"CREDITOR\"\n            },\n            \"counterpartyAccount\": {\n                \"identification\": {\n                    \"identification\": \"0491000157943\",\n                    \"schemeName\": \"BBAN\"\n                }\n            },\n            \"counterpartyBank\": {\n                \"name\": \"970436\"\n            },\n            \"instructedAmount\": {\n                \"amount\": \"2000\",\n                \"currencyCode\": \"VND\"\n            },\n            \"messageToBank\": \"Le Hong Son tEST\",\n            \"remittanceInformation\": {\n                \"type\": \"UNSTRUCTURED\",\n                \"content\": \"Le Hong Son tEST\"\n            },\n            \"additions\": {\n                \"counterpartyBankName\": \"Ngân hàng TMCP Ngoại thương Việt Nam\",\n                \"counterpartyBankShortName\": \"Vietcombank\"\n            }\n        },\n        \"totalAmount\": {\n            \"amount\": \"2000\",\n            \"currencyCode\": \"VND\"\n        },\n        \"edited\": false,\n        \"additions\": {\n            \"originatorBankBranchCode\": \"VN0010307\",\n            \"customerId\": \"36134609\",\n            \"ipAddress\": \"103.130.219.240\",\n            \"userNameBB\": \"0387654818\",\n            \"userAgent\": \"BBW\",\n            \"lang\": \"en\",\n            \"externalProductId\": \"1001\",\n            \"paymentDate\": \"2024-04-08T07:45:18Z\",\n            \"internalUserId\": \"2ea4c0f5-3ba4-478a-850f-8bf8ad9ba7ab\",\n            \"transactionRemarks\": \"Le Hong Son tEST\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Transfer Status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "28",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "requestId",
+							"value": "4d31758e-6e5b-4fe1-a6d9-f3cbbe801dd8",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "2",
+							"description": "1: Status, 2: Detail Local, None: Detail Server",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/techcombank/transfer-info",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"techcombank",
+						"transfer-info"
+					]
+				},
+				"description": "Sử dụng để kiểm tra giao dịch tạo vừa rồi đã thành công hay chưa, nhằm tránh xảy ra trường hợp giao dịch báo thất bại nhưng vẫn bị trừ tiền.  \n\"PROCESSED\": Đã thực hiện hoàn tất giao dịch.  \n\"CONFIRMATION_PENDING\": Giao dịch chưa hoàn tất, có thể bỏ qua và tạo giao dịch khác  \n\"USER_DECLINED\": Đã hủy bởi người dùng"
+			},
+			"response": [
+				{
+					"name": "Transfer Status",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idBank",
+									"value": "28",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "requestId",
+									"value": "4d31758e-6e5b-4fe1-a6d9-f3cbbe801dd8",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "2",
+									"description": "1: Status, 2: Detail Local, None: Detail Server",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/techcombank/transfer-info",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"techcombank",
+								"transfer-info"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 07:45:45 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=nxY2ywEQGf2SyzJCw0tMykTYnUIWljj8dXHmL4Qj0FNgnkQ3MzdsA0rV6VPdVBVJ6NdteVBrc4XcdgVQ2pKR4dghUxZ7i%2BSLCaUDhijYsH2P051nhIpvg5shT0fs\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8710a3bf38110eb8-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 88,\n    \"username\": \"0387654818\",\n    \"idbank\": \"28\",\n    \"transId\": \"FT23338919407889\",\n    \"paymentId\": \"4d31758e-6e5b-4fe1-a6d9-f3cbbe801dd8\",\n    \"debitAccountNo\": \"3606666888\",\n    \"creditAccountNo\": \"0491000157943\",\n    \"creditAccountName\": \"LE HONG SON\",\n    \"creditBankCode\": \"970436\",\n    \"memo\": \"Le Hong Son tEST\",\n    \"amount\": \"2000\",\n    \"fullBank\": \"tcb\",\n    \"status\": \"00\",\n    \"note\": \"Giao dịch thành công\",\n    \"qrCode\": \"CONFIRMTRANSFER\",\n    \"requestId\": \"123\",\n    \"callbackCount\": null,\n    \"callbackStatus\": null,\n    \"owner\": \"1\",\n    \"created_at\": \"2023-12-04T04:32:04.000000Z\",\n    \"updated_at\": \"2023-12-04T04:32:15.000000Z\"\n}"
+				}
+			]
+		}
+	]
+}

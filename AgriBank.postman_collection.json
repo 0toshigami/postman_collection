@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "855eb319-4c37-455f-b923-9b22158386ac",
+		"name": "AgriBank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-855eb319-4c37-455f-b923-9b22158386ac?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/agribank/login?idBank=35",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"agribank",
+						"login"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "35"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Info Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/msbbank/getinfo?token={{token}}&idBank=34",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"msbbank",
+						"getinfo"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "idBank",
+							"value": "34"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lịch sử giao dịch",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/msbbank/histories?idBank=34&day=10",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"msbbank",
+						"histories"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "34"
+						},
+						{
+							"key": "day",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

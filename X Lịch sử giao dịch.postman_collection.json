@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "4486f7ee-1dcd-4d6a-9f0c-e6b4499a8bfd",
+		"name": "X Lịch sử giao dịch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-4486f7ee-1dcd-4d6a-9f0c-e6b4499a8bfd?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Lịch sử giao dịch",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/api/info/list-histories?bankName=vcb",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"info",
+						"list-histories"
+					],
+					"query": [
+						{
+							"key": "bankName",
+							"value": "vcb"
+						},
+						{
+							"key": "type",
+							"value": "0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

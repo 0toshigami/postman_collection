@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "e845f4dc-ba21-4cfa-94c8-7017598d5403",
+		"name": "4.FE API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-e845f4dc-ba21-4cfa-94c8-7017598d5403?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "List Deposit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/info/list-histories-deposit",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"info",
+						"list-histories-deposit"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "0387654818",
+							"disabled": true
+						},
+						{
+							"key": "memo",
+							"value": "Test Ck LHone",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count Bank Used",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host-tta}}/be/manager/count-bank-used",
+					"host": [
+						"{{host-tta}}"
+					],
+					"path": [
+						"be",
+						"manager",
+						"count-bank-used"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "0387654818",
+							"disabled": true
+						},
+						{
+							"key": "memo",
+							"value": "Test Ck LHone",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count Bank Used Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host-tta}}/be/admin/decrypt-text?text=eyJpdiI6IlFDM0NoeU1nMEo4MW1jaGUxWUhtQ3c9PSIsInZhbHVlIjoiT1lxTkZlS0RrTlpqaE1lTGlDMC9objB2aVlSREI1K1JTTk5GQjZxQTZhdz0iLCJtYWMiOiI2MTZiNzNhY2M5ZjVhOTQ4ZjI4N2U5YWJhZDJhMjNjZDg3ZTFjMGNlODc3YzNjMDU2MDE0ZTViNTcyMTFhNTY4IiwidGFnIjoiIn0=",
+					"host": [
+						"{{host-tta}}"
+					],
+					"path": [
+						"be",
+						"admin",
+						"decrypt-text"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "eyJpdiI6IlFDM0NoeU1nMEo4MW1jaGUxWUhtQ3c9PSIsInZhbHVlIjoiT1lxTkZlS0RrTlpqaE1lTGlDMC9objB2aVlSREI1K1JTTk5GQjZxQTZhdz0iLCJtYWMiOiI2MTZiNzNhY2M5ZjVhOTQ4ZjI4N2U5YWJhZDJhMjNjZDg3ZTFjMGNlODc3YzNjMDU2MDE0ZTViNTcyMTFhNTY4IiwidGFnIjoiIn0="
+						},
+						{
+							"key": "memo",
+							"value": "Test Ck LHone",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Debug VCBAfterTransfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/selltool/job-vcb",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"selltool",
+						"job-vcb"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

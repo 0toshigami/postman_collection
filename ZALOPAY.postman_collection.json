@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "2e881c23-7dc2-43aa-aa8e-16b2f0bc1832",
+		"name": "ZALOPAY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-2e881c23-7dc2-43aa-aa8e-16b2f0bc1832?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "get_otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"0934567643\",\r\n    \"otp\" : \"078650\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}request",
+					"host": [
+						"{{URL}}request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "submit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"0855576421\",\r\n    \"otp\" : \"052573\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}submit",
+					"host": [
+						"{{URL}}submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"0855576421\",\r\n    \"password\" : \"290900\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}login",
+					"host": [
+						"{{URL}}login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"0352883794\",\r\n    \"receiver\" : \"0855576421\",\r\n    \"amount\"   : 1000,\r\n    \"comment\"  : \"LHS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}transfer",
+					"host": [
+						"{{URL}}transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"84352883794\",\r\n    \"limit\" : 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}historys",
+					"host": [
+						"{{URL}}historys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "balance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"0855576421\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}balance",
+					"host": [
+						"{{URL}}balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transfer-bank",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"0352883794\",\r\n    \"bank_code\": \"ZPVCB\",\r\n    \"receiver\": \"0491000157943\",\r\n    \"amount\": \"100000\",\r\n    \"comment\": \"LHS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}transfer-bank",
+					"host": [
+						"{{URL}}transfer-bank"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:8000/api/v1/",
+			"type": "string"
+		},
+		{
+			"key": "URLTEST",
+			"value": "http://thinh023.xyz/api/v1/",
+			"type": "string"
+		}
+	]
+}

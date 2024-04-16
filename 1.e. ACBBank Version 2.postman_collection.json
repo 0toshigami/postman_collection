@@ -1,0 +1,770 @@
+{
+	"info": {
+		"_postman_id": "e0c03756-1432-44b0-8b6e-f3f57bc34761",
+		"name": "1.e. ACBBank Version 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-e0c03756-1432-44b0-8b6e-f3f57bc34761?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/acb/v2/login?idBank=17",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"acb",
+						"v2",
+						"login"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "17"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/acb/v2/login?idBank=137&proxy=mproxy",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"acb",
+								"v2",
+								"login"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "137"
+								},
+								{
+									"key": "proxy",
+									"value": "mproxy"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 07:46:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=8H6SOi9tUn4I7rH3LujUt%2FbrI56QRbGm84g9SWGVcCI5upYoR7Fgk3%2FkEb1Xp4UVnd1gXjlLsSr1QbbBhiCddnRKLn6d5fuc98qe7cbFBvxqjK9hs%2FK3NDR3%2BDJa\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8710a495fea20eb8-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MT1NmOGEyNmZhMGIiLCJ1c2VyTmFtZSI6IjEzNDkwMTgxIiwibmFtZSI6eyJnaXZlbk5hbWUiOiJOR1VZRU4gSE9ORyIsImZhbWlseU5hbWUiOiJNSU5IIn0sImRpc3BsYXlOYW1lIjoiTUlOSCBOR1VZRU4gSE9ORyIsImVtYWlscyI6bnVsbCwiYWN0aXZlIjp0cnVlLCJncm91cHMiOlt7InZhbHVlIjoiMSIsIiRyZWYiOiJodHRwczovL2xvY2FsaG9zdC9zY2ltL0dyb3Vwcy8xIiwiZGlzcGxheSI6ImFjYm8ifV0sIm1ldGEiOnsicmVzb3VyY2VUeXBlIjoiVXNlciIsImNyZWF0ZWQiOiIyMDIzLTEwLTA2VDEwOjE1OjI1LjU1NiswMDowMCIsImxhc3RNb2RpZmllZCI6IjIwMjMtMTAtMDZUMTA6MTU6MjUuNTU2KzAwOjAwIiwibG9jYXRpb24iOiJodHRwczovL2xvY2FsaG9zdC9zY2ltL1VzZXJzLzZiNjJiMzYxLTc4ZjgtNGU3OS04YmE2LTAyM2Y4YTI2ZmEwYiJ9LCJsYXN0TG9naW4iOiIyMDI0LTA0LTA4VDA3OjQ2OjIxLjEyNjE0MyswMDowMCIsInN0YXR1cyI6MCwiYWRkcmVzc2VzIjpudWxsLCJwaG90b3MiOm51bGwsInBob25lTnVtYmVycyI6bnVsbCwiZXh0ZXJuYWxJZCI6IjEyMzY1MzgzIiwiY29ycG9yYXRlIjpudWxsLCJyb2xlIjpudWxsLCJsYXN0Q3JlZGVudGljYWwiOiIyMDIzLTEwLTA2VDEwOjE2OjU3LjcwMTUwMCswMDowMCIsImlhdCI6IjIwMjQtMDQtMDhUMDc6NDY6MjEuMTYwOTc2KzAwOjAwIiwicGFzc3dvcmRFeHBpcmVJbiI6MTgwLjEwNDU4OTc1NjE2OSwicGFzc3dvcmRFeHBpcmVBbGVydCI6ZmFsc2UsImlzcyI6Iml1U3VIWVZ1ZklVdU5JUkVWMEZCOUVvTG45a0hzRGJtIiwicGVyc19yb2xlIjpbIkVLWUMiXSwiZXh0ZXJuYWxfaWQiOiJiMjNjMWM4ZDgwZGY0NjEyMjE2ODYwN2FiMWZhZWY5NTQ4MjJhYmE1NGVjNmIxMmZiMmUxZDcxNjg2MGI0MmZlIn0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsImlzcyI6Iml1U3VIWVZ1ZklVdU5JUkVWMEZCOUVvTG45a0hzRGJtIn0.w4ekv6Cn1HdUJES0S4MAGqkJrCre-e8Po5UHevC1T3Y\",\n    \"expiresIn\": 300,\n    \"identity\": {\n        \"active\": true,\n        \"addresses\": null,\n        \"corporate\": null,\n        \"displayName\": \"NGUYEN VAN A\",\n        \"emails\": null,\n        \"externalId\": \"12365383\",\n        \"external_id\": \"b23c1c2324232323323954822aba54ec6b12fb2e1d716860b42fe\",\n        \"groups\": [\n            {\n                \"$ref\": \"https://localhost/scim/Groups/1\",\n                \"display\": \"acbo\",\n                \"value\": \"1\"\n            }\n        ],\n        \"iat\": \"2024-04-08T07:46:21.160976+00:00\",\n        \"id\": \"6b62b361-72438-4e79-8ba6-023f8a26fa0b\",\n        \"iss\": \"iuSuHY232323V0FB9EoLn9kHsDbm\",\n        \"lastCredentical\": \"2023-10-06T10:16:57.701500+00:00\",\n        \"lastLogin\": \"2024-04-08T07:46:21.126143+00:00\",\n        \"meta\": {\n            \"created\": \"2023-10-06T10:15:25.556+00:00\",\n            \"lastModified\": \"2023-10-06T10:15:25.556+00:00\",\n            \"location\": \"https://localhost/scim/Users/6b62b361-78f8-4e79-8ba6-023f8a26fa0b\",\n            \"resourceType\": \"User\"\n        },\n        \"name\": {\n            \"familyName\": \"AAAA\",\n            \"givenName\": \"NGUYEN VAN\"\n        },\n        \"passwordExpireAlert\": false,\n        \"passwordExpireIn\": 180.104589756169,\n        \"pers_role\": [\n            \"EKYC\"\n        ],\n        \"phoneNumbers\": null,\n        \"photos\": null,\n        \"role\": null,\n        \"schemas\": [\n            \"urn:ietf:params:scim:schemas:core:2.0:User\"\n        ],\n        \"status\": 0,\n        \"userName\": \"2132324323\"\n    },\n    \"refreshToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE32zODEsImp0aSI6ImFhMzU1MTRlLThiNzQtNGM1Ni1hZTM4LWFjYTNiYmI5NWM2MSIsImV4cCI6MTcxNDM3Njc4MSwiaWRlbnRpdHkiOnsic2NoZW1hcyI6WyJ1cm46aWV0ZjpwYXJhbXM6c2NpbTpzY2hlbWFzOmNvcmU6Mi4wOlVzZXIiXSwiaWQiOiI2YjYyYjM2MS03OGY4LTRlNzktOGJhNi0wMjNmOGEyNmZhMGIiLCJ1c2VyTmFtZSI6IjEzNDkwMTgxIiwibmFtZSI6eyJnaXZlbk5hbWUiOiJOR1VZRU4gSE9ORyIsImZhbWlseU5hbWUiOiJNSU5IIn0sImRpc3BsYXlOYW1lIjoiTUlOSCBOR1VZRU4gSE9ORyIsImVtYWlscyI6bnVsbCwiYWN0aXZlIjp0cnVlL2DowMCIsInN0YXR1cyI6MCwiYWRkcmVzc2VzIjpudWxsLCJwaG90b3MiOm51bGwsInBob25lTnVtYmVycyI6bnVsbCwiZXh0ZXJuYWxJZCI6IjEyMzY1MzgzIiwiY29ycG9yYXRlIjpudWxsLCJyb2xlIjpudWxsLCJsYXN0Q3JlZGVudGljYWwiOiIyMDIzLTEwLTA2VDEwOjE2OjU3LjcwMTUwMCswMDowMCIsImlhdCI6IjIwMjQtMDQtMDhUMDc6NDY6MjEuMTYwOTc2KzAwOjAwIiwicGFzc3dvcmRFeHBpcmVJbiI6MTgwLjEwNDU4OTc1NjE2OSwicGFzc3dvcmRFeHBpcmVBbGVydCI6ZmFsc2UsImlzcyI6Iml1U3VIWVZ1ZklVdU5JUkVWMEZCOUVvTG45a0hzRGJtIiwicGVyc19yb2xlIjpbIkVLWUMiXSwiZXh0ZXJuYWxfaWQiOiJiMjNjMWM4ZDgwZGY0NjEyMjE2ODYwN2FiMWZhZWY5NTQ4MjJhYmE1NGVjNmIxMmZiMmUxZDcxNjg2MGI0MmZlIn0sInR5cGUiOiJyZWZyZXNoIiwiaXNzIjoiaXVTdUhZVnVmSVV1TklSRVYwRkI5RW9MbjlrSHNEYm0ifQ.d_pxVawhGRfSIpl5w3o3fhOSfi-l0cN0aRBDJc2k27w\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Account Info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/acb/v2/info?idBank=137&proxy=mproxy",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"acb",
+						"v2",
+						"info"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "137"
+						},
+						{
+							"key": "proxy",
+							"value": "mproxy"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Account Info",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/acb/v2/info?idBank=137&proxy=mproxy",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"acb",
+								"v2",
+								"info"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "137"
+								},
+								{
+									"key": "proxy",
+									"value": "mproxy"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 07:47:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=6EiMy9Aqh0oy0kqyrSHLy2xv3yau84GRq5l7i1S%2BdiHHlUFN5PRhBIq1462IXG4gUhAcKxn3APBo3xPrf3US4Oi2od7JUSfMBrp9NqkrG4DT7pqPEICv%2FGXT1zbo\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8710a62e18d50eb8-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Thành công\",\n    \"message_en\": \"Success\",\n    \"data\": [\n        {\n            \"accountNumber\": \"13432481\",\n            \"accountDescription\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"owner\": \"NGUYEN HONG AAAA\",\n            \"currency\": \"VND\",\n            \"balance\": 3082586,\n            \"totalBalance\": 3085286,\n            \"cardToken\": null,\n            \"status\": 1,\n            \"amountDue\": null,\n            \"dueDate\": null\n        }\n    ],\n    \"code\": 200,\n    \"error\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Histories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/acb/v2/histories?idBank=137&fromDate=31/03/2024&toDate=31/03/2024&proxy=mproxy",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"acb",
+						"v2",
+						"histories"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "137"
+						},
+						{
+							"key": "day",
+							"value": "30",
+							"disabled": true
+						},
+						{
+							"key": "fromDate",
+							"value": "31/03/2024"
+						},
+						{
+							"key": "toDate",
+							"value": "31/03/2024"
+						},
+						{
+							"key": "proxy",
+							"value": "mproxy"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Histories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/acb/v2/histories?idBank=137&day=7&proxy=mproxy",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"acb",
+								"v2",
+								"histories"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "137"
+								},
+								{
+									"key": "day",
+									"value": "7"
+								},
+								{
+									"key": "fromDate",
+									"value": "01/03/2024",
+									"disabled": true
+								},
+								{
+									"key": "toDate",
+									"value": "31/03/2024",
+									"disabled": true
+								},
+								{
+									"key": "proxy",
+									"value": "mproxy"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 07:48:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=QM3n05tt6qSwsyQ0u3goEZQ8Jlbmo4lxgKNQdA5R12Ea9T1zbrof4GcHFZdH%2Ffv%2Bbq2qhY9SnBLWHYXWUtaqwx2rTlcFqkkvWsRhU7UyxGtAAThPRB2ICTZK98Eq\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8710a74fe9000eb8-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Thành công\",\n    \"message_en\": \"Success\",\n    \"data\": [\n        {\n            \"amount\": 2,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"transactionNumber\": 2528,\n            \"description\": \"##Lai nhap von#\",\n            \"isOnline\": false,\n            \"postingDate\": 1712336400000,\n            \"type\": \"IN\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1712413935000,\n            \"effectiveDate\": 1712336400000\n        },\n        {\n            \"amount\": 2000,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"NGUYEN HONG MINH\",\n            \"transactionNumber\": 2527,\n            \"description\": \"IB Le Hong Son Chuyen Khoan\",\n            \"isOnline\": false,\n            \"postingDate\": 1712250000000,\n            \"type\": \"IN\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1712293274000,\n            \"effectiveDate\": 1712250000000\n        },\n        {\n            \"amount\": 2000,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"NGUYEN HONG MINH\",\n            \"transactionNumber\": 2526,\n            \"description\": \"IB Le Hong Son Chuyen Khoan\",\n            \"isOnline\": false,\n            \"postingDate\": 1712250000000,\n            \"type\": \"IN\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1712293235000,\n            \"effectiveDate\": 1712250000000\n        },\n        {\n            \"amount\": 2000,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"LE HONG SON\",\n            \"transactionNumber\": 2525,\n            \"description\": \"IB Le Hong Son Chuyen Khoan\",\n            \"isOnline\": true,\n            \"postingDate\": 1712250000000,\n            \"type\": \"OUT\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1712292294000,\n            \"effectiveDate\": 1712250000000\n        },\n        {\n            \"amount\": 2000,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"LE HONG SON\",\n            \"transactionNumber\": 2524,\n            \"description\": \"IB Le Hong Son Chuyen Khoan\",\n            \"isOnline\": true,\n            \"postingDate\": 1712250000000,\n            \"type\": \"OUT\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1712291993000,\n            \"effectiveDate\": 1712250000000\n        },\n        {\n            \"amount\": 2000,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"LE HONG SON\",\n            \"transactionNumber\": 2523,\n            \"description\": \"IB Le Hong Son Chuyen Khoan\",\n            \"isOnline\": true,\n            \"postingDate\": 1711904400000,\n            \"type\": \"OUT\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1711903101000,\n            \"effectiveDate\": 1711904400000\n        },\n        {\n            \"amount\": 2132,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"VU TUNG DUY\",\n            \"transactionNumber\": 2522,\n            \"description\": \"NJFII-310324-13:18:48 651229\",\n            \"bankName\": \"VIETCOMBANK - NH TMCP NGOAI THUONG\",\n            \"isOnline\": true,\n            \"postingDate\": 1711904400000,\n            \"type\": \"OUT\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1711865930000,\n            \"effectiveDate\": 1711904400000\n        }\n    ],\n    \"code\": 200,\n    \"error\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Histories Row",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/acb/v2/histories-row?idBank=137&row=20&proxy=mproxy",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"acb",
+						"v2",
+						"histories-row"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "137"
+						},
+						{
+							"key": "row",
+							"value": "20"
+						},
+						{
+							"key": "proxy",
+							"value": "mproxy"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Histories Row",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/acb/v2/histories-row?idBank=137&row=20&proxy=mproxy",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"acb",
+								"v2",
+								"histories-row"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "137"
+								},
+								{
+									"key": "row",
+									"value": "20"
+								},
+								{
+									"key": "proxy",
+									"value": "mproxy"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 07:48:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=jXPNCESUAp1VCkdeAF3OsCLe7EI2Yd143IYMz4WazU1cKnFOO7Tc8kuV98J3JHAV8%2BasArWFm4PCxqYct4i54Zwgz22MnjrYxQ971M5tj9b%2Feo%2BVjyUk8nFzOipb\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8710a86a9a430eb8-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Thành công\",\n    \"message_en\": \"Success\",\n    \"data\": [\n        {\n            \"amount\": 2,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"\",\n            \"transactionNumber\": 2528,\n            \"description\": \"##Lai nhap von#\",\n            \"bankName\": \"\",\n            \"isOnline\": false,\n            \"postingDate\": 1712336400000,\n            \"accountOwner\": null,\n            \"type\": \"IN\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1712413935000,\n            \"effectiveDate\": 1712336400000\n        },\n        {\n            \"amount\": 2000,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"NGUYEN HONG MINH\",\n            \"transactionNumber\": 2527,\n            \"description\": \"IB Le Hong Son Chuyen Khoan\",\n            \"bankName\": \"\",\n            \"isOnline\": false,\n            \"postingDate\": 1712250000000,\n            \"accountOwner\": null,\n            \"type\": \"IN\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1712293274000,\n            \"effectiveDate\": 1712250000000\n        },\n        {\n            \"amount\": 2000,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"NGUYEN HONG MINH\",\n            \"transactionNumber\": 2526,\n            \"description\": \"IB Le Hong Son Chuyen Khoan\",\n            \"bankName\": \"\",\n            \"isOnline\": false,\n            \"postingDate\": 1712250000000,\n            \"accountOwner\": null,\n            \"type\": \"IN\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1712293235000,\n            \"effectiveDate\": 1712250000000\n        },\n        {\n            \"amount\": 2000,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"LE HONG SON\",\n            \"transactionNumber\": 2525,\n            \"description\": \"IB Le Hong Son Chuyen Khoan\",\n            \"bankName\": \"\",\n            \"isOnline\": true,\n            \"postingDate\": 1712250000000,\n            \"accountOwner\": null,\n            \"type\": \"OUT\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1712292294000,\n            \"effectiveDate\": 1712250000000\n        },\n        {\n            \"amount\": 2000,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"LE HONG SON\",\n            \"transactionNumber\": 2524,\n            \"description\": \"IB Le Hong Son Chuyen Khoan\",\n            \"bankName\": \"\",\n            \"isOnline\": true,\n            \"postingDate\": 1712250000000,\n            \"accountOwner\": null,\n            \"type\": \"OUT\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1712291993000,\n            \"effectiveDate\": 1712250000000\n        },\n        {\n            \"amount\": 2000,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"LE HONG SON\",\n            \"transactionNumber\": 2523,\n            \"description\": \"IB Le Hong Son Chuyen Khoan\",\n            \"bankName\": \"\",\n            \"isOnline\": true,\n            \"postingDate\": 1711904400000,\n            \"accountOwner\": null,\n            \"type\": \"OUT\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1711903101000,\n            \"effectiveDate\": 1711904400000\n        },\n        {\n            \"amount\": 2132,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"VU TUNG DUY\",\n            \"transactionNumber\": 2522,\n            \"description\": \"NJFII-310324-13:18:48 651229\",\n            \"bankName\": \"VIETCOMBANK - NH TMCP NGOAI THUONG\",\n            \"isOnline\": true,\n            \"postingDate\": 1711904400000,\n            \"accountOwner\": null,\n            \"type\": \"OUT\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1711865930000,\n            \"effectiveDate\": 1711904400000\n        },\n        {\n            \"amount\": 2000,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"NGUYEN HONG MINH\",\n            \"transactionNumber\": 2521,\n            \"description\": \"IB Le Hong Son Chuyen Khoan\",\n            \"bankName\": \"\",\n            \"isOnline\": false,\n            \"postingDate\": 1710262800000,\n            \"accountOwner\": null,\n            \"type\": \"IN\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1710246315000,\n            \"effectiveDate\": 1710262800000\n        },\n        {\n            \"amount\": 2000,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"NGUYEN HONG MINH\",\n            \"transactionNumber\": 2520,\n            \"description\": \"IB Le Hong Son Chuyen Khoan\",\n            \"bankName\": \"\",\n            \"isOnline\": false,\n            \"postingDate\": 1710262800000,\n            \"accountOwner\": null,\n            \"type\": \"IN\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1710246293000,\n            \"effectiveDate\": 1710262800000\n        },\n        {\n            \"amount\": 2000,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"NGUYEN HONG MINH\",\n            \"transactionNumber\": 2519,\n            \"description\": \"IB Le Hong Son Chuyen Khoan\",\n            \"bankName\": \"\",\n            \"isOnline\": false,\n            \"postingDate\": 1710176400000,\n            \"accountOwner\": null,\n            \"type\": \"IN\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1710233750000,\n            \"effectiveDate\": 1710176400000\n        },\n        {\n            \"amount\": 2000,\n            \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n            \"receiverName\": \"NGUYEN HONG MINH\",\n            \"transactionNumber\": 2518,\n            \"description\": \"IB Le Hong Son Chuyen Khoan\",\n            \"bankName\": \"\",\n            \"isOnline\": false,\n            \"postingDate\": 1710176400000,\n            \"accountOwner\": null,\n            \"type\": \"IN\",\n            \"receiverAccountNumber\": \"\",\n            \"currency\": \"VND\",\n            \"account\": 13490181,\n            \"activeDatetime\": 1710233733000,\n            \"effectiveDate\": 1710176400000\n        }\n    ],\n    \"code\": 200,\n    \"error\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Transfer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/api/acb/v2/transfer?idBank=137&toBank=7164631&bankCode=970416&amount=2000&memo=Le Hong Son Chuyen Khoan&requestId=123123123123&proxy=mproxy",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"acb",
+						"v2",
+						"transfer"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "137",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "toBank",
+							"value": "7164631",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970416",
+							"description": "Bankcode Napas 247"
+						},
+						{
+							"key": "amount",
+							"value": "2000",
+							"description": "Số tiền"
+						},
+						{
+							"key": "memo",
+							"value": "Le Hong Son Chuyen Khoan",
+							"description": "Lời nhắn"
+						},
+						{
+							"key": "requestId",
+							"value": "123123123123"
+						},
+						{
+							"key": "stopauto",
+							"value": "1",
+							"description": "1 = stop auto",
+							"disabled": true
+						},
+						{
+							"key": "proxy",
+							"value": "mproxy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Transfer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/api/acb/v2/confirm-transfer?idBank=137&otp=271173&uuid=5477257e-2b34-4fe6-9c75-60174ba01eab&proxy=mproxy",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"acb",
+						"v2",
+						"confirm-transfer"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "137"
+						},
+						{
+							"key": "otp",
+							"value": "271173"
+						},
+						{
+							"key": "uuid",
+							"value": "5477257e-2b34-4fe6-9c75-60174ba01eab"
+						},
+						{
+							"key": "proxy",
+							"value": "mproxy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Name Bank",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/acb/getname?idBank=17&bankCode=970415&bankNumber=662663666999&proxy=mproxy",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"acb",
+						"getname"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "17"
+						},
+						{
+							"key": "bankCode",
+							"value": "970415"
+						},
+						{
+							"key": "bankNumber",
+							"value": "662663666999"
+						},
+						{
+							"key": "proxy",
+							"value": "mproxy"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

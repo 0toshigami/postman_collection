@@ -1,0 +1,800 @@
+{
+	"info": {
+		"_postman_id": "e597c334-50ec-406a-aa50-990769484aa9",
+		"name": "ZZZ Queue Transfer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-e597c334-50ec-406a-aa50-990769484aa9?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Name Bank Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/acb/getname?idBank=17&bankCode=970415&bankNumber=662663666999",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"acb",
+						"getname"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "17"
+						},
+						{
+							"key": "bankCode",
+							"value": "970415"
+						},
+						{
+							"key": "bankNumber",
+							"value": "662663666999"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Histories v2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/acb/histories-row?idBank=17",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"acb",
+								"histories-row"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "17"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:43:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=Vt%2BZZXhOumjCxqf8PxwciHo3uAqKTRQw%2BFMYqtrG1QLSdxcFGhipmo4EU%2BtJvSPGgayKaf7Cveoae8znCRsLz9HwzAcdchJNyBFf9X1pzDQvbT9CF%2BYf2yPz1nXP\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d6303ca267c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Successfully\",\n    \"data\": {\n        \"time\": \"2023-09-13T10:43:35.821+07:00\",\n        \"codeStatus\": 200,\n        \"messageStatus\": \"success\",\n        \"description\": \"\",\n        \"took\": 31,\n        \"data\": [],\n        \"redisTook\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Queue Auto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/autotouch/allqueue",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"autotouch",
+						"allqueue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ACB",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{host}}/api/selltool/account-number?username=13490181&password=Minhbaby29*",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"selltool",
+						"account-number"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "13490181"
+						},
+						{
+							"key": "password",
+							"value": "Minhbaby29*"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Publick Key Python",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/autotouch/allqueuee",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"autotouch",
+						"allqueuee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decrypt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "dcmm",
+							"value": "PwbUzEhQmm7oqU39wpISmV1D1GeSNDfwsooWU5e0Bpb1Yq1wnTc/hnyO4VY+j9Mw5WiIzBuPVsQVHUBr2mHK7iCIeEqP0sjZc1kOxt83fzxAy1DchbLT3F546qp2Df5Xm339ssoTwyhgOd2vWHJvSoa81sAkiY1BRRKMVJ+nIbKraAiZjbC39Qnx4t9oAEcIkLJM25KY3lEf2hbyCDTiEbfNqZIjyLFine7CKRJqaTm+xq/RRsbPkkc8CxnAC18dPA6GkUnpPxHKA7L6zI8etm+h3mIzUR45RxilvJK8OYj/3ldnTG26fB7k6EN6VDI6O69eMYf8BIDa9gIzpdHY8l6a7Fd6g1kmRCTbgsmTBeJFAzgf3eNlwhPkIns+zc80abXCDaaOzY43pIWUZD3279wHPw0/vHxXOT6gRzZYIMj7MWnG6cKziGHIydbe8e6YXvVMiR9xmd6jPgHdrXdu8DFXmvZw91V6Wi34VEckcwsAWXehgbMogz9ys2NSjT3gawFyU/GHjZLOQSeDos8TfoRmZT6ei0KkSJUBvQw75nGMyENekMJ/4MF+gg1vF0d8F/+K/rQt6CRMpRc97dOptel1DuehjjUggk4CGQ5oESxuLCIz8wTYMzUGe24NGVh7nGi3UYkOSGbq3pacQJ3KhKCUMNHIE9+YQpESQ1miH0E=\n",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/autotouch/allqueue",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"autotouch",
+						"allqueue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Encrypt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/autotouch/encrypt",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"autotouch",
+						"encrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Queue Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/queue/allvcb",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"queue",
+						"allvcb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Captcha Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/queue/allvcb",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"queue",
+						"allvcb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Notification Telegram",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"app\":\"com.mbmobile\",\r\n\"audioContentsURI\":null,\r\n\"bigText\":\"TK 00011400003206|GD:  1,111VND 23\\/05\\/23 00:42|SD:21,283VND|ND: LE HONG SON chuyen tien Trace 84461 5 00011400003206\",\r\n\"extraInfoText\":null,\r\n\"groupedMessages\":[],\r\n\"imageBackgroundURI\":null,\r\n\"subText\":null,\r\n\"summaryText\":null,\r\n\"text\":\"TK 00011400003206|GD:  1,111VND 23\\/05\\/23 00:42|SD:21,283VND|ND: LE HONG SON chuyen tien Trace 84461 5 00011400003206\",\r\n\"time\":\"1684777388192\",\r\n\"title\":\"Th\\u00f4ng b\\u00e1o bi\\u1ebfn \\u0111\\u1ed9ng s\\u1ed1 d\\u01b0\",\r\n\"titleBig\":null,\r\n\"chat_id\":\"-991382015\",\r\n\"username\":\"Igviivii\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.ukm.vn/api/callback/appnotification",
+					"protocol": "https",
+					"host": [
+						"api",
+						"ukm",
+						"vn"
+					],
+					"path": [
+						"api",
+						"callback",
+						"appnotification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Noti từ Android",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json;charset=utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Tin nh\\u1eafn\",\"pkg\":\"com.google.android.apps.messaging\",\"title\":\"ACB\",\"text\":\"ACB: TK 7164631(VND) + 1,919 luc 15:26 29\\/09\\/2023. So du 18,372. GD: LE HONG SON chuyen tien GD 555859-092923 15:26:51\",\"subtext\":null,\"bigtext\":null,\"infotext\":null,\"username\":\"0387654818\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/webhook/notify",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"webhook",
+						"notify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Notification Telegram Copy 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"app\":\"com.VCB\",\"audioContentsURI\":\"\",\"bigText\":\"Số dư TK VCB 0491000157943 +1,212 VND lúc 08-06-2023 23:45:34. Số dư 43,968 VND. Ref 313377.080623.234533.LE HONG SON chuyen tien\",\"extraInfoText\":\"\",\"groupedMessages\":[],\"imageBackgroundURI\":\"\",\"subText\":\"\",\"summaryText\":\"Số dư TK VCB 0491000157943 +1,212 VND lúc 08-06-2023 23:45:34. Số dư 43,968 VND. Ref 313377.080623.234533.LE HONG SON chuyen tien\",\"text\":\"Số dư TK VCB 0491000157943 +1,212 VND lúc 08-06-2023 23:45:34. Số dư 43,968 VND. Ref 313377.080623.234533.LE HONG SON chuyen tien\",\"time\":\"1686242736710\",\"title\":\"Thông báo VCB\",\"titleBig\":\"Thông báo VCB\",\"chat_id\":\"\",\"username\":\"\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://45.77.170.115/api/notification",
+					"protocol": "http",
+					"host": [
+						"45",
+						"77",
+						"170",
+						"115"
+					],
+					"path": [
+						"api",
+						"notification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Queue Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/autotouch/allqueue",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"autotouch",
+						"allqueue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gửi Otp Transfer Python",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/otp/vietcombank?token={{token}}&idBank=2&tranid=3289696168&otp=300646",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"otp",
+						"vietcombank"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"description": "Token "
+						},
+						{
+							"key": "idBank",
+							"value": "2",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "tranid",
+							"value": "3289696168"
+						},
+						{
+							"key": "otp",
+							"value": "300646"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "telco",
+							"value": "VIETTEL",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "527669281947941",
+							"type": "text"
+						},
+						{
+							"key": "serial",
+							"value": "20000251842532",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "10000",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/account/rechargecard",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"rechargecard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://napthe365.vn/chargingws/v2/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "telco",
+							"value": "VIETTEL",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "328165731461437",
+							"type": "text"
+						},
+						{
+							"key": "serial",
+							"value": "20000252333563",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "10000",
+							"type": "text"
+						},
+						{
+							"key": "request_id",
+							"value": "3382587628",
+							"type": "text"
+						},
+						{
+							"key": "partner_id",
+							"value": "78272157776",
+							"type": "text"
+						},
+						{
+							"key": "sign",
+							"value": "0895f317f0cbdb48b67715f1ef407600",
+							"type": "text"
+						},
+						{
+							"key": "command",
+							"value": "charging",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://napthe365.vn/chargingws/v2/",
+					"protocol": "https",
+					"host": [
+						"napthe365",
+						"vn"
+					],
+					"path": [
+						"chargingws",
+						"v2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/callback/napthe365?status=1&message=Thành công&request_id=989876&declared_value=50000&value=50000&amount=25000&code=429404041816967&serial=20000252611539 &telco=VIETTEL&trans_id=343424&callback_sign=17b118fe86852c52ea126c9537617f6d",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"callback",
+						"napthe365"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "1"
+						},
+						{
+							"key": "message",
+							"value": "Thành công"
+						},
+						{
+							"key": "request_id",
+							"value": "989876"
+						},
+						{
+							"key": "declared_value",
+							"value": "50000"
+						},
+						{
+							"key": "value",
+							"value": "50000"
+						},
+						{
+							"key": "amount",
+							"value": "25000"
+						},
+						{
+							"key": "code",
+							"value": "429404041816967"
+						},
+						{
+							"key": "serial",
+							"value": "20000252611539 "
+						},
+						{
+							"key": "telco",
+							"value": "VIETTEL"
+						},
+						{
+							"key": "trans_id",
+							"value": "343424"
+						},
+						{
+							"key": "callback_sign",
+							"value": "17b118fe86852c52ea126c9537617f6d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check key tinsoft",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://proxy.tinsoftsv.com/api/getKeyInfo.php?key=TLyrtNVfYnRHnmT3ZX21qFtyvFyupou8m6bERe",
+					"protocol": "http",
+					"host": [
+						"proxy",
+						"tinsoftsv",
+						"com"
+					],
+					"path": [
+						"api",
+						"getKeyInfo.php"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "TLyrtNVfYnRHnmT3ZX21qFtyvFyupou8m6bERe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CapMonster Image to Text",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientKey\":\"86cb24d8fef74651bee13d4b08b7e640\",\r\n    \"task\":\r\n    {\r\n        \"type\":\"ImageToTextTask\",\r\n        \"numeric\": 1,\r\n        \"body\":\"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\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://063d-171-228-24-79.ngrok-free.app/createTask",
+					"protocol": "https",
+					"host": [
+						"063d-171-228-24-79",
+						"ngrok-free",
+						"app"
+					],
+					"path": [
+						"createTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CapMonster Image to Text Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientKey\":\"86cb24d8fef74651bee13d4b08b7e640\",\r\n    \"task\":\r\n    {\r\n        \"type\":\"ImageToTextTask\",\r\n        \"numeric\": 1,\r\n        \"body\":\"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\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://063d-171-228-24-79.ngrok-free.app/createTask",
+					"protocol": "https",
+					"host": [
+						"063d-171-228-24-79",
+						"ngrok-free",
+						"app"
+					],
+					"path": [
+						"createTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CapMonster Image to Text Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientKey\":\"86cb24d8fef74651bee13d4b08b7e640\",\r\n    \"task\":\r\n    {\r\n        \"type\":\"ImageToTextTask\",\r\n        // \"CapMonsterModule\": \"ZennoLab.facebook\",\r\n        \"body\":\"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\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://44c6-171-228-5-145.ngrok-free.app/createTask",
+					"protocol": "https",
+					"host": [
+						"44c6-171-228-5-145",
+						"ngrok-free",
+						"app"
+					],
+					"path": [
+						"createTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CapMonster Image to Text Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientKey\":\"86cb24d8fef74651bee13d4b08b7e640\",\r\n    \"taskId\": 11\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://44c6-171-228-5-145.ngrok-free.app/getTaskResult",
+					"protocol": "https",
+					"host": [
+						"44c6-171-228-5-145",
+						"ngrok-free",
+						"app"
+					],
+					"path": [
+						"getTaskResult"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

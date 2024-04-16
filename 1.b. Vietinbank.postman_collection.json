@@ -1,0 +1,933 @@
+{
+	"info": {
+		"_postman_id": "84a38ce4-9291-43ce-9aaf-e7ce9a8a5862",
+		"name": "1.b. Vietinbank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-84a38ce4-9291-43ce-9aaf-e7ce9a8a5862?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/vietinbank/login?idBank=71",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietinbank",
+						"login"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "71",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "username",
+							"value": "03876548181",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"disabled": true
+						},
+						{
+							"key": "numberAccount",
+							"value": "123",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietinbank/login?idBank=10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietinbank",
+								"login"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "10",
+									"description": "Bank ID trong hệ thống"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 03:11:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=vfry5qAOegRBDqHQtR%2FXDOz%2BvxBTronxqvhCtkbMkhZt%2FoS8s4T3jH7bjGGusa3omOpiweA7Q5Rt0ocSl1HESEiJVhONyQDyWffWbrUHc5W9kMtoUqziwMVvqiOt\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "804cb9cd6d240ff5-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"requestId\": \"5VIPVP7RVV6H|16934510610\",\n        \"sessionId\": \"NA23CVOOPE\",\n        \"error\": false,\n        \"systemDate\": \"202309451101153\",\n        \"status\": \"SUCCESS\",\n        \"customerNumber\": \"30164347835\",\n        \"ipayId\": \"IP086733\",\n        \"unreadMessages\": [],\n        \"addField2\": \"Available###3016597835######hangtt13###19/12/2011 17:46:08\",\n        \"addField3\": \"323534\",\n        \"tokenId\": \"OPI0P16Z\",\n        \"customerEkyc\": \"N\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Account Detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/vietinbank/info?idBank=71",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietinbank",
+						"info"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "71",
+							"description": "Bank ID trong hệ thống"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Account Detail",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietinbank/info?idBank=10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietinbank",
+								"info"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "10",
+									"description": "Bank ID trong hệ thống"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:38:10 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=8eTjncsZ86zu4mwTb36dcYi7WBA5Jd06NHmZqaiylC%2FIoWlKeevL%2BcW19LpnufMDh57e2gA2zxemRbRzbuGYFJpwBDKj0Lb9XpB2%2B33e%2BuJXdwge7XbODuuclAtq\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d5b0998d67c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"requestId\": \"X832ETNGKH2G|1694512288042\",\n    \"sessionId\": \"3FR51E12391B\",\n    \"error\": false,\n    \"customerType\": \"P\",\n    \"customerNumber\": \"30165923435\",\n    \"totalAmount\": 104086813,\n    \"accounts\": [\n        {\n            \"number\": \"000012340000\",\n            \"bsb\": \"32034\",\n            \"type\": \"DDA\",\n            \"currencyCode\": \"VND\",\n            \"status\": \"0\",\n            \"openDate\": \"13-02-2019\",\n            \"accountState\": {\n                \"serviceLimits\": [\n                    {\n                        \"service\": \"Billpay\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Closeaccount\",\n                        \"transactionLimit\": 0,\n                        \"dailyLimit\": 0,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Eztransfer\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Lrfrom\",\n                        \"transactionLimit\": 99999999999999900,\n                        \"dailyLimit\": 99999999999999900,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Openda\",\n                        \"transactionLimit\": 0,\n                        \"dailyLimit\": 0,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Pfromtobillauto\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Pfromtocard\",\n                        \"transactionLimit\": 499999999,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Pfromtoext\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Pfromtoint\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Pstockpayment\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Qrpay\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Repaycard\",\n                        \"transactionLimit\": 99999999999999900,\n                        \"dailyLimit\": 99999999999999900,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Schedulefromtoext\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Schedulefromtoint\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Sellfx\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    }\n                ],\n                \"availableBalance\": 0,\n                \"balance\": 0\n            },\n            \"relationshipType\": \"A\",\n            \"relationshipTypeName\": \"A|Individual\",\n            \"title\": \"LE HOANG SON\",\n            \"entityNumber\": \"CU30165934535\",\n            \"productId\": \"1015\",\n            \"branchName\": \"CN HA DONG\",\n            \"alias\": \"Selltool\",\n            \"aliasStatus\": \"2\",\n            \"aliasStatusDesc\": \"Tạm dừng\",\n            \"aliasType\": \"01\",\n            \"aliasProduct\": \"1\",\n            \"holdAmt\": \"0\",\n            \"restrictionCode\": \"false\",\n            \"packageAccountName\": \"Smart năng động\"\n        },\n        {\n            \"number\": \"000012340000\",\n            \"bsb\": \"35334\",\n            \"type\": \"DDA\",\n            \"currencyCode\": \"VND\",\n            \"status\": \"0\",\n            \"openDate\": \"10-10-2000\",\n            \"accountState\": {\n                \"serviceLimits\": [\n                    {\n                        \"service\": \"Billpay\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Closeaccount\",\n                        \"transactionLimit\": 0,\n                        \"dailyLimit\": 0,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Eztransfer\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Lrfrom\",\n                        \"transactionLimit\": 99999999999999900,\n                        \"dailyLimit\": 99999999999999900,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Openda\",\n                        \"transactionLimit\": 0,\n                        \"dailyLimit\": 0,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Pfromtobillauto\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Pfromtocard\",\n                        \"transactionLimit\": 499999999,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Pfromtoext\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Pfromtoint\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Pstockpayment\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Qrpay\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Repaycard\",\n                        \"transactionLimit\": 99999999999999900,\n                        \"dailyLimit\": 99999999999999900,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Schedulefromtoext\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Schedulefromtoint\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Sellfx\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"VisaQRpay\",\n                        \"transactionLimit\": 100100000,\n                        \"dailyLimit\": 500500000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    }\n                ],\n                \"availableBalance\": 1000,\n                \"balance\": 1000\n            },\n            \"relationshipType\": \"A\",\n            \"relationshipTypeName\": \"A|Individual\",\n            \"title\": \"LE HOANG SON\",\n            \"entityNumber\": \"CU301435335\",\n            \"productId\": \"1015\",\n            \"branchName\": \"CN HA DONG\",\n            \"alias\": \"SOVY\",\n            \"aliasStatus\": \"0\",\n            \"aliasStatusDesc\": \"Đang hoạt động\",\n            \"aliasType\": \"02\",\n            \"aliasProduct\": \"1\",\n            \"holdAmt\": \"0\",\n            \"restrictionCode\": \"false\",\n            \"packageAccountName\": \"Smart năng động\"\n        },\n        {\n            \"number\": \"000012340000\",\n            \"bsb\": \"94598\",\n            \"type\": \"DDA\",\n            \"currencyCode\": \"VND\",\n            \"status\": \"0\",\n            \"openDate\": \"06-14-2000\",\n            \"accountState\": {\n                \"serviceLimits\": [\n                    {\n                        \"service\": \"Billpay\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Closeaccount\",\n                        \"transactionLimit\": 0,\n                        \"dailyLimit\": 0,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Eztransfer\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Lrfrom\",\n                        \"transactionLimit\": 99999999999999900,\n                        \"dailyLimit\": 99999999999999900,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Openda\",\n                        \"transactionLimit\": 0,\n                        \"dailyLimit\": 0,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Pfromtobillauto\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Pfromtocard\",\n                        \"transactionLimit\": 499999999,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Pfromtoext\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Pfromtoint\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Pstockpayment\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Qrpay\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Repaycard\",\n                        \"transactionLimit\": 99999999999999900,\n                        \"dailyLimit\": 99999999999999900,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Schedulefromtoext\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Schedulefromtoint\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"Sellfx\",\n                        \"transactionLimit\": 500000000,\n                        \"dailyLimit\": 3000000000,\n                        \"transactionAmountMin\": 1000,\n                        \"dailyLimitUsed\": 0\n                    },\n                    {\n                        \"service\": \"VisaQRpay\",\n                        \"transactionLimit\": 100100000,\n                        \"dailyLimit\": 500500000,\n                        \"transactionAmountMin\": 1,\n                        \"dailyLimitUsed\": 0\n                    }\n                ],\n                \"availableBalance\": 42112090,\n                \"balance\": 42162090\n            },\n            \"relationshipType\": \"A\",\n            \"relationshipTypeName\": \"A|Individual\",\n            \"title\": \"LE HOANG SON\",\n            \"entityNumber\": \"CU3016567835\",\n            \"productId\": \"1015\",\n            \"branchName\": \"HOI SO\",\n            \"alias\": \"AUTO\",\n            \"aliasStatus\": \"0\",\n            \"aliasStatusDesc\": \"Đang hoạt động\",\n            \"aliasType\": \"02\",\n            \"aliasProduct\": \"1\",\n            \"holdAmt\": \"50000\",\n            \"restrictionCode\": \"false\",\n            \"packageAccountName\": \"Smart năng động\"\n        }\n    ],\n    \"entities\": [\n        {\n            \"title\": \"LE HOANG SON\",\n            \"isDefault\": false,\n            \"emailAddress\": \"\",\n            \"number\": \"CU35757835\",\n            \"mobileNumber\": \"03873465818\",\n            \"type\": \"P\",\n            \"defaultAccount\": \"000012340000\",\n            \"segmentId\": \"CN01\",\n            \"segmentName\": \"Khách hàng thân thiết\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Histories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/vietinbank/histories?idBank=71&fromDate=10/01/2024&toDate=24/03/2024",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietinbank",
+						"histories"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "71",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "day",
+							"value": "30",
+							"description": "Số ngày lấy LSGD",
+							"disabled": true
+						},
+						{
+							"key": "fromDate",
+							"value": "10/01/2024"
+						},
+						{
+							"key": "toDate",
+							"value": "24/03/2024"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Histories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietinbank/histories?idBank=10&day=5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietinbank",
+								"histories"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "10",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "day",
+									"value": "5",
+									"description": "Số ngày lấy LSGD"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:40:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=D21Ei5qeoSFoLkLX2LWU5jzWr2Ir2SHckqFY%2B1Fmilt%2BEae25MLYYHo%2BScmxB3o1OkC1xCXG5D2DE%2FG2Dhx25hN8Pkrdg0natusnRHVhTjFMqqHmuZohlNrxKJbQ\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d5e992b4b7c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"requestId\": \"EXVIZMGWJJCE|1694576434074\",\n    \"sessionId\": \"Q6YEZE7SRE\",\n    \"error\": false,\n    \"accountNo\": \"662663666999\",\n    \"currentPage\": 0,\n    \"nextPage\": 0,\n    \"pageSize\": 100,\n    \"totalRecords\": 17,\n    \"warningMsg\": \"\",\n    \"transactions\": [\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"CT DI:944K2390K1L98Q1V LE HONG SON chuyen tien\",\n            \"amount\": \"250000.00\",\n            \"balance\": \"42162090.00\",\n            \"trxId\": \"944K2390K1L98Q1V\",\n            \"processDate\": \"12-09-2023 20:53:29\",\n            \"dorC\": \"D\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1611\",\n            \"tellerId\": \"mobile\",\n            \"corresponsiveAccount\": \"19035500957017\",\n            \"corresponsiveName\": \"NGUYEN THANH BINH\",\n            \"channel\": \"78 - Retail Internet Banking\",\n            \"serviceBranchId\": \"94498\",\n            \"serviceBranchName\": \"CN 12 - TP HCM - HOI SO\",\n            \"pmtType\": \"RTGS - Chuyển tiền nhanh\",\n            \"sendingBankId\": \"01201001\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"\",\n            \"receivingBankId\": \"VTCBVNVN\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"TCB_NH TMCP Ky Thuong VN\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"LE HONG SON chuyen tien\",\n            \"amount\": \"1000000.00\",\n            \"balance\": \"42412090.00\",\n            \"trxId\": \"1Jwi0-7lB2y3b1d\",\n            \"processDate\": \"12-09-2023 20:09:07\",\n            \"dorC\": \"D\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1610\",\n            \"tellerId\": \"mobile\",\n            \"corresponsiveAccount\": \"108869752220\",\n            \"corresponsiveName\": \"TRAN THI HANG\",\n            \"channel\": \"78 - Retail Internet Banking\",\n            \"serviceBranchId\": \"94498\",\n            \"serviceBranchName\": \"CN 12 - TP HCM - HOI SO\",\n            \"pmtType\": \"DW - Chuyển tiền trong hệ thống\",\n            \"sendingBankId\": \"\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"\",\n            \"receivingBankId\": \"\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"CT DI:325514364060 chuyen sang clone de test\",\n            \"amount\": \"100000.00\",\n            \"balance\": \"43412090.00\",\n            \"trxId\": \"944S2390JMK97ZRD\",\n            \"processDate\": \"12-09-2023 14:52:16\",\n            \"dorC\": \"D\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1609\",\n            \"tellerId\": \"mobile\",\n            \"corresponsiveAccount\": \"00011400003206\",\n            \"corresponsiveName\": \"NGUYEN THI PHUONG THAO\",\n            \"channel\": \"78 - Retail Internet Banking\",\n            \"serviceBranchId\": \"94498\",\n            \"serviceBranchName\": \"CN 12 - TP HCM - HOI SO\",\n            \"pmtType\": \"RTGS - Chuyển tiền nhanh\",\n            \"sendingBankId\": \"\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"\",\n            \"receivingBankId\": \"970422\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"MB_NH TMCP Quan doi\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"CT DI:944K2390JCL68139 QR - LE HONG SON chuyen tien\",\n            \"amount\": \"72000.00\",\n            \"balance\": \"43512090.00\",\n            \"trxId\": \"944K2390JCL68139\",\n            \"processDate\": \"12-09-2023 11:01:14\",\n            \"dorC\": \"D\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1608\",\n            \"tellerId\": \"mobile\",\n            \"corresponsiveAccount\": \"19036254191014\",\n            \"corresponsiveName\": \"DO THI HUONG\",\n            \"channel\": \"78 - Retail Internet Banking\",\n            \"serviceBranchId\": \"94498\",\n            \"serviceBranchName\": \"CN 12 - TP HCM - HOI SO\",\n            \"pmtType\": \"RTGS - Chuyển tiền nhanh\",\n            \"sendingBankId\": \"01201001\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"\",\n            \"receivingBankId\": \"VTCBVNVN\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"TCB_NH TMCP Ky Thuong VN\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"CT DI:325510010888 LE HONG SON chuyen tien\",\n            \"amount\": \"60000.00\",\n            \"balance\": \"43584090.00\",\n            \"trxId\": \"944S2390JCFPNPPM\",\n            \"processDate\": \"12-09-2023 10:57:51\",\n            \"dorC\": \"D\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1607\",\n            \"tellerId\": \"mobile\",\n            \"corresponsiveAccount\": \"668801051994\",\n            \"corresponsiveName\": \"DANG NGOC TUNG\",\n            \"channel\": \"78 - Retail Internet Banking\",\n            \"serviceBranchId\": \"94498\",\n            \"serviceBranchName\": \"CN 12 - TP HCM - HOI SO\",\n            \"pmtType\": \"RTGS - Chuyển tiền nhanh\",\n            \"sendingBankId\": \"\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"\",\n            \"receivingBankId\": \"970422\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"MB_NH TMCP Quan doi\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"CT DI:325422488635 QR - LE HONG SON chuyen tien\",\n            \"amount\": \"130000.00\",\n            \"balance\": \"43644090.00\",\n            \"trxId\": \"944S2390HGZZR1Z3\",\n            \"processDate\": \"11-09-2023 22:19:18\",\n            \"dorC\": \"D\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1606\",\n            \"tellerId\": \"mobile\",\n            \"corresponsiveAccount\": \"8700205165009\",\n            \"corresponsiveName\": \"MAI VAN KHANH\",\n            \"channel\": \"78 - Retail Internet Banking\",\n            \"serviceBranchId\": \"94498\",\n            \"serviceBranchName\": \"CN 12 - TP HCM - HOI SO\",\n            \"pmtType\": \"RTGS - Chuyển tiền nhanh\",\n            \"sendingBankId\": \"\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"\",\n            \"receivingBankId\": \"970405\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"Agribank_NH NN va PTNT Viet Nam\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"CT DI:944K2390HBCUCAQ5 QR - TT HD 2301001175\",\n            \"amount\": \"366000.00\",\n            \"balance\": \"43774090.00\",\n            \"trxId\": \"944K2390HBCUCAQ5\",\n            \"processDate\": \"11-09-2023 19:54:32\",\n            \"dorC\": \"D\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1605\",\n            \"tellerId\": \"mobile\",\n            \"corresponsiveAccount\": \"0946502888\",\n            \"corresponsiveName\": \"NGUYEN PHUONG THAO\",\n            \"channel\": \"78 - Retail Internet Banking\",\n            \"serviceBranchId\": \"94498\",\n            \"serviceBranchName\": \"CN 12 - TP HCM - HOI SO\",\n            \"pmtType\": \"RTGS - Chuyển tiền nhanh\",\n            \"sendingBankId\": \"01201001\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"\",\n            \"receivingBankId\": \"MSCBVNVX\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"MB_NH TMCP Quan doi\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"CT DI:944K2390GXWRJLFJ QR - LE HONG SON chuyen tien\",\n            \"amount\": \"51000.00\",\n            \"balance\": \"44140090.00\",\n            \"trxId\": \"944K2390GXWRJLFJ\",\n            \"processDate\": \"11-09-2023 14:07:39\",\n            \"dorC\": \"D\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1604\",\n            \"tellerId\": \"mobile\",\n            \"corresponsiveAccount\": \"19036254191014\",\n            \"corresponsiveName\": \"DO THI HUONG\",\n            \"channel\": \"78 - Retail Internet Banking\",\n            \"serviceBranchId\": \"94498\",\n            \"serviceBranchName\": \"CN 12 - TP HCM - HOI SO\",\n            \"pmtType\": \"RTGS - Chuyển tiền nhanh\",\n            \"sendingBankId\": \"01201001\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"\",\n            \"receivingBankId\": \"VTCBVNVN\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"TCB_NH TMCP Ky Thuong VN\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"CT DI:325414569341 LE HONG SON chuyen tien\",\n            \"amount\": \"30000.00\",\n            \"balance\": \"44191090.00\",\n            \"trxId\": \"944S2390GXRR6BMS\",\n            \"processDate\": \"11-09-2023 14:03:52\",\n            \"dorC\": \"D\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1603\",\n            \"tellerId\": \"mobile\",\n            \"corresponsiveAccount\": \"668801051994\",\n            \"corresponsiveName\": \"DANG NGOC TUNG\",\n            \"channel\": \"78 - Retail Internet Banking\",\n            \"serviceBranchId\": \"94498\",\n            \"serviceBranchName\": \"CN 12 - TP HCM - HOI SO\",\n            \"pmtType\": \"RTGS - Chuyển tiền nhanh\",\n            \"sendingBankId\": \"\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"\",\n            \"receivingBankId\": \"970422\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"MB_NH TMCP Quan doi\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"CT DEN:944T2390GNF4R5QW IBVCB.4194724150.036242.Le Hong Son Chuyen Khoan.CT tu 0491000157943 LE HONG SON toi 662663666999 LE HONG SON tai VIETINBANK\",\n            \"amount\": \"1000.00\",\n            \"balance\": \"44221090.00\",\n            \"trxId\": \"944T2390GNF4R5QW\",\n            \"processDate\": \"11-09-2023 10:04:07\",\n            \"dorC\": \"C\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1602\",\n            \"tellerId\": \"A44_VESB2\",\n            \"corresponsiveAccount\": \"0491000157943\",\n            \"corresponsiveName\": \"LE HONG SON\",\n            \"channel\": \"44 - Gateway (VTB)\",\n            \"serviceBranchId\": \"94498\",\n            \"serviceBranchName\": \"CN 12 - TP HCM - HOI SO\",\n            \"pmtType\": \"RTGSIN - Chuyển tiền nhanh\",\n            \"sendingBankId\": \"BFTVVNVX\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"VCB_NH TMCP Ngoai thuong VN\",\n            \"receivingBankId\": \"01201001\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"Phi GD thanh toan tai Google Domains, the 1381; thoi gian GD:10/09/2023 22:54:26\",\n            \"amount\": \"20231.00\",\n            \"balance\": \"44220090.00\",\n            \"trxId\": \"1601\",\n            \"processDate\": \"11-09-2023 00:44:44\",\n            \"dorC\": \"D\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1601\",\n            \"tellerId\": \"prod1\",\n            \"corresponsiveAccount\": null,\n            \"corresponsiveName\": null,\n            \"channel\": \"60 - Point of Sale Terminals\",\n            \"serviceBranchId\": \"33398\",\n            \"serviceBranchName\": \"TRUNG TAM THE\",\n            \"pmtType\": \"DWPOS\",\n            \"sendingBankId\": \"\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"\",\n            \"receivingBankId\": \"\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"GD thanh toan tai Google Domains, the 1381; thoi gian GD:10/09/2023 22:54:26\",\n            \"amount\": \"674369.00\",\n            \"balance\": \"44240321.00\",\n            \"trxId\": \"1600\",\n            \"processDate\": \"11-09-2023 00:44:44\",\n            \"dorC\": \"D\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1600\",\n            \"tellerId\": \"prod1\",\n            \"corresponsiveAccount\": null,\n            \"corresponsiveName\": null,\n            \"channel\": \"60 - Point of Sale Terminals\",\n            \"serviceBranchId\": \"33398\",\n            \"serviceBranchName\": \"TRUNG TAM THE\",\n            \"pmtType\": \"DWPOS\",\n            \"sendingBankId\": \"\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"\",\n            \"receivingBankId\": \"\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"CT DEN:944T2390FW4RDLE3 MBVCB.4193103849.099184.LE HONG SON chuyen tien.CT tu 0491000157943 LE HONG SON toi 662663666999 LE HONG SON tai VIETINBANK; thoi gian GD:10/09/2023 22:46:50\",\n            \"amount\": \"1111111.00\",\n            \"balance\": \"44914690.00\",\n            \"trxId\": \"944T2390FW4RDLE3\",\n            \"processDate\": \"11-09-2023 00:40:07\",\n            \"dorC\": \"C\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1599\",\n            \"tellerId\": \"A44_VESB2\",\n            \"corresponsiveAccount\": \"0491000157943\",\n            \"corresponsiveName\": \"LE HONG SON\",\n            \"channel\": \"44 - Gateway (VTB)\",\n            \"serviceBranchId\": \"94498\",\n            \"serviceBranchName\": \"CN 12 - TP HCM - HOI SO\",\n            \"pmtType\": \"RTGSIN - Chuyển tiền nhanh\",\n            \"sendingBankId\": \"BFTVVNVX\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"VCB_NH TMCP Ngoai thuong VN\",\n            \"receivingBankId\": \"01201001\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"CT DEN:944T2390FFG0N4Z8 1628\",\n            \"amount\": \"15000000.00\",\n            \"balance\": \"43803579.00\",\n            \"trxId\": \"944T2390FFG0N4Z8\",\n            \"processDate\": \"10-09-2023 16:29:10\",\n            \"dorC\": \"C\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1598\",\n            \"tellerId\": \"A44_VESB2\",\n            \"corresponsiveAccount\": \"0000573949950\",\n            \"corresponsiveName\": \"NGUYEN THANH PHUONG\",\n            \"channel\": \"44 - Gateway (VTB)\",\n            \"serviceBranchId\": \"94498\",\n            \"serviceBranchName\": \"CN 12 - TP HCM - HOI SO\",\n            \"pmtType\": \"RTGSIN - Chuyển tiền nhanh\",\n            \"sendingBankId\": \"MSCBVNVX\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"MB_NH TMCP Quan doi\",\n            \"receivingBankId\": \"01201001\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"CT DI:325311698196 QR - LE HONG SON chuyen tien\",\n            \"amount\": \"99000.00\",\n            \"balance\": \"28803579.00\",\n            \"trxId\": \"944S2390F33ZZ7K5\",\n            \"processDate\": \"10-09-2023 11:11:06\",\n            \"dorC\": \"D\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1597\",\n            \"tellerId\": \"mobile\",\n            \"corresponsiveAccount\": \"9704229204332224444\",\n            \"corresponsiveName\": \"NINH THI VUONG\",\n            \"channel\": \"78 - Retail Internet Banking\",\n            \"serviceBranchId\": \"94498\",\n            \"serviceBranchName\": \"CN 12 - TP HCM - HOI SO\",\n            \"pmtType\": \"RTGS - Chuyển tiền nhanh\",\n            \"sendingBankId\": \"\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"\",\n            \"receivingBankId\": \"970422\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"MB_NH TMCP Quan doi\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"CT DI:944K2390DXLFD1N9 LE HONG SON chuyen tien\",\n            \"amount\": \"330000.00\",\n            \"balance\": \"28902579.00\",\n            \"trxId\": \"944K2390DXLFD1N9\",\n            \"processDate\": \"09-09-2023 18:13:41\",\n            \"dorC\": \"D\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1596\",\n            \"tellerId\": \"mobile\",\n            \"corresponsiveAccount\": \"0982574988\",\n            \"corresponsiveName\": \"PHAM THI THU HA\",\n            \"channel\": \"78 - Retail Internet Banking\",\n            \"serviceBranchId\": \"94498\",\n            \"serviceBranchName\": \"CN 12 - TP HCM - HOI SO\",\n            \"pmtType\": \"RTGS - Chuyển tiền nhanh\",\n            \"sendingBankId\": \"01201001\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"\",\n            \"receivingBankId\": \"MSCBVNVX\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"MB_NH TMCP Quan doi\"\n        },\n        {\n            \"currency\": \"VND\",\n            \"remark\": \"LE HONG SON chuyen tien\",\n            \"amount\": \"90000.00\",\n            \"balance\": \"29232579.00\",\n            \"trxId\": \"2arjo-7l4xBzQV6\",\n            \"processDate\": \"08-09-2023 20:00:55\",\n            \"dorC\": \"D\",\n            \"refType\": \"HistoryRecordSequence\",\n            \"refId\": \"1595\",\n            \"tellerId\": \"mobile\",\n            \"corresponsiveAccount\": \"106001411973\",\n            \"corresponsiveName\": \"VU THI BICH HONG\",\n            \"channel\": \"78 - Retail Internet Banking\",\n            \"serviceBranchId\": \"94498\",\n            \"serviceBranchName\": \"CN 12 - TP HCM - HOI SO\",\n            \"pmtType\": \"DW - Chuyển tiền trong hệ thống\",\n            \"sendingBankId\": \"\",\n            \"sendingBranchId\": \"\",\n            \"sendingBranchName\": \"\",\n            \"receivingBankId\": \"\",\n            \"receivingBranchId\": \"\",\n            \"receivingBranchName\": \"\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/vietinbank/transfer?idBank=71&toBank=0491000157943&bankCode=970436&amount=20000&memo=TestCk",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietinbank",
+						"transfer"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "71",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "toBank",
+							"value": "0491000157943",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970436",
+							"description": "Bankcode Napas 247"
+						},
+						{
+							"key": "amount",
+							"value": "20000",
+							"description": "Số tiền"
+						},
+						{
+							"key": "memo",
+							"value": "TestCk",
+							"description": "Lời nhắn"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Transfer",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietinbank/transfer?idBank=10&toBank=0491000157943&bankCode=970436&amount=1000&memo=TestCk",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietinbank",
+								"transfer"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "10",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "toBank",
+									"value": "0491000157943",
+									"description": "Số tài khoản nhận tiền"
+								},
+								{
+									"key": "bankCode",
+									"value": "970436",
+									"description": "Bankcode Napas 247"
+								},
+								{
+									"key": "amount",
+									"value": "1000",
+									"description": "Số tiền"
+								},
+								{
+									"key": "memo",
+									"value": "TestCk",
+									"description": "Lời nhắn"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:40:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=lhPuFsBfyBBLd7vCC%2FO7prjSxYKGf15tbRLIeFQYeuXx2CpVu%2F6hzwppnfpiqrVrs2fOy%2BIUCOFhTQHkQR5TuH6If6RCZ89awZe7DWuVec7YO6kAkojMOm7YbsJq\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d5eefb8ff7c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"requestId\": \"ZDGMSLXBN0KZ|1694576448499\",\n    \"sessionId\": \"OSICZ86VCP\",\n    \"error\": false,\n    \"errorCode\": \"099\",\n    \"errorMessage\": \"Chờ xác thực giao dịch\",\n    \"paymentId\": \"B068B8ORYE2MNRDR\",\n    \"systemDate\": \"20230913104051\"\n}"
+				}
+			]
+		},
+		{
+			"name": "One Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/vietinbank/one-transfer?idBank=71&toBank=0491000157943&bankCode=970436&amount=2000&memo=TestCk",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietinbank",
+						"one-transfer"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "71",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "toBank",
+							"value": "0491000157943",
+							"description": "Số tài khoản nhận tiền"
+						},
+						{
+							"key": "bankCode",
+							"value": "970436",
+							"description": "Bankcode Napas 247"
+						},
+						{
+							"key": "amount",
+							"value": "2000",
+							"description": "Số tiền"
+						},
+						{
+							"key": "memo",
+							"value": "TestCk",
+							"description": "Lời nhắn"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Info Transfer Local",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/vietinbank/infotransfer?paymentId=LWQ089HQD7OSMZG61&idBank=71",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietinbank",
+						"infotransfer"
+					],
+					"query": [
+						{
+							"key": "paymentId",
+							"value": "LWQ089HQD7OSMZG61",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "idBank",
+							"value": "71"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Info Transfer Local",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietinbank/infotransfer?paymentId=B068B8ORYE2MNRDR&idBank=10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietinbank",
+								"infotransfer"
+							],
+							"query": [
+								{
+									"key": "paymentId",
+									"value": "B068B8ORYE2MNRDR",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "idBank",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:41:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=eywZlQbgRn4MTL%2BLrlXDBn9HijRysQJjZxTTyBiavywWM97AfOXpRikbDSZOy004dupbj7YxgO7ABG75nhnJt3kbY%2BSFe01z6NYmn7VkC97Euvt15NDe2%2FZYHII4\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d5f970e967c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"idbank\": \"10\",\n    \"username\": \"0387654818\",\n    \"paymentId\": \"B068B8ORYE2MNRDR\",\n    \"debitAccountNo\": null,\n    \"creditAccountNo\": null,\n    \"creditAccountName\": null,\n    \"creditBankCode\": null,\n    \"memo\": null,\n    \"amount\": null,\n    \"fullBank\": \"selltool\",\n    \"note\": \"Chờ xác thực giao dịch\",\n    \"status\": \"2\",\n    \"paymentRes\": null,\n    \"owner\": \"1\",\n    \"created_at\": \"2023-09-13 10:40:49\",\n    \"updated_at\": \"2023-09-13 10:40:49\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Info Transfer Server",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/vietinbank/updatetransfer?idBank=71&paymentId=LWQ089HQD7OSMZG6",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vietinbank",
+						"updatetransfer"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "71",
+							"description": "Bank ID trong hệ thống"
+						},
+						{
+							"key": "paymentId",
+							"value": "LWQ089HQD7OSMZG6",
+							"description": "Mã giao dịch"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Info Transfer Server",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/vietinbank/updatetransfer?idBank=10&paymentId=B068B8ORYE2MNRDR",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vietinbank",
+								"updatetransfer"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "10",
+									"description": "Bank ID trong hệ thống"
+								},
+								{
+									"key": "paymentId",
+									"value": "B068B8ORYE2MNRDR",
+									"description": "Mã giao dịch"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:41:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "55"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=OE3vSioAAYjRlSupLTwqmsSuYTqOwlyohDkWekNKz%2B02jIXY%2FFfj9B1Yo12GezXvNHaqQukDy%2F8932GqnMZsizZAbifHdUlgw828o3GzdBkW1hnVv6ewuywsxtc4\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d5fcbdce07c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"requestId\": \"HKJRSJ4JEXNW|1694576482611\",\n    \"sessionId\": \"3EGRRJU74I\",\n    \"error\": true,\n    \"errorCode\": \"099\",\n    \"errorMessage\": \"giao dich cho xac thuc\"\n}"
+				}
+			]
+		}
+	]
+}

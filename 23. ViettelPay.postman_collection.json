@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "67592061-377c-45c5-87db-40905b68c6e2",
+		"name": "23. ViettelPay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-67592061-377c-45c5-87db-40905b68c6e2?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/viettelpay/login?phone=0387652322&password=2133",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"viettelpay",
+						"login"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "0387652322"
+						},
+						{
+							"key": "password",
+							"value": "2133"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Otp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/viettelpay/otplogin?phone=0387654818&otp=7846",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"viettelpay",
+						"otplogin"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "0387654818"
+						},
+						{
+							"key": "otp",
+							"value": "7846"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Histories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/viettelpay/histories?phone=0387654818",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"viettelpay",
+						"histories"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "0387654818"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/viettelpay/getbalance?phone=0387654818",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"viettelpay",
+						"getbalance"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "0387654818"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

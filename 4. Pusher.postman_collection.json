@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "a4fde905-59f4-472e-8680-ec38487fef71",
+		"name": "4. Pusher",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-a4fde905-59f4-472e-8680-ec38487fef71?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/selltool/pusher-test",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"selltool",
+						"pusher-test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usage Soketi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://103.130.219.240:9601/usage",
+					"protocol": "http",
+					"host": [
+						"103",
+						"130",
+						"219",
+						"240"
+					],
+					"port": "9601",
+					"path": [
+						"usage"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

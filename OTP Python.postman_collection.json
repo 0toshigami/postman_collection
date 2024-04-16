@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "5a33b17f-1093-4d2e-b6c1-db3baa42b816",
+		"name": "OTP Python",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-5a33b17f-1093-4d2e-b6c1-db3baa42b816?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Cancel Login Techcombank",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/otp/login-cancel-techcombank?idBank=28",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"otp",
+						"login-cancel-techcombank"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "28"
+						}
+					]
+				},
+				"description": "If \"type\" = 1 then SMS will be sent"
+			},
+			"response": [
+				{
+					"name": "02. Login Cancel Auto",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/otp/login-cancel-techcombank?idBank=28",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"otp",
+								"login-cancel-techcombank"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "28"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Nov 2023 09:07:01 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=%2FLvzHQX2IQxU%2BcWVRp9du%2FCvjZF%2BSXumSZFssvcMXti4qCnfFEcZBtspKomZCteh03i2%2BU78ICWIGNkkvwOPU2tGNRXrK%2FAg9HCI3KG4nzoxDq1oxUz3HK3lzP64\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8255dcae8cfb2114-HKG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Hủy đăng nhập thành công\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Transfer Vietinbank",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "paymentId",
+							"value": "CNHBMJI5LBS81MIO",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/otp/vietinbank",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"otp",
+						"vietinbank"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer TP Bank",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "paymentId",
+							"value": "CNHBMJI5LBS81MIO",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/otp/vietinbank",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"otp",
+						"vietinbank"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

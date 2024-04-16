@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "b4e40621-75ac-443e-8196-e0e1bf241a16",
+		"name": "03. Proxy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-b4e40621-75ac-443e-8196-e0e1bf241a16?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Thêm Tinsoft Proxy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "action",
+							"value": "add",
+							"description": "add, get, new",
+							"type": "text"
+						},
+						{
+							"key": "proxyKey",
+							"value": "TLF5B1ss1SHRjOgkjNJGnMMMQTa8Z8R32mwn6s",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/manage/proxy/tinsoft",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"manage",
+						"proxy",
+						"tinsoft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Proxy MProxy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "123123",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/manage/proxy/mproxyvn",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"manage",
+						"proxy",
+						"mproxyvn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Proxy Manunal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "123123",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "vSwRjNCUPjiKO",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "ip.mproxy.vn",
+							"type": "text"
+						},
+						{
+							"key": "port",
+							"value": "12343",
+							"type": "text"
+						},
+						{
+							"key": "source",
+							"value": "mproxy",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/manage/proxy/manunal",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"manage",
+						"proxy",
+						"manunal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy proxy hiện tại",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "action",
+							"value": "get",
+							"description": "add, get, new",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/manage/proxy-tinsoft",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"manage",
+						"proxy-tinsoft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Đổi proxy mới",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "action",
+							"value": "new",
+							"type": "text"
+						},
+						{
+							"key": "proxyKey",
+							"value": "TLqRr8ijCSpsxLHUYQApWyAOBw8rJuBT8QuDBn",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/manage/proxy-tinsoft",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"manage",
+						"proxy-tinsoft"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

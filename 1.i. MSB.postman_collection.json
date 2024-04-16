@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "e47d1367-ee3c-48c9-bbef-2e023b39ed8f",
+		"name": "1.i. MSB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-e47d1367-ee3c-48c9-bbef-2e023b39ed8f?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/msbbank/login?idBank=34",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"msbbank",
+						"login"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "34"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/msbbank/login?idBank=34",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"msbbank",
+								"login"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "34"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 06:29:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=1D2RiyxgyDALEN7OSNvgH4T0S3%2BMfYEEajzf%2BmIjZ9EkjOOr3hFx1Bda9wYvWYdgTnMYs4%2FyggTrTVObyKp2LPz3SPS0WDh72JJdstJ6Nx1b6yfhQw8wQQvSHOXr\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805e567488672efc-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"token\": \"408fe089-b7ac-354a-a8c4-f5536233bc6b\",\n    \"referer\": \"https://ebank.msb.com.vn/IBSRetail/Request?dse_operationName=retailJumpProc&dse_errorPage=error_page.jsp&dse_processorState=initial&dse_nextEventName=start&dse_sessionId=6QiKpLV93PUsNjtFqopd5Sj&dse_applicationId=-1&dse_pageId=2&toOpName=retailIndexProc\",\n    \"session\": \"6QiKpLV93P35334Fqopd5Sj\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Info Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/msbbank/getinfo?idBank=34",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"msbbank",
+						"getinfo"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "34"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Info Account",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/msbbank/getinfo?idBank=34",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"msbbank",
+								"getinfo"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "34"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 06:30:22 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=V4B71M9ZQDGIb7z2uy4B1JIIVhQPIRM0PCHKR52Al4laL57goGFwMF2Rp3f02Wtbb%2FENnSeBHKAtKNa9NPEiPTAqC%2FmMffOGcOVYLnW5Ne%2BEIgc2qHXtjyjpe0hT\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805e57557f412efc-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\"status\":\"200\",\"message\":\"\",\"inforError\":\"\",\"tokenNo\":null,\"timeCreateToken\":null,\"data\":[{\"acctNo\":\"03201012522358\",\"acctName\":\"LE HONG SON\",\"pAcctNo\":null,\"bankNo\":null,\"orgNo\":null,\"productType\":\"R-PROBSMP\",\"loanNo\":null,\"branchNo\":\"032\",\"subBranchNo\":null,\"cbSign\":null,\"certType\":null,\"certCode\":null,\"acctType\":\"CA\",\"subAcctType\":null,\"currencyCode\":\"VND\",\"cxSign\":null,\"establishDate\":null,\"availableDate\":null,\"currentBalance\":null,\"freezedBalance\":null,\"availableBalance\":2514,\"remark\":null,\"status\":\"ACTV\",\"createBy\":null,\"createTime\":null,\"updateBy\":null,\"updateTime\":null,\"cifNo\":null,\"ledgerBalance\":2514,\"holdAmount\":0,\"overdraftLimit\":0,\"interestRate\":0,\"dateAccountOpened\":null,\"passbookNo\":null,\"accuredInterest\":0,\"term\":null,\"termInString\":null,\"teamInStringCode\":null,\"originalBalance\":null,\"principalBalance\":null,\"penaltyAmount\":null,\"currentCashValue\":null,\"earmarkedAmount\":null,\"issuedDate\":\"2023-07-03\",\"maturityDate\":null,\"timesNenewedCount\":null,\"purposeCode\":null,\"loanOriginalAmt\":null,\"osPrincipal\":null,\"osBalance\":null,\"loanTerm\":null,\"loanTermInString\":null,\"principalFrequent\":null,\"interestFrequent\":null,\"fullReleaseDate\":null,\"overdueIndicatorDescription\":null,\"billedTotalAmount\":null,\"billedPrincipal\":null,\"billedInterest\":null,\"billedLateCharge\":null,\"paymentAmount\":null,\"finalPaymentAmount\":null,\"accruedLateCharge\":null,\"accruedCommonFee\":null,\"otherCharges\":null,\"availableLimit\":null,\"totalPayment\":null,\"serialNo\":null,\"cdtcod\":null,\"cdterm\":null,\"issdt\":null,\"matdt\":null,\"indentifyNumber\":\"0387654818\",\"accruedInterestOverdraf\":null,\"accruedExcesssInt\":null,\"overdrafSequence\":null,\"overdrafAuthLimitSeq\":null,\"overdrafDrawLimitSeq\":null,\"overdrafDateEnteredSeq\":null,\"overdrafDateExpirationSeq\":null,\"overdrafInterestRateSeq\":null,\"overdrafRateNumberSeq\":null,\"collateralFdId\":null,\"alias\":\"TK thanh toán 1\",\"isMaster\":\"N\",\"exChangeRate\":null,\"transfer\":true,\"termInStringCode\":null,\"accountInString\":\"032-01-01-252235-8\",\"keyAccountSeqOverdraf\":null,\"accountSeqOverdraf\":null}],\"peekData\":null}"
+				}
+			]
+		},
+		{
+			"name": "Histories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/msbbank/histories?idBank=34&day=30",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"msbbank",
+						"histories"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "34"
+						},
+						{
+							"key": "day",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Histories",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/msbbank/histories?idBank=34&day=30",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"msbbank",
+								"histories"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "34"
+								},
+								{
+									"key": "day",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 06:30:48 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=10JBH6oYXl1LM5QKC%2BKGDFWFP9N3k4xwg%2BDSzZ0pYqjm2T9ieERF2%2FtpN%2BMrMUR%2F2HBZjjTH30HuhfvsvqySChqcJMJ6oQoRZesYhi%2FI5cWFv7xvsPyWmQacscMN\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805e57f79d112efc-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\"status\":true,\"code\":200,\"data\":{\"in\":6555,\"isStaging\":false,\"toDate\":\"2023-09-13\",\"fromAmount\":null,\"accNo\":\"03201012522358\",\"toAmount\":null,\"CNT\":\"K\\u00eanh kh\\u00e1c\",\"sophu\":\"msb\",\"history\":[{\"coreSn\":\"DD2023235510719\",\"tranSn\":null,\"tranServiceCode\":\"Y\",\"traceCode\":\"NP1321O\",\"dcSign\":\"D\",\"acceptsOrg\":null,\"tranType\":\"Chuy\\u1ec3n ti\\u1ec1n nhanh 24\\/7\",\"tranDevice\":null,\"deviceNo\":\"23\",\"voucherType\":null,\"currencyCode\":\"VND\",\"rolloutAcctNo\":\"03201012522358\",\"rolloutAcctName\":null,\"rolloutCardNo\":null,\"beneficiaryAcctNo\":\"662663666999\",\"beneficiaryAcctName\":\"LE HONG SON\",\"beneficiaryAcctBank\":\"VIETINBANK - NH TMCP CONG THUONG VIET NAM\",\"beneficiaryAcctBranch\":null,\"beneficiaryCardNo\":null,\"amount\":10000,\"fee\":null,\"preBalance\":2514,\"actBalance\":null,\"postTime\":1692772493000,\"tranTime\":null,\"status\":null,\"operator\":null,\"channel\":\"IBS\",\"remark\":\"Tfr A\\/c: 280802016 -183597-CK 24\\/7 cho 662663666999. Con cho mai huy bao\",\"insertDate\":null,\"tellerId\":\"IBSML247\",\"tmSeq\":483115,\"syncType\":0,\"tcCode\":null,\"tcSyncTime\":null,\"isDetail\":false,\"transferDate\":\"23\\/08\\/2023\",\"transferTime\":\"13:34\",\"channelName\":\"Internet Banking\",\"indentifyNumber\":null,\"lnTime\":null,\"dueDate\":null,\"osBalance\":null},{\"coreSn\":\"DD2023235510718\",\"tranSn\":null,\"tranServiceCode\":\"N\",\"traceCode\":\"NP1321I\",\"dcSign\":\"C\",\"acceptsOrg\":null,\"tranType\":\"CK n\\u1ed9i b\\u1ed9\",\"tranDevice\":null,\"deviceNo\":\"5\",\"voucherType\":null,\"currencyCode\":\"VND\",\"rolloutAcctNo\":\"03201012522358\",\"rolloutAcctName\":null,\"rolloutCardNo\":null,\"beneficiaryAcctNo\":null,\"beneficiaryAcctName\":null,\"beneficiaryAcctBank\":null,\"beneficiaryAcctBranch\":null,\"beneficiaryCardNo\":null,\"amount\":5555,\"fee\":null,\"preBalance\":12514,\"actBalance\":null,\"postTime\":1692772183000,\"tranTime\":null,\"status\":null,\"operator\":null,\"channel\":\"CNT\",\"remark\":\"Tfr A\\/c: 189802002 -270444-suc vat mai huy bao_0387654818\",\"insertDate\":null,\"tellerId\":\"VASML247\",\"tmSeq\":8585317,\"syncType\":0,\"tcCode\":null,\"tcSyncTime\":null,\"isDetail\":false,\"transferDate\":\"23\\/08\\/2023\",\"transferTime\":\"13:29\",\"channelName\":\"K\\u00eanh kh\\u00e1c\",\"indentifyNumber\":null,\"lnTime\":null,\"dueDate\":null,\"osBalance\":null},{\"coreSn\":\"DD2023235510717\",\"tranSn\":null,\"tranServiceCode\":\"Y\",\"traceCode\":\"NP1321I\",\"dcSign\":\"C\",\"acceptsOrg\":null,\"tranType\":\"Chuy\\u1ec3n ti\\u1ec1n nhanh 24\\/7\",\"tranDevice\":null,\"deviceNo\":\"5\",\"voucherType\":null,\"currencyCode\":\"VND\",\"rolloutAcctNo\":\"03201012522358\",\"rolloutAcctName\":null,\"rolloutCardNo\":null,\"beneficiaryAcctNo\":null,\"beneficiaryAcctName\":null,\"beneficiaryAcctBank\":null,\"beneficiaryAcctBranch\":null,\"beneficiaryCardNo\":null,\"amount\":1000,\"fee\":null,\"preBalance\":6959,\"actBalance\":null,\"postTime\":1692771497000,\"tranTime\":null,\"status\":null,\"operator\":null,\"channel\":\"CNT\",\"remark\":\"Tfr A\\/c: 189802002 -029160-MBVCB.4083491133.029160.MAI HUY BAO chuyen tien.CT tu 1039300932 MAI HUY BAO toi 03201012522358 LE HONG SON tai MSB\",\"insertDate\":null,\"tellerId\":\"IBSML247\",\"tmSeq\":8583499,\"syncType\":0,\"tcCode\":null,\"tcSyncTime\":null,\"isDetail\":false,\"transferDate\":\"23\\/08\\/2023\",\"transferTime\":\"13:18\",\"channelName\":\"K\\u00eanh kh\\u00e1c\",\"indentifyNumber\":null,\"lnTime\":null,\"dueDate\":null,\"osBalance\":null}],\"totalRecord\":3,\"MBA\":\"Mobile Banking\",\"userId\":null,\"currentChannel\":\"IB\",\"content\":null,\"queryType\":0,\"out\":10000,\"fromDate\":\"2023-08-14\",\"transType\":null,\"endBalance\":2514,\"eltDate\":5959,\"page\":1,\"IBS\":\"Internet Banking\",\"accType\":\"CA\"}}"
+				}
+			]
+		}
+	]
+}

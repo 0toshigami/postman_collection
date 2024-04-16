@@ -1,0 +1,817 @@
+{
+	"info": {
+		"_postman_id": "b65c8680-1b44-4f60-a7b0-8e48d75dfb2f",
+		"name": "22. Zalopay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-b65c8680-1b44-4f60-a7b0-8e48d75dfb2f?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "01. Send OTP Login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/zalo/send-otp?username=08555123123",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"zalo",
+						"send-otp"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "08555123123"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "01. Send OTP Login",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/zalo/send-otp?username=0352883794",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"zalo",
+								"send-otp"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "0352883794"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 02:54:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=la2JV1Uqii7x53w6RTiP04OqzI3Jytud5zLRDdhqHNpKpq4EgbWVYetnqh8E8GWiv5uE1WcO2m%2FD%2FaOrj9j1yBVj4P%2BEI2XyOGrn9A%2B3XE%2BA6nqskGHLvjlZLKSE\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "804ca0dbeef42aa0-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Gửi mã OTP thành công\",\n    \"message_en\": \"Sending OTP code successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "02. Post OTP Login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/zalo/otplogin?username=085557213123&otp=142194",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"zalo",
+						"otplogin"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "085557213123"
+						},
+						{
+							"key": "otp",
+							"value": "142194"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "03. Login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/zalo/login?username=085557123&password=290900",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"zalo",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "085557123"
+						},
+						{
+							"key": "password",
+							"value": "290900"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "03. Login",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/zalo/login?username=0855576421&password=290900",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"zalo",
+								"login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "0855576421"
+								},
+								{
+									"key": "password",
+									"value": "290900"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:46:06 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=qd3d%2Fn%2F3LBeRi3lW3WojGkeppSZwZhkXIq%2BbZGWYdyUiaHOPzQ80YnUm%2FNgANFHFdV498TNJKzXRTzUPatCdhs7J1eIV8omWDllYr66SdCXWmfumCJkAiokv%2BrdJ\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80686330ee96db76-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Đăng nhập thành công\",\n    \"message_en\": \"Login successfully\",\n    \"user_id\": \"200329003457528\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Histories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/zalo/histories?username=085557123123&limit=5",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"zalo",
+						"histories"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "085557123123"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Histories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/zalo/histories?username=0855576421&limit=5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"zalo",
+								"histories"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "0855576421"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:43:24 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=wYpk2X7CDZFzif9D6NmSTydH0xHS1%2FlxSYBcint1wRLX%2F7JR3%2BgGakU3xvC1%2FjLWB41phS89ofHsWI9p%2FOzjxYKyNUdRrUiIaeobSdfSGQm9dOsr11IsVWpwQwa6\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "80685f3bdd59db76-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Thành công\",\n    \"transactions\": [\n        {\n            \"trans_id\": \"230910001831905\",\n            \"trans_type\": 1,\n            \"product_code\": \"TF007\",\n            \"app_id\": \"241\",\n            \"description\": \"Selltool0935\",\n            \"trans_time\": \"2023-09-10T15:45:23Z\",\n            \"trans_amount\": \"987000\",\n            \"sign\": -1,\n            \"subtotal_amount\": \"987000\",\n            \"charge_amount\": \"987000\",\n            \"fee_amount\": \"0\",\n            \"discount_amount\": \"0\",\n            \"pmc\": \"Ví ZaloPay\",\n            \"status_info\": {\n                \"status\": 1,\n                \"title\": \"Thành công\",\n                \"message\": \"\",\n                \"code\": \"1\"\n            },\n            \"title\": \"Chuyển tiền\",\n            \"icon\": \"https://simg.zalopay.com.vn/zst/zpi-spa/cashier/icon/28136-4.png\",\n            \"template_info\": {\n                \"template_id\": \"3\",\n                \"progress_view\": {\n                    \"steps\": [\n                        {\n                            \"status\": 1,\n                            \"title\": \"Thành công\",\n                            \"message\": \"ZaloPay trừ tiền thành công\",\n                            \"time\": \"2023-09-10T15:45:23Z\"\n                        },\n                        {\n                            \"status\": 1,\n                            \"title\": \"Thành công\",\n                            \"message\": \"Nhà cung cấp xử lý thành công\",\n                            \"time\": \"2023-09-10T15:45:24Z\"\n                        },\n                        {\n                            \"status\": 1,\n                            \"title\": \"Thành công\",\n                            \"message\": \"Giao dịch thành công\",\n                            \"time\": \"2023-09-10T15:45:24Z\"\n                        }\n                    ]\n                },\n                \"custom_fields\": [\n                    {\n                        \"name\": \"Mã đơn hàng\",\n                        \"value\": \"230910000723416\"\n                    },\n                    {\n                        \"name\": \"Người nhận\",\n                        \"value\": \"LE HONG SON\"\n                    },\n                    {\n                        \"name\": \"Ngân hàng\",\n                        \"value\": \"Vietcombank\"\n                    },\n                    {\n                        \"name\": \"Số tài khoản\",\n                        \"value\": \"***7943\"\n                    }\n                ],\n                \"custom_views\": null,\n                \"custom_buttons\": []\n            },\n            \"mode\": 2,\n            \"trans_note\": \"\",\n            \"system_type\": 1,\n            \"app_trans_id\": \"230910000723416\",\n            \"ref_trans_id\": \"0\",\n            \"balance_snapshot\": \"279\",\n            \"refund_ids\": [],\n            \"refund_detail\": null\n        },\n        {\n            \"trans_id\": \"\",\n            \"trans_type\": 4,\n            \"product_code\": \"TF020\",\n            \"app_id\": \"450\",\n            \"description\": \"Seltool0931\",\n            \"trans_time\": \"2023-09-04T14:31:05Z\",\n            \"trans_amount\": \"200000\",\n            \"sign\": 1,\n            \"subtotal_amount\": \"200000\",\n            \"charge_amount\": \"200000\",\n            \"fee_amount\": \"0\",\n            \"discount_amount\": \"0\",\n            \"pmc\": \"Ví ZaloPay\",\n            \"status_info\": {\n                \"status\": 1,\n                \"title\": \"Thành công\",\n                \"message\": \"\",\n                \"code\": \"1\"\n            },\n            \"title\": \"Nhận tiền\",\n            \"icon\": \"https://simg.zalopay.com.vn/zst/zpi-spa/cashier/icon/24555-157.png\",\n            \"template_info\": {\n                \"template_id\": \"2\",\n                \"progress_view\": null,\n                \"custom_fields\": [\n                    {\n                        \"name\": \"Mã đơn hàng\",\n                        \"value\": \"2309040000213938\"\n                    },\n                    {\n                        \"name\": \"Người gửi\",\n                        \"value\": \"Trần Thị Hằng\"\n                    },\n                    {\n                        \"name\": \"Số điện thoại\",\n                        \"value\": \"****3794\"\n                    },\n                    {\n                        \"name\": \"Lời nhắn\",\n                        \"value\": \"Seltool0931\"\n                    }\n                ],\n                \"custom_views\": null,\n                \"custom_buttons\": [\n                    {\n                        \"label\": \"Chuyển lại\",\n                        \"link\": \"/home-transfer\",\n                        \"priority\": 1\n                    },\n                    {\n                        \"label\": \"Xem thiệp\",\n                        \"link\": \"/transfer/greeting/preview/2309040000213938\",\n                        \"priority\": 2\n                    }\n                ]\n            },\n            \"mode\": 1,\n            \"trans_note\": \"\",\n            \"system_type\": 1,\n            \"app_trans_id\": \"2309040000213938\",\n            \"ref_trans_id\": \"0\",\n            \"balance_snapshot\": \"987279\",\n            \"refund_ids\": [],\n            \"refund_detail\": null\n        },\n        {\n            \"trans_id\": \"\",\n            \"trans_type\": 4,\n            \"product_code\": \"TF020\",\n            \"app_id\": \"450\",\n            \"description\": \"Seltool0931\",\n            \"trans_time\": \"2023-09-04T14:30:36Z\",\n            \"trans_amount\": \"200000\",\n            \"sign\": 1,\n            \"subtotal_amount\": \"200000\",\n            \"charge_amount\": \"200000\",\n            \"fee_amount\": \"0\",\n            \"discount_amount\": \"0\",\n            \"pmc\": \"Ví ZaloPay\",\n            \"status_info\": {\n                \"status\": 1,\n                \"title\": \"Thành công\",\n                \"message\": \"\",\n                \"code\": \"1\"\n            },\n            \"title\": \"Nhận tiền\",\n            \"icon\": \"https://simg.zalopay.com.vn/zst/zpi-spa/cashier/icon/24555-157.png\",\n            \"template_info\": {\n                \"template_id\": \"2\",\n                \"progress_view\": null,\n                \"custom_fields\": [\n                    {\n                        \"name\": \"Mã đơn hàng\",\n                        \"value\": \"2309040000219054\"\n                    },\n                    {\n                        \"name\": \"Người gửi\",\n                        \"value\": \"Trần Thị Hằng\"\n                    },\n                    {\n                        \"name\": \"Số điện thoại\",\n                        \"value\": \"****3794\"\n                    },\n                    {\n                        \"name\": \"Lời nhắn\",\n                        \"value\": \"Seltool0931\"\n                    }\n                ],\n                \"custom_views\": null,\n                \"custom_buttons\": [\n                    {\n                        \"label\": \"Chuyển lại\",\n                        \"link\": \"/home-transfer\",\n                        \"priority\": 1\n                    },\n                    {\n                        \"label\": \"Xem thiệp\",\n                        \"link\": \"/transfer/greeting/preview/2309040000219054\",\n                        \"priority\": 2\n                    }\n                ]\n            },\n            \"mode\": 1,\n            \"trans_note\": \"\",\n            \"system_type\": 1,\n            \"app_trans_id\": \"2309040000219054\",\n            \"ref_trans_id\": \"0\",\n            \"balance_snapshot\": \"787279\",\n            \"refund_ids\": [],\n            \"refund_detail\": null\n        },\n        {\n            \"trans_id\": \"230904001556304\",\n            \"trans_type\": 1,\n            \"product_code\": \"TF007\",\n            \"app_id\": \"241\",\n            \"description\": \"Selltool0942\",\n            \"trans_time\": \"2023-09-04T14:26:21Z\",\n            \"trans_amount\": \"111111\",\n            \"sign\": -1,\n            \"subtotal_amount\": \"111111\",\n            \"charge_amount\": \"111111\",\n            \"fee_amount\": \"0\",\n            \"discount_amount\": \"0\",\n            \"pmc\": \"Ví ZaloPay\",\n            \"status_info\": {\n                \"status\": 1,\n                \"title\": \"Thành công\",\n                \"message\": \"\",\n                \"code\": \"1\"\n            },\n            \"title\": \"Chuyển tiền\",\n            \"icon\": \"https://simg.zalopay.com.vn/zst/zpi-spa/cashier/icon/28136-4.png\",\n            \"template_info\": {\n                \"template_id\": \"3\",\n                \"progress_view\": {\n                    \"steps\": [\n                        {\n                            \"status\": 1,\n                            \"title\": \"Thành công\",\n                            \"message\": \"ZaloPay trừ tiền thành công\",\n                            \"time\": \"2023-09-04T14:26:21Z\"\n                        },\n                        {\n                            \"status\": 1,\n                            \"title\": \"Thành công\",\n                            \"message\": \"Nhà cung cấp xử lý thành công\",\n                            \"time\": \"2023-09-04T14:26:21Z\"\n                        },\n                        {\n                            \"status\": 1,\n                            \"title\": \"Thành công\",\n                            \"message\": \"Giao dịch thành công\",\n                            \"time\": \"2023-09-04T14:26:21Z\"\n                        }\n                    ]\n                },\n                \"custom_fields\": [\n                    {\n                        \"name\": \"Mã đơn hàng\",\n                        \"value\": \"230904000592654\"\n                    },\n                    {\n                        \"name\": \"Người nhận\",\n                        \"value\": \"LE HONG SON\"\n                    },\n                    {\n                        \"name\": \"Ngân hàng\",\n                        \"value\": \"Vietcombank\"\n                    },\n                    {\n                        \"name\": \"Số tài khoản\",\n                        \"value\": \"***7943\"\n                    }\n                ],\n                \"custom_views\": null,\n                \"custom_buttons\": []\n            },\n            \"mode\": 2,\n            \"trans_note\": \"\",\n            \"system_type\": 1,\n            \"app_trans_id\": \"230904000592654\",\n            \"ref_trans_id\": \"0\",\n            \"balance_snapshot\": \"587279\",\n            \"refund_ids\": [],\n            \"refund_detail\": null\n        },\n        {\n            \"trans_id\": \"\",\n            \"trans_type\": 4,\n            \"product_code\": \"TF020\",\n            \"app_id\": \"450\",\n            \"description\": \"Seltool0931\",\n            \"trans_time\": \"2023-09-04T14:25:48Z\",\n            \"trans_amount\": \"200000\",\n            \"sign\": 1,\n            \"subtotal_amount\": \"200000\",\n            \"charge_amount\": \"200000\",\n            \"fee_amount\": \"0\",\n            \"discount_amount\": \"0\",\n            \"pmc\": \"Ví ZaloPay\",\n            \"status_info\": {\n                \"status\": 1,\n                \"title\": \"Thành công\",\n                \"message\": \"\",\n                \"code\": \"1\"\n            },\n            \"title\": \"Nhận tiền\",\n            \"icon\": \"https://simg.zalopay.com.vn/zst/zpi-spa/cashier/icon/24555-157.png\",\n            \"template_info\": {\n                \"template_id\": \"2\",\n                \"progress_view\": null,\n                \"custom_fields\": [\n                    {\n                        \"name\": \"Mã đơn hàng\",\n                        \"value\": \"2309040000210920\"\n                    },\n                    {\n                        \"name\": \"Người gửi\",\n                        \"value\": \"Trần Thị Hằng\"\n                    },\n                    {\n                        \"name\": \"Số điện thoại\",\n                        \"value\": \"****3794\"\n                    },\n                    {\n                        \"name\": \"Lời nhắn\",\n                        \"value\": \"Seltool0931\"\n                    }\n                ],\n                \"custom_views\": null,\n                \"custom_buttons\": [\n                    {\n                        \"label\": \"Chuyển lại\",\n                        \"link\": \"/home-transfer\",\n                        \"priority\": 1\n                    },\n                    {\n                        \"label\": \"Xem thiệp\",\n                        \"link\": \"/transfer/greeting/preview/2309040000210920\",\n                        \"priority\": 2\n                    }\n                ]\n            },\n            \"mode\": 1,\n            \"trans_note\": \"\",\n            \"system_type\": 1,\n            \"app_trans_id\": \"2309040000210920\",\n            \"ref_trans_id\": \"0\",\n            \"balance_snapshot\": \"698390\",\n            \"refund_ids\": [],\n            \"refund_detail\": null\n        }\n    ],\n    \"count\": 5\n}"
+				}
+			]
+		},
+		{
+			"name": "Balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/zalo/balance?username=0855512323",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"zalo",
+						"balance"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "0855512323"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Balance",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/zalo/balance?username=0855576421",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"zalo",
+								"balance"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "0855576421"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 02:55:48 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=DMOBSjcMHo73Y9RynlJ37OPm6%2F1FzvTNesW6HhuH%2FQaqgkFeQaQFfCHLCxgm1lJk5CMHUvRPUE2nfCHb6ok04qB6l1vhmbvTUKRCh0IhbANKfR%2B6a3tdg0XQjlSg\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "804ca246f8852aa0-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Lấy số dư thành công\",\n    \"message_en\": \"Get balance success\",\n    \"balance\": \"279\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Transfer Zalo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/zalo/transfer-zalo?username=0855576421&receiver=&amount=200000&comment=Seltool0931",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"zalo",
+						"transfer-zalo"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "0855576421"
+						},
+						{
+							"key": "receiver",
+							"value": ""
+						},
+						{
+							"key": "amount",
+							"value": "200000"
+						},
+						{
+							"key": "comment",
+							"value": "Seltool0931"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer Bank",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/zalo/transfer-bank?username=0855576421&bankCode=ZPVCB&toBank=0491000157943&amount=10000&comment=Selltool0935",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"zalo",
+						"transfer-bank"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "0855576421"
+						},
+						{
+							"key": "bankCode",
+							"value": "ZPVCB"
+						},
+						{
+							"key": "toBank",
+							"value": "0491000157943"
+						},
+						{
+							"key": "amount",
+							"value": "10000"
+						},
+						{
+							"key": "comment",
+							"value": "Selltool0935"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fail",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/zalo/transfer-bank?username=0855576421&bankCode=ZPVCB&toBank=0491000157943&amount=987000&comment=Selltool0935",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"zalo",
+								"transfer-bank"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "0855576421"
+								},
+								{
+									"key": "bankCode",
+									"value": "ZPVCB"
+								},
+								{
+									"key": "toBank",
+									"value": "0491000157943"
+								},
+								{
+									"key": "amount",
+									"value": "987000"
+								},
+								{
+									"key": "comment",
+									"value": "Selltool0935"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 02:55:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=c9YO7y90lTaPsDN6j7BBIr%2BGxsZ%2F3Cs63wyxVaM7y9xJnW2ouid2LvghpVUmSn4fpZngvUmFVlhobu2MWl1hyMzmuXBPzu%2BN9dPEOVdZLnEjqouDDRF1cYVJAyET\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "804ca1300c1b2aa0-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Số dư không đủ: 279đ\"\n}"
+				},
+				{
+					"name": "Fail: Min 100.000đ",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/zalo/transfer-bank?username=0855576421&bankCode=ZPVCB&toBank=0491000157943&amount=10000&comment=Selltool0935",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"zalo",
+								"transfer-bank"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "0855576421"
+								},
+								{
+									"key": "bankCode",
+									"value": "ZPVCB"
+								},
+								{
+									"key": "toBank",
+									"value": "0491000157943"
+								},
+								{
+									"key": "amount",
+									"value": "10000"
+								},
+								{
+									"key": "comment",
+									"value": "Selltool0935"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 02:55:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=DerfKTRbQ66YewqgDCwDOtEzAOpqqtjqaqMPY6McGdTxFqiDw4waQzj6668dyPbE4%2FlRNZx%2F%2FT9e1cOLNmJg2Kcq3LopThtrB76yDaA7a%2B2tTmxCYQRwjyulQ%2Fv6\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "804ca1b6ef6f2aa0-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Chuyển tiền đến tài khoản ngân hàng thất bại\",\n    \"message_en\": \"Transfer money to bank fail\",\n    \"data\": {\n        \"data\": {\n            \"appid\": 0,\n            \"apptime\": 0,\n            \"amount\": 0,\n            \"apptransid\": 0,\n            \"mac\": \"\",\n            \"feeamount\": 0,\n            \"freetranscountmessage\": \"\",\n            \"productcode\": \"\"\n        },\n        \"returncode\": -8136,\n        \"returnmessage\": \"Số tiền tối thiểu được phép chuyển là 100.000đ. Vui lòng nhập lại.\"\n    }\n}"
+				}
+			]
+		}
+	]
+}

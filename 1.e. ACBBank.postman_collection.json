@@ -1,0 +1,654 @@
+{
+	"info": {
+		"_postman_id": "00eff8ff-9d6a-4c0a-a0d8-269876e6d448",
+		"name": "1.e. ACBBank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-00eff8ff-9d6a-4c0a-a0d8-269876e6d448?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/acb/login?idBank=137",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"acb",
+						"login"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "137"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/acb/login?idBank=17",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"acb",
+								"login"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "17"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:42:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=XyZUqBO9avQG20tRj0pDWntbhKtaFCZtmCqZkjvesPkGB1ILAa%2Bjq06K8Z2gDJOP05iA8RvFmYCQZ6ixO1ikDjJOp%2BOW89Jd8AAKWeGnPXD7TG69%2BLEX%2F9XPElr7\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d6102bcc27c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"username\",\n    \"password\": \"password\",\n    \"clientId\": \"iuSuHYVufIUuNIREV0FB354646434\",\n    \"apiKey\": \"CQk6S5usau23346436345CuDtgtqIM8FI1\",\n    \"xAppVersion\": \"3.16.0\",\n    \"userAgent\": \"ACB-MBA/4 CFNetwork/1240.0.4 Darwin/20.6.0\",\n    \"accessToken\": \"ey*****************************************************\",\n    \"stk\": \"7165431\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Account Info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/acb/info?idBank=17",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"acb",
+						"info"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "17"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Account Info",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/acb/info?idBank=17",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"acb",
+								"info"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "17"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:42:56 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=ZI9u6YxdJQfRAaVoETyGJ6yipX3JZC3265DX1TcNwwu2Bg%2B3RMAB1Q61yABDxDdxliR93rc0WWtvf0N9ecKFof4hpAt9XMmPgNWol13hJ6Z3tHEtP2EY2pAQMHm9\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d6209d9897c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Successfully\",\n    \"data\": {\n        \"time\": \"2023-09-15T10:42:56.479+97:00\",\n        \"codeStatus\": 200,\n        \"messageStatus\": \"success\",\n        \"description\": \"success\",\n        \"took\": 24,\n        \"data\": [\n            {\n                \"accountNumber\": \"7164631\",\n                \"accountDescription\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n                \"owner\": \"LE HOANG SON\",\n                \"currency\": \"VND\",\n                \"balance\": 150241,\n                \"totalBalance\": 150241,\n                \"cardToken\": null,\n                \"status\": 1,\n                \"amountDue\": null,\n                \"dueDate\": null\n            }\n        ],\n        \"redisTook\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get 5 Histories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/acb/histories?idBank=65",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"acb",
+						"histories"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "65"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get 5 Histories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/acb/histories?idBank=17",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"acb",
+								"histories"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "17"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:43:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=H5AxqejiVJXAVGhXFCAySvXQv3m0rJ7g9kC%2F4lLuGGCOM%2F7yQ0ms%2F9SropJm9AGLqv4D12LnjoXQb1Lflr6bumk1Wpkf0ShdXC190J5SgYw9PH%2BVpAhRR0FV7eQG\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d62d09e5f7c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Successfully\",\n    \"data\": {\n        \"time\": \"2023-09-13T10:43:28.019+07:00\",\n        \"codeStatus\": 200,\n        \"messageStatus\": \"success\",\n        \"description\": \"\",\n        \"took\": 112,\n        \"data\": {\n            \"accountNumber\": 7164631,\n            \"accountDescription\": null,\n            \"owner\": \"LE HONG SON\",\n            \"startPeriodDate\": null,\n            \"endPeriodDate\": null,\n            \"contractDate\": null,\n            \"startDate\": 1679850000000,\n            \"endDate\": null,\n            \"balance\": 15241,\n            \"dueAmount\": null,\n            \"currency\": \"VND\",\n            \"totalBalance\": null,\n            \"balanceSixMonth\": [],\n            \"rate\": 0.05,\n            \"updateRateDate\": null,\n            \"transactions\": [\n                {\n                    \"amount\": 1212,\n                    \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n                    \"receiverName\": \"\",\n                    \"transactionNumber\": 2510,\n                    \"description\": \"LE HONG SON chuyen tien GD 078057-082623 17:19:23\",\n                    \"bankName\": \"\",\n                    \"isOnline\": false,\n                    \"postingDate\": 1693155600000,\n                    \"accountOwner\": null,\n                    \"type\": \"IN\",\n                    \"receiverAccountNumber\": \"\",\n                    \"currency\": \"VND\",\n                    \"account\": 7164631,\n                    \"activeDatetime\": 1693045164000,\n                    \"effectiveDate\": 1693155600000\n                },\n                {\n                    \"amount\": 1000,\n                    \"accountName\": \"TKTT TRUC TUYEN KHTN (CN) VND\",\n                    \"receiverName\": \"\",\n                    \"transactionNumber\": 2509,\n                    \"description\": \"MBVCB.4083144219.065827.MAI HUY BAO chuyen tien.CT tu 1039300932 MAI HUY BAO toi 7164631 LE HONG SON tai ACB GD 065827-082323 12:07:37\",\n                    \"bankName\": \"\",\n                    \"isOnline\": false,\n                    \"postingDate\": 1692723600000,\n                    \"accountOwner\": null,\n                    \"type\": \"IN\",\n                    \"receiverAccountNumber\": \"\",\n                    \"currency\": \"VND\",\n                    \"account\": 7164631,\n                    \"activeDatetime\": 1692767257000,\n                    \"effectiveDate\": 1692723600000\n                }\n            ],\n            \"addon\": false,\n            \"isAddon\": false\n        },\n        \"redisTook\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Histories v2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/acb/histories-row?idBank=65",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"acb",
+						"histories-row"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "65"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Histories v2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/acb/histories-row?idBank=17",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"acb",
+								"histories-row"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "17"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:43:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=Vt%2BZZXhOumjCxqf8PxwciHo3uAqKTRQw%2BFMYqtrG1QLSdxcFGhipmo4EU%2BtJvSPGgayKaf7Cveoae8znCRsLz9HwzAcdchJNyBFf9X1pzDQvbT9CF%2BYf2yPz1nXP\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d6303ca267c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Successfully\",\n    \"data\": {\n        \"time\": \"2023-09-13T10:43:35.821+07:00\",\n        \"codeStatus\": 200,\n        \"messageStatus\": \"success\",\n        \"description\": \"\",\n        \"took\": 31,\n        \"data\": [],\n        \"redisTook\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Name Bank",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/acb/getname?idBank=17&bankCode=970415&bankNumber=662663666999",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"acb",
+						"getname"
+					],
+					"query": [
+						{
+							"key": "idBank",
+							"value": "17"
+						},
+						{
+							"key": "bankCode",
+							"value": "970415"
+						},
+						{
+							"key": "bankNumber",
+							"value": "662663666999"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Histories v2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/acb/histories-row?idBank=17",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"acb",
+								"histories-row"
+							],
+							"query": [
+								{
+									"key": "idBank",
+									"value": "17"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 03:43:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=Vt%2BZZXhOumjCxqf8PxwciHo3uAqKTRQw%2BFMYqtrG1QLSdxcFGhipmo4EU%2BtJvSPGgayKaf7Cveoae8znCRsLz9HwzAcdchJNyBFf9X1pzDQvbT9CF%2BYf2yPz1nXP\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805d6303ca267c33-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Successfully\",\n    \"data\": {\n        \"time\": \"2023-09-13T10:43:35.821+07:00\",\n        \"codeStatus\": 200,\n        \"messageStatus\": \"success\",\n        \"description\": \"\",\n        \"took\": 31,\n        \"data\": [],\n        \"redisTook\": 0\n    }\n}"
+				}
+			]
+		}
+	]
+}

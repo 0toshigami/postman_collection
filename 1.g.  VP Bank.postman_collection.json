@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "15304cc0-e1fe-4da7-ba6f-0eb77659111e",
+		"name": "1.g.  VP Bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3976238",
+		"_collection_link": "https://www.postman.com/apibankvn/workspace/api-bank-version-2/collection/27750374-15304cc0-e1fe-4da7-ba6f-0eb77659111e?action=share&source=collection_link&creator=3976238"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "autophone",
+							"value": "1",
+							"description": "1: Tự động xử lý đăng nhập nếu cần xác thực từ Android",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/vpbank/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vpbank",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idBank",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "autophone",
+									"value": "1",
+									"description": "1: Tự động xử lý đăng nhập nếu cần xác thực từ Android",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/vpbank/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vpbank",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 06:06:23 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=e3QiKawjFvYlpmFfkPZR8%2BJqzyfw7pC9%2F6bYyfzELA2%2Fo44kWdGnvcghtaSxIfxvlZrPf6BRHHWxdkNScse7dkvZD1VwNPUeaezqDIBhYHLwURjm%2Bj14xtPspSeN\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805e34349b547ce9-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,\n    \"message\": \"Vui lòng nhập mã xác thực từ điện thoại\",\n    \"tokenKey\": \"RkZJSEFTSFdvN0F5cmptRWUwZlFUMG9FQnlCLzV3MVpiSmtCaDNvdWFWbTJtdEJDNVk9\",\n    \"csrf\": \"5915460431326877563\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login OTP",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "3VYMB97OIX",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/vpbank/login-otp",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vpbank",
+						"login-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lịch sử giao dịch",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "day",
+							"value": "30",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/vpbank/histories",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vpbank",
+						"histories"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Lịch sử giao dịch",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idBank",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "day",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/vpbank/histories",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"vpbank",
+								"histories"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 13 Sep 2023 06:07:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=88sXqHhCUNnk5%2FC5IRlMMR9ZMvKd4YDbrEZ8BF8uX5kuCX4lwwDtZC5zH4hfXOGZyDPF3ZliXhlJ686H%2BROZ5oxomkZdc89%2FeEheFbvx%2FOUPjcucPMDdd8YXgikQ\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "805e357def417ce9-LAX"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		},
+		{
+			"name": "Đăng nhập từ tool ADB",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBank",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "W7QUJQOYO0",
+							"type": "text"
+						},
+						{
+							"key": "cancel",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/otp/login-vpbank",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"otp",
+						"login-vpbank"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
